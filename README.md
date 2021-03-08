@@ -13,11 +13,11 @@ XS Scripts are External Subroutines used by the games AoE2, AoE3 and AoM
 
 1. Syntax Highlighting:
 
-    ![Syntax Highlighting](./imgs/example1.png)
+    ![Syntax Highlighting](https://i.imgur.com/xP1qJCR.png)
 
 2. Code tab completion
 
-    ![Tab Completion](./imgs/example2.png)
+    ![Tab Completion](https://i.imgur.com/iSgkBIi.png)
 
 ## Release Notes
 
