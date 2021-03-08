@@ -13,6 +13,14 @@
     ],
     "license": "See LICENSE.md",
 	"icon": "icon.png",
+    "bugs": {
+		"url": "https://github.com/Divy1211/vsc-xs-support/issues"
+	},
+	"homepage": "https://github.com/Divy1211/vsc-xs-support",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Divy1211/vsc-xs-support.git"
+	},
     "keywords": [
 		"vscode",
 		"xs",
