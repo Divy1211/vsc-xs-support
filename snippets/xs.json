@@ -1,0 +1,2317 @@
+{
+	"xs-switch-case": {
+		"prefix": ["switch", "case", "switch-case"],
+		"body": [
+			"switch(${1:variable}) {",
+			"\tcase ${2:value 1} : {",
+			"\t\t${3://code}",
+			"\t}",
+			"\tcase ${4:value 2} : {",
+			"\t\t${5://code}",
+			"\t}",
+			"\tdefault : {",
+			"\t\t${6://code}",
+			"\t}",
+			"}"
+		],
+		"description": ""
+	},
+	"xs-for": {
+		"prefix": ["for"],
+		"body": [
+			"for(${1:variable} = ${2:initial_value}; ${3:terminating_condition}) {",
+			"\t${4://code}",
+			"}"
+		],
+		"description": ""
+	},
+	"xs-while": {
+		"prefix": ["while"],
+		"body": [
+			"while(${1:condition}) {",
+			"\t${2://code}",
+			"}"
+		],
+		"description": "while loop"
+	},
+	"xs-if-else-if": {
+		"prefix": ["if else if"],
+		"body": [
+			"if(${1:condition}) {",
+			"\t${2://code}",
+			"}",
+			"else if(${3:condition}) {",
+			"\t${4://code}",
+			"}",
+			"else {",
+			"\t${5://code}",
+			"}"
+		],
+		"description": ""
+	},
+	"xs-function-definition": {
+		"prefix": ["function"],
+		"body": [
+			"${1:returnType} ${2:name}(${3:parameters}) {",
+			"\t${4://code}",
+			"}"
+		],
+		"description": ""
+	},
+
+
+
+	"xs-vector-definition": {
+		"prefix": ["Vector"],
+		"body": [
+			"Vector ${1:variable} = Vector(${2:x}, ${3:y}, ${4:z});"
+		],
+		"description": "Initialise a vector with the given X, Y, Z components"
+	},
+	"xs-vector-get-x": {
+		"prefix": ["xsVectorGetX"],
+		"body": [
+			"xsVectorGetX(${1:Vector variable})"
+		],
+		"description": "Get the X component of the specified vector. Returns a float value"
+	},
+	"xs-vector-get-y": {
+		"prefix": ["xsVectorGetY"],
+		"body": [
+			"xsVectorGetY(${1:Vector variable})"
+		],
+		"description": "Get the Y component of the specified vector. Returns a float value"
+	},
+	"xs-vector-get-z": {
+		"prefix": ["xsVectorGetZ"],
+		"body": [
+			"xsVectorGetZ(${1:Vector variable})"
+		],
+		"description": "Get the Z component of the specified vector. Returns a float value"
+	},
+	"xs-vector-set-x": {
+		"prefix": ["xsVectorSetX"],
+		"body": [
+			"xsVectorSetX(${1:float x})"
+		],
+		"description": "Return a new vector with the X component of the given vector changed to the given value."
+	},
+	"xs-vector-set-y": {
+		"prefix": ["xsVectorSetY"],
+		"body": [
+			"xsVectorSetY(${1:float y})"
+		],
+		"description": "Return a new vector with the Y component of the given vector changed to the given value."
+	},
+	"xs-vector-set-z": {
+		"prefix": ["xsVectorSetZ"],
+		"body": [
+			"xsVectorSetZ(${1:float z})"
+		],
+		"description": "Return a new vector with the Z component of the given vector changed to the given value."
+	},
+	"xs-vector-set": {
+		"prefix": ["xsVectorSet"],
+		"body": [
+			"xsVectorSet(${1:float x}, ${2:float y}, ${3:float z})"
+		],
+		"description": "Return a vector with the given X, Y and Z components."
+	},
+    "xs-vector-length": {
+		"prefix": ["xsVectorLength"],
+		"body": [
+			"xsVectorLength(${1:Vector variable})"
+		],
+		"description": "Return the length of the given vector."
+	},
+    "xs-vector-normalize": {
+		"prefix": ["xsVectorNormalize"],
+		"body": [
+			"xsVectorNormalize(${1:Vector variable})"
+		],
+		"description": "Returns a unit vector along the direction of the given vector."
+	},
+
+
+
+	"xs-rule-definition": {
+		"prefix": ["rule"],
+		"body": [
+			"rule ${1:ruleName}${2:\n\tactive}${3:\n\tinactive}",
+			"\tgroup ${4:groupName}${5:\n\trunImmediately}${6:\n\thighFrequency}${7:\n\tminInterval ${8:value}}${9:\n\tmaxInterval ${10:value}}${11:\n\tpriority ${12:value}}",
+			"{",
+			"\t${13://code}",
+			"}"
+		],
+		"description": ""
+	},
+    "xs-disable-rule": {
+    "prefix": ["xsDisableRule(String ruleName)"],
+    "body": [
+        "xsDisableRule(String ruleName)"
+        ],
+        "description": "Disables the given rule"
+    },
+    "xs-disable-self": {
+    "prefix": ["xsDisableSelf()"],
+    "body": [
+        "xsDisableSelf()"
+        ],
+        "description": "Disables the rule this function is called inside"
+    },
+    "xs-enable-rule": {
+    "prefix": ["xsEnableRule(String ruleName)"],
+    "body": [
+        "xsEnableRule(String ruleName)"
+        ],
+        "description": "Enables the given rule"
+    },
+    "xs-is-rule-enabled": {
+    "prefix": ["xsIsRuleEnabled(String ruleName)"],
+    "body": [
+        "xsIsRuleEnabled(String ruleName)"
+        ],
+        "description": "Returns true if the given rule is enabled"
+    },
+    "xs-set-rule-priority": {
+    "prefix": ["xsSetRulePriority(String ruleName, int priority)"],
+    "body": [
+        "xsSetRulePriority(String ruleName, int priority)"
+        ],
+        "description": "Sets the priority of the given rule"
+    },
+    "xs-set-rule-priority-self": {
+    "prefix": ["xsSetRulePrioritySelf(int priority)"],
+    "body": [
+        "xsSetRulePrioritySelf(int priority)"
+        ],
+        "description": "Sets the priority of the rule this function is called inside"
+    },
+    "xs-set-rule-min-interval": {
+    "prefix": ["xsSetRuleMinInterval(String ruleName, int interval)"],
+    "body": [
+        "xsSetRuleMinInterval(String ruleName, int interval)"
+        ],
+        "description": "Sets the min interval of the given rule"
+    },
+    "xs-set-rule-min-interval-self": {
+    "prefix": ["xsSetRuleMinIntervalSelf(int interval)"],
+    "body": [
+        "xsSetRuleMinIntervalSelf(int interval)"
+        ],
+        "description": "Sets the min interval of the rule this function is called inside"
+    },
+    "xs-set-rule-max-interval": {
+    "prefix": ["xsSetRuleMaxInterval(String ruleName, int interval)"],
+    "body": [
+        "xsSetRuleMaxInterval(String ruleName, int interval)"
+        ],
+        "description": "Sets the max interval of the given rule"
+    },
+    "xs-set-rule-max-interval-self": {
+    "prefix": ["xsSetRuleMaxIntervalSelf(int interval)"],
+    "body": [
+        "xsSetRuleMaxIntervalSelf(int interval)"
+        ],
+        "description": "Sets the max interval of the rule this function is called inside"
+    },
+    "xs-enable-rule-group": {
+    "prefix": ["xsEnableRuleGroup(String ruleGroupName)"],
+    "body": [
+        "xsEnableRuleGroup(String ruleGroupName)"
+        ],
+        "description": "Enables all the rules in the given rule group"
+    },
+    "xs-disable-rule-group": {
+    "prefix": ["xsDisableRuleGroup(String ruleGroupName)"],
+    "body": [
+        "xsDisableRuleGroup(String ruleGroupName)"
+        ],
+        "description": "Disables all the rules in the given rule group"
+    },
+    "xs-is-rule-group-enabled": {
+    "prefix": ["xsIsRuleGroupEnabled(String ruleGroupName)"],
+    "body": [
+        "xsIsRuleGroupEnabled(String ruleGroupName)"
+        ],
+        "description": "Returns true if all the rules in the given rule group are enabled"
+    },
+
+
+
+    "xs-array-create-int": {
+        "prefix": ["xsArrayCreateInt"],
+        "body": [
+            "xsArrayCreateInt(${1:int length}, ${2:int defaultValue}, \"${3:String uniqueName}\")"
+            ],
+            "description": "Create an array with a specified length, a default value and a unique name. Returns an Integer that is the ID of the created array"
+    },
+    "xs-array-get-int": {
+        "prefix": ["xsArrayGetInt"],
+        "body": [
+            "xsArrayGetInt(${1:int arrayID}, ${2:int index})"
+            ],
+            "description": "Get the value at the specified index of the specified array. Returns a int value"
+    },
+    "xs-array-set-int": {
+        "prefix": ["xsArraySetInt"],
+        "body": [
+            "xsArraySetInt(${1:int arrayID}, ${2:int index}, ${3:int newValue})"
+            ],
+            "description": "Set the value at the specified index of the specified array"
+    },
+    "xs-array-resize-int": {
+        "prefix": ["xsArrayResizeInt"],
+        "body": [
+            "xsArrayResizeInt(${1:int arrayID}, ${1:int newLength})"
+            ],
+            "description": "Resize the specified array to a specified new length"
+    },
+    "xs-array-create-float": {
+        "prefix": ["xsArrayCreateFloat"],
+        "body": [
+            "xsArrayCreateFloat(${1:int length}, ${2:float defaultValue}, \"${3:String uniqueName}\")"
+            ],
+            "description": "Create an array with a specified length, a default value and a unique name. Returns an Integer that is the ID of the created array"
+    },
+    "xs-array-get-float": {
+        "prefix": ["xsArrayGetFloat"],
+        "body": [
+            "xsArrayGetFloat(${1:int arrayID}, ${2:int index})"
+            ],
+            "description": "Get the value at the specified index of the specified array. Returns a float value"
+    },
+    "xs-array-set-float": {
+        "prefix": ["xsArraySetFloat"],
+        "body": [
+            "xsArraySetFloat(${1:int arrayID}, ${2:int index}, ${3:float newValue})"
+            ],
+            "description": "Set the value at the specified index of the specified array"
+    },
+    "xs-array-resize-float": {
+        "prefix": ["xsArrayResizeFloat"],
+        "body": [
+            "xsArrayResizeFloat(${1:int arrayID}, ${1:int newLength})"
+            ],
+            "description": "Resize the specified array to a specified new length"
+    },
+    "xs-array-create-bool": {
+        "prefix": ["xsArrayCreateBool"],
+        "body": [
+            "xsArrayCreateBool(${1:int length}, ${2:bool defaultValue}, \"${3:String uniqueName}\")"
+            ],
+            "description": "Create an array with a specified length, a default value and a unique name. Returns an Integer that is the ID of the created array"
+    },
+    "xs-array-get-bool": {
+        "prefix": ["xsArrayGetBool"],
+        "body": [
+            "xsArrayGetBool(${1:int arrayID}, ${2:int index})"
+            ],
+            "description": "Get the value at the specified index of the specified array. Returns a bool value"
+    },
+    "xs-array-set-bool": {
+        "prefix": ["xsArraySetBool"],
+        "body": [
+            "xsArraySetBool(${1:int arrayID}, ${2:int index}, ${3:bool newValue})"
+            ],
+            "description": "Set the value at the specified index of the specified array"
+    },
+    "xs-array-resize-bool": {
+        "prefix": ["xsArrayResizeBool"],
+        "body": [
+            "xsArrayResizeBool(${1:int arrayID}, ${1:int newLength})"
+            ],
+            "description": "Resize the specified array to a specified new length"
+    },
+    "xs-array-create-string": {
+        "prefix": ["xsArrayCreateString"],
+        "body": [
+            "xsArrayCreateString(${1:int length}, ${2:String defaultValue}, \"${3:String uniqueName}\")"
+            ],
+            "description": "Create an array with a specified length, a default value and a unique name. Returns an Integer that is the ID of the created array"
+    },
+    "xs-array-get-string": {
+        "prefix": ["xsArrayGetString"],
+        "body": [
+            "xsArrayGetString(${1:int arrayID}, ${2:int index})"
+            ],
+            "description": "Get the value at the specified index of the specified array. Returns a String value"
+    },
+    "xs-array-set-string": {
+        "prefix": ["xsArraySetString"],
+        "body": [
+            "xsArraySetString(${1:int arrayID}, ${2:int index}, ${3:String newValue})"
+            ],
+            "description": "Set the value at the specified index of the specified array"
+    },
+    "xs-array-resize-string": {
+        "prefix": ["xsArrayResizeString"],
+        "body": [
+            "xsArrayResizeString(${1:int arrayID}, ${1:int newLength})"
+            ],
+            "description": "Resize the specified array to a specified new length"
+    },
+    "xs-array-create-vector": {
+        "prefix": ["xsArrayCreateVector"],
+        "body": [
+            "xsArrayCreateVector(${1:int length}, ${2:Vector defaultValue}, \"${3:String uniqueName}\")"
+            ],
+            "description": "Create an array with a specified length, a default value and a unique name. Returns an Integer that is the ID of the created array"
+    },
+    "xs-array-get-vector": {
+        "prefix": ["xsArrayGetVector"],
+        "body": [
+            "xsArrayGetVector(${1:int arrayID}, ${2:int index})"
+            ],
+            "description": "Get the value at the specified index of the specified array. Returns a Vector value"
+    },
+    "xs-array-set-vector": {
+        "prefix": ["xsArraySetVector"],
+        "body": [
+            "xsArraySetVector(${1:int arrayID}, ${2:int index}, ${3:Vector newValue})"
+            ],
+            "description": "Set the value at the specified index of the specified array"
+    },
+    "xs-array-resize-vector": {
+        "prefix": ["xsArrayResizeVector"],
+        "body": [
+            "xsArrayResizeVector(${1:int arrayID}, ${1:int newLength})"
+            ],
+            "description": "Resize the specified array to a specified new length"
+    },
+    "xs-array-get-size": {
+        "prefix": ["xsArrayGetSize"],
+        "body": [
+            "xsArrayGetSize(${1:int arrayID})"
+            ],
+            "description": "Returns the int value for the length of the specified array"
+    },
+
+
+
+    "xs-player-attribute": {
+        "prefix": ["xsPlayerAttribute"],
+        "body": [
+            "xsPlayerAttribute(${1:int playerNumber}, ${2:int resourceID})"
+            ],
+            "description": "Returns the float value for the specified resource of the specified player"
+    },
+    "xs-set-player-attribute": {
+        "prefix": ["xsSetPlayerAttribute"],
+        "body": [
+            "xsSetPlayerAttribute(${1:int playerNumber}, ${2:int resourceID}, ${3:float value})"
+            ],
+            "description": "Returns the float value for the specified resource of the specified player"
+    },
+    "xs-trigger-variable": {
+        "prefix": ["xsTriggerVariable"],
+        "body": [
+            "xsTriggerVariable(${1:int variableID}, ${2:int value})"
+            ],
+            "description": "Returns the int value for the specified variable"
+    },
+    "xs-set-trigger-variable": {
+        "prefix": ["xsSetTriggerVariable"],
+        "body": [
+            "xsSetTriggerVariable(${1:int variableID}, ${2:int value})"
+            ],
+            "description": "Sets the value for the specified variable"
+    },
+    "xs-get-num-players": {
+        "prefix": ["xsGetNumPlayers"],
+        "body": [
+            "xsGetNumPlayers()"
+            ],
+            "description": "Returns the int value for the number of players in the game"
+    },
+    "xs-chat-data": {
+        "prefix": ["xsChatData"],
+        "body": [
+            "xsChatData(${1:String message}, ${2:int number})"
+            ],
+            "description": "Display a message in the chat"
+    },
+    "xs-get-time": {
+        "prefix": ["xsGetTime"],
+        "body": [
+            "xsGetTime()"
+            ],
+            "description": "Returns the int valur for the game time in seconds"
+    },
+    "xs-effect-amount": {
+        "prefix": ["xsEffectAmount"],
+        "body": [
+            "xsEffectAmount(${1:int effectID}, ${2:int unitOrTechnologyID}, ${3:int attributeOrOperation}, ${4:int value}, {5: int playerNumber})"
+            ],
+            "description": "Returns the int value for the number of players in the game"
+    },
+
+
+
+    "abs": {
+        "prefix": ["abs"],
+        "body": [
+            "abs(${1:float number})"
+            ],
+            "description": "returns the magnitude of the number"
+    },
+    "sqrt": {
+        "prefix": ["sqrt"],
+        "body": [
+            "sqrt(${1:float number})"
+            ],
+            "description": "returns the square root of the number"
+    },
+    "pow": {
+        "prefix": ["pow"],
+        "body": [
+            "pow(${1:float number1}, ${1:float number2})"
+            ],
+            "description": "returns number1 raised to the power of number2"
+    },
+    "sin": {
+        "prefix": ["sin"],
+        "body": [
+            "sin(${1:float number})"
+            ],
+            "description": "returns the sine of the given angle in radians"
+    },
+    "cos": {
+        "prefix": ["cos"],
+        "body": [
+            "cos(${1:float number})"
+            ],
+            "description": "returns the cosine of the given angle in radians"
+    },
+    "tan": {
+        "prefix": ["tan"],
+        "body": [
+            "tan(${1:float number})"
+            ],
+            "description": "returns the tangent of the given angle in radians"
+    },
+    "asin": {
+        "prefix": ["asin"],
+        "body": [
+            "asin(${1:float number})"
+            ],
+            "description": "returns the inverse sine of the given number"
+    },
+    "acos": {
+        "prefix": ["acos"],
+        "body": [
+            "acos(${1:float number})"
+            ],
+            "description": "returns the inverse cosine of the given number"
+    },
+    "atan": {
+        "prefix": ["atan"],
+        "body": [
+            "atan(${1:float number})"
+            ],
+            "description": "returns the inverse tangent of the given number"
+    },
+    "atan2": {
+        "prefix": ["atan2"],
+        "body": [
+            "atan2(${1:float number})"
+            ],
+            "description": "this is supposed to be the atan2(y, x) function but it only takes one input... thxDE"
+    },
+
+
+
+
+    "xs-constant-AttributeFood": {
+            "prefix": ["cAttributeFood"],
+            "body": [
+                "cAttributeFood"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeWood": {
+            "prefix": ["cAttributeWood"],
+            "body": [
+                "cAttributeWood"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeStone": {
+            "prefix": ["cAttributeStone"],
+            "body": [
+                "cAttributeStone"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeGold": {
+            "prefix": ["cAttributeGold"],
+            "body": [
+                "cAttributeGold"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePopulationCap": {
+            "prefix": ["cAttributePopulationCap"],
+            "body": [
+                "cAttributePopulationCap"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeReligion": {
+            "prefix": ["cAttributeReligion"],
+            "body": [
+                "cAttributeReligion"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeCurrentAge": {
+            "prefix": ["cAttributeCurrentAge"],
+            "body": [
+                "cAttributeCurrentAge"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeRelics": {
+            "prefix": ["cAttributeRelics"],
+            "body": [
+                "cAttributeRelics"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeTrageBonus": {
+            "prefix": ["cAttributeTrageBonus"],
+            "body": [
+                "cAttributeTrageBonus"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeTradeGoods": {
+            "prefix": ["cAttributeTradeGoods"],
+            "body": [
+                "cAttributeTradeGoods"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeTradeProducation": {
+            "prefix": ["cAttributeTradeProducation"],
+            "body": [
+                "cAttributeTradeProducation"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePopulation": {
+            "prefix": ["cAttributePopulation"],
+            "body": [
+                "cAttributePopulation"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeDecay": {
+            "prefix": ["cAttributeDecay"],
+            "body": [
+                "cAttributeDecay"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeDiscovery": {
+            "prefix": ["cAttributeDiscovery"],
+            "body": [
+                "cAttributeDiscovery"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeRuins": {
+            "prefix": ["cAttributeRuins"],
+            "body": [
+                "cAttributeRuins"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeMeat": {
+            "prefix": ["cAttributeMeat"],
+            "body": [
+                "cAttributeMeat"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeBerries": {
+            "prefix": ["cAttributeBerries"],
+            "body": [
+                "cAttributeBerries"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeFish": {
+            "prefix": ["cAttributeFish"],
+            "body": [
+                "cAttributeFish"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeKills": {
+            "prefix": ["cAttributeKills"],
+            "body": [
+                "cAttributeKills"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeResearchCount": {
+            "prefix": ["cAttributeResearchCount"],
+            "body": [
+                "cAttributeResearchCount"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeExploration": {
+            "prefix": ["cAttributeExploration"],
+            "body": [
+                "cAttributeExploration"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeConvertPriest": {
+            "prefix": ["cAttributeConvertPriest"],
+            "body": [
+                "cAttributeConvertPriest"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeConvertBuilding": {
+            "prefix": ["cAttributeConvertBuilding"],
+            "body": [
+                "cAttributeConvertBuilding"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeBuildingLimit": {
+            "prefix": ["cAttributeBuildingLimit"],
+            "body": [
+                "cAttributeBuildingLimit"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeFoodLimit": {
+            "prefix": ["cAttributeFoodLimit"],
+            "body": [
+                "cAttributeFoodLimit"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeUnitLimit": {
+            "prefix": ["cAttributeUnitLimit"],
+            "body": [
+                "cAttributeUnitLimit"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeMaintence": {
+            "prefix": ["cAttributeMaintence"],
+            "body": [
+                "cAttributeMaintence"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeFaith": {
+            "prefix": ["cAttributeFaith"],
+            "body": [
+                "cAttributeFaith"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeFaithRechargeRate": {
+            "prefix": ["cAttributeFaithRechargeRate"],
+            "body": [
+                "cAttributeFaithRechargeRate"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeFarmFood": {
+            "prefix": ["cAttributeFarmFood"],
+            "body": [
+                "cAttributeFarmFood"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeCivilianPopulation": {
+            "prefix": ["cAttributeCivilianPopulation"],
+            "body": [
+                "cAttributeCivilianPopulation"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeAllTechsAchieved": {
+            "prefix": ["cAttributeAllTechsAchieved"],
+            "body": [
+                "cAttributeAllTechsAchieved"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeMilitaryPopulation": {
+            "prefix": ["cAttributeMilitaryPopulation"],
+            "body": [
+                "cAttributeMilitaryPopulation"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeConversions": {
+            "prefix": ["cAttributeConversions"],
+            "body": [
+                "cAttributeConversions"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeWonder": {
+            "prefix": ["cAttributeWonder"],
+            "body": [
+                "cAttributeWonder"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeRazings": {
+            "prefix": ["cAttributeRazings"],
+            "body": [
+                "cAttributeRazings"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeKillRatio": {
+            "prefix": ["cAttributeKillRatio"],
+            "body": [
+                "cAttributeKillRatio"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayerKilled": {
+            "prefix": ["cAttributePlayerKilled"],
+            "body": [
+                "cAttributePlayerKilled"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeTributeInefficency": {
+            "prefix": ["cAttributeTributeInefficency"],
+            "body": [
+                "cAttributeTributeInefficency"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeGoldBonus": {
+            "prefix": ["cAttributeGoldBonus"],
+            "body": [
+                "cAttributeGoldBonus"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeTownCenterUnavailable": {
+            "prefix": ["cAttributeTownCenterUnavailable"],
+            "body": [
+                "cAttributeTownCenterUnavailable"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeGoldCounter": {
+            "prefix": ["cAttributeGoldCounter"],
+            "body": [
+                "cAttributeGoldCounter"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeWriting": {
+            "prefix": ["cAttributeWriting"],
+            "body": [
+                "cAttributeWriting"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeMonasteries": {
+            "prefix": ["cAttributeMonasteries"],
+            "body": [
+                "cAttributeMonasteries"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeTribute": {
+            "prefix": ["cAttributeTribute"],
+            "body": [
+                "cAttributeTribute"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeHoldRuins": {
+            "prefix": ["cAttributeHoldRuins"],
+            "body": [
+                "cAttributeHoldRuins"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeHoldRelics": {
+            "prefix": ["cAttributeHoldRelics"],
+            "body": [
+                "cAttributeHoldRelics"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeOre": {
+            "prefix": ["cAttributeOre"],
+            "body": [
+                "cAttributeOre"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeCapturedUnit": {
+            "prefix": ["cAttributeCapturedUnit"],
+            "body": [
+                "cAttributeCapturedUnit"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeTradeGoodQuality": {
+            "prefix": ["cAttributeTradeGoodQuality"],
+            "body": [
+                "cAttributeTradeGoodQuality"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeTradeMarketLevel": {
+            "prefix": ["cAttributeTradeMarketLevel"],
+            "body": [
+                "cAttributeTradeMarketLevel"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeFormations": {
+            "prefix": ["cAttributeFormations"],
+            "body": [
+                "cAttributeFormations"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeBuildingHouseRate": {
+            "prefix": ["cAttributeBuildingHouseRate"],
+            "body": [
+                "cAttributeBuildingHouseRate"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeGatherTaxRate": {
+            "prefix": ["cAttributeGatherTaxRate"],
+            "body": [
+                "cAttributeGatherTaxRate"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeGatherAccumalation": {
+            "prefix": ["cAttributeGatherAccumalation"],
+            "body": [
+                "cAttributeGatherAccumalation"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeSalvageDecayRate": {
+            "prefix": ["cAttributeSalvageDecayRate"],
+            "body": [
+                "cAttributeSalvageDecayRate"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeAllowFormations": {
+            "prefix": ["cAttributeAllowFormations"],
+            "body": [
+                "cAttributeAllowFormations"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeCanConvert": {
+            "prefix": ["cAttributeCanConvert"],
+            "body": [
+                "cAttributeCanConvert"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer1Kills": {
+            "prefix": ["cAttributePlayer1Kills"],
+            "body": [
+                "cAttributePlayer1Kills"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer2Kills": {
+            "prefix": ["cAttributePlayer2Kills"],
+            "body": [
+                "cAttributePlayer2Kills"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer3Kills": {
+            "prefix": ["cAttributePlayer3Kills"],
+            "body": [
+                "cAttributePlayer3Kills"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer4Kills": {
+            "prefix": ["cAttributePlayer4Kills"],
+            "body": [
+                "cAttributePlayer4Kills"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer5Kills": {
+            "prefix": ["cAttributePlayer5Kills"],
+            "body": [
+                "cAttributePlayer5Kills"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer6Kills": {
+            "prefix": ["cAttributePlayer6Kills"],
+            "body": [
+                "cAttributePlayer6Kills"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer7Kills": {
+            "prefix": ["cAttributePlayer7Kills"],
+            "body": [
+                "cAttributePlayer7Kills"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer8Kills": {
+            "prefix": ["cAttributePlayer8Kills"],
+            "body": [
+                "cAttributePlayer8Kills"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeConvertResistance": {
+            "prefix": ["cAttributeConvertResistance"],
+            "body": [
+                "cAttributeConvertResistance"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeTradeVigRate": {
+            "prefix": ["cAttributeTradeVigRate"],
+            "body": [
+                "cAttributeTradeVigRate"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeStoneBonus": {
+            "prefix": ["cAttributeStoneBonus"],
+            "body": [
+                "cAttributeStoneBonus"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeQueuedCount": {
+            "prefix": ["cAttributeQueuedCount"],
+            "body": [
+                "cAttributeQueuedCount"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeTrainingCount": {
+            "prefix": ["cAttributeTrainingCount"],
+            "body": [
+                "cAttributeTrainingCount"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeRaider": {
+            "prefix": ["cAttributeRaider"],
+            "body": [
+                "cAttributeRaider"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeBoardingRechargeRate": {
+            "prefix": ["cAttributeBoardingRechargeRate"],
+            "body": [
+                "cAttributeBoardingRechargeRate"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeStartingVillagers": {
+            "prefix": ["cAttributeStartingVillagers"],
+            "body": [
+                "cAttributeStartingVillagers"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeResearchCostMod": {
+            "prefix": ["cAttributeResearchCostMod"],
+            "body": [
+                "cAttributeResearchCostMod"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeResearchTimeMod": {
+            "prefix": ["cAttributeResearchTimeMod"],
+            "body": [
+                "cAttributeResearchTimeMod"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeConvertBoats": {
+            "prefix": ["cAttributeConvertBoats"],
+            "body": [
+                "cAttributeConvertBoats"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeFishTrapFood": {
+            "prefix": ["cAttributeFishTrapFood"],
+            "body": [
+                "cAttributeFishTrapFood"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeHealRateModifer": {
+            "prefix": ["cAttributeHealRateModifer"],
+            "body": [
+                "cAttributeHealRateModifer"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeHealRange": {
+            "prefix": ["cAttributeHealRange"],
+            "body": [
+                "cAttributeHealRange"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeStartingFood": {
+            "prefix": ["cAttributeStartingFood"],
+            "body": [
+                "cAttributeStartingFood"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeStartingWood": {
+            "prefix": ["cAttributeStartingWood"],
+            "body": [
+                "cAttributeStartingWood"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeStartingStone": {
+            "prefix": ["cAttributeStartingStone"],
+            "body": [
+                "cAttributeStartingStone"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeStartingGold": {
+            "prefix": ["cAttributeStartingGold"],
+            "body": [
+                "cAttributeStartingGold"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeRaiderAbility": {
+            "prefix": ["cAttributeRaiderAbility"],
+            "body": [
+                "cAttributeRaiderAbility"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeBerserkerHealTimer": {
+            "prefix": ["cAttributeBerserkerHealTimer"],
+            "body": [
+                "cAttributeBerserkerHealTimer"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeDominantSheepControl": {
+            "prefix": ["cAttributeDominantSheepControl"],
+            "body": [
+                "cAttributeDominantSheepControl"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeObjectCostSummation": {
+            "prefix": ["cAttributeObjectCostSummation"],
+            "body": [
+                "cAttributeObjectCostSummation"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeResearchCostSummation": {
+            "prefix": ["cAttributeResearchCostSummation"],
+            "body": [
+                "cAttributeResearchCostSummation"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeRelicIncomeSummation": {
+            "prefix": ["cAttributeRelicIncomeSummation"],
+            "body": [
+                "cAttributeRelicIncomeSummation"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeTradeIncomeSummation": {
+            "prefix": ["cAttributeTradeIncomeSummation"],
+            "body": [
+                "cAttributeTradeIncomeSummation"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer1Tribute": {
+            "prefix": ["cAttributePlayer1Tribute"],
+            "body": [
+                "cAttributePlayer1Tribute"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer2Tribute": {
+            "prefix": ["cAttributePlayer2Tribute"],
+            "body": [
+                "cAttributePlayer2Tribute"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer3Tribute": {
+            "prefix": ["cAttributePlayer3Tribute"],
+            "body": [
+                "cAttributePlayer3Tribute"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer4Tribute": {
+            "prefix": ["cAttributePlayer4Tribute"],
+            "body": [
+                "cAttributePlayer4Tribute"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer5Tribute": {
+            "prefix": ["cAttributePlayer5Tribute"],
+            "body": [
+                "cAttributePlayer5Tribute"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer6Tribute": {
+            "prefix": ["cAttributePlayer6Tribute"],
+            "body": [
+                "cAttributePlayer6Tribute"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer7Tribute": {
+            "prefix": ["cAttributePlayer7Tribute"],
+            "body": [
+                "cAttributePlayer7Tribute"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer8Tribute": {
+            "prefix": ["cAttributePlayer8Tribute"],
+            "body": [
+                "cAttributePlayer8Tribute"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer1KillValue": {
+            "prefix": ["cAttributePlayer1KillValue"],
+            "body": [
+                "cAttributePlayer1KillValue"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer2KillValue": {
+            "prefix": ["cAttributePlayer2KillValue"],
+            "body": [
+                "cAttributePlayer2KillValue"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer3KillValue": {
+            "prefix": ["cAttributePlayer3KillValue"],
+            "body": [
+                "cAttributePlayer3KillValue"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer4KillValue": {
+            "prefix": ["cAttributePlayer4KillValue"],
+            "body": [
+                "cAttributePlayer4KillValue"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer5KillValue": {
+            "prefix": ["cAttributePlayer5KillValue"],
+            "body": [
+                "cAttributePlayer5KillValue"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer6KillValue": {
+            "prefix": ["cAttributePlayer6KillValue"],
+            "body": [
+                "cAttributePlayer6KillValue"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer7KillValue": {
+            "prefix": ["cAttributePlayer7KillValue"],
+            "body": [
+                "cAttributePlayer7KillValue"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer8KillValue": {
+            "prefix": ["cAttributePlayer8KillValue"],
+            "body": [
+                "cAttributePlayer8KillValue"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer1Razings": {
+            "prefix": ["cAttributePlayer1Razings"],
+            "body": [
+                "cAttributePlayer1Razings"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer2Razings": {
+            "prefix": ["cAttributePlayer2Razings"],
+            "body": [
+                "cAttributePlayer2Razings"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer3Razings": {
+            "prefix": ["cAttributePlayer3Razings"],
+            "body": [
+                "cAttributePlayer3Razings"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer4Razings": {
+            "prefix": ["cAttributePlayer4Razings"],
+            "body": [
+                "cAttributePlayer4Razings"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer5Razings": {
+            "prefix": ["cAttributePlayer5Razings"],
+            "body": [
+                "cAttributePlayer5Razings"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer6Razings": {
+            "prefix": ["cAttributePlayer6Razings"],
+            "body": [
+                "cAttributePlayer6Razings"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer7Razings": {
+            "prefix": ["cAttributePlayer7Razings"],
+            "body": [
+                "cAttributePlayer7Razings"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer8Razings": {
+            "prefix": ["cAttributePlayer8Razings"],
+            "body": [
+                "cAttributePlayer8Razings"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer1RazingValue": {
+            "prefix": ["cAttributePlayer1RazingValue"],
+            "body": [
+                "cAttributePlayer1RazingValue"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer2RazingValue": {
+            "prefix": ["cAttributePlayer2RazingValue"],
+            "body": [
+                "cAttributePlayer2RazingValue"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer3RazingValue": {
+            "prefix": ["cAttributePlayer3RazingValue"],
+            "body": [
+                "cAttributePlayer3RazingValue"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer4RazingValue": {
+            "prefix": ["cAttributePlayer4RazingValue"],
+            "body": [
+                "cAttributePlayer4RazingValue"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer5RazingValue": {
+            "prefix": ["cAttributePlayer5RazingValue"],
+            "body": [
+                "cAttributePlayer5RazingValue"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer6RazingValue": {
+            "prefix": ["cAttributePlayer6RazingValue"],
+            "body": [
+                "cAttributePlayer6RazingValue"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer7RazingValue": {
+            "prefix": ["cAttributePlayer7RazingValue"],
+            "body": [
+                "cAttributePlayer7RazingValue"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributePlayer8RazingValue": {
+            "prefix": ["cAttributePlayer8RazingValue"],
+            "body": [
+                "cAttributePlayer8RazingValue"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeCastle": {
+            "prefix": ["cAttributeCastle"],
+            "body": [
+                "cAttributeCastle"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeHitPointRazings": {
+            "prefix": ["cAttributeHitPointRazings"],
+            "body": [
+                "cAttributeHitPointRazings"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeKillsByPlayer1": {
+            "prefix": ["cAttributeKillsByPlayer1"],
+            "body": [
+                "cAttributeKillsByPlayer1"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeKillsByPlayer2": {
+            "prefix": ["cAttributeKillsByPlayer2"],
+            "body": [
+                "cAttributeKillsByPlayer2"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeKillsByPlayer3": {
+            "prefix": ["cAttributeKillsByPlayer3"],
+            "body": [
+                "cAttributeKillsByPlayer3"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeKillsByPlayer4": {
+            "prefix": ["cAttributeKillsByPlayer4"],
+            "body": [
+                "cAttributeKillsByPlayer4"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeKillsByPlayer5": {
+            "prefix": ["cAttributeKillsByPlayer5"],
+            "body": [
+                "cAttributeKillsByPlayer5"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeKillsByPlayer6": {
+            "prefix": ["cAttributeKillsByPlayer6"],
+            "body": [
+                "cAttributeKillsByPlayer6"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeKillsByPlayer7": {
+            "prefix": ["cAttributeKillsByPlayer7"],
+            "body": [
+                "cAttributeKillsByPlayer7"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeKillsByPlayer8": {
+            "prefix": ["cAttributeKillsByPlayer8"],
+            "body": [
+                "cAttributeKillsByPlayer8"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeRazingsByPlayer1": {
+            "prefix": ["cAttributeRazingsByPlayer1"],
+            "body": [
+                "cAttributeRazingsByPlayer1"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeRazingsByPlayer2": {
+            "prefix": ["cAttributeRazingsByPlayer2"],
+            "body": [
+                "cAttributeRazingsByPlayer2"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeRazingsByPlayer3": {
+            "prefix": ["cAttributeRazingsByPlayer3"],
+            "body": [
+                "cAttributeRazingsByPlayer3"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeRazingsByPlayer4": {
+            "prefix": ["cAttributeRazingsByPlayer4"],
+            "body": [
+                "cAttributeRazingsByPlayer4"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeRazingsByPlayer5": {
+            "prefix": ["cAttributeRazingsByPlayer5"],
+            "body": [
+                "cAttributeRazingsByPlayer5"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeRazingsByPlayer6": {
+            "prefix": ["cAttributeRazingsByPlayer6"],
+            "body": [
+                "cAttributeRazingsByPlayer6"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeRazingsByPlayer7": {
+            "prefix": ["cAttributeRazingsByPlayer7"],
+            "body": [
+                "cAttributeRazingsByPlayer7"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeRazingsByPlayer8": {
+            "prefix": ["cAttributeRazingsByPlayer8"],
+            "body": [
+                "cAttributeRazingsByPlayer8"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeValueKilledByOthers": {
+            "prefix": ["cAttributeValueKilledByOthers"],
+            "body": [
+                "cAttributeValueKilledByOthers"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeValueRazedByOthers": {
+            "prefix": ["cAttributeValueRazedByOthers"],
+            "body": [
+                "cAttributeValueRazedByOthers"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeKilledByOthers": {
+            "prefix": ["cAttributeKilledByOthers"],
+            "body": [
+                "cAttributeKilledByOthers"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeRazedByOthers": {
+            "prefix": ["cAttributeRazedByOthers"],
+            "body": [
+                "cAttributeRazedByOthers"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeTributeFromPlayer1": {
+            "prefix": ["cAttributeTributeFromPlayer1"],
+            "body": [
+                "cAttributeTributeFromPlayer1"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeTributeFromPlayer2": {
+            "prefix": ["cAttributeTributeFromPlayer2"],
+            "body": [
+                "cAttributeTributeFromPlayer2"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeTributeFromPlayer3": {
+            "prefix": ["cAttributeTributeFromPlayer3"],
+            "body": [
+                "cAttributeTributeFromPlayer3"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeTributeFromPlayer4": {
+            "prefix": ["cAttributeTributeFromPlayer4"],
+            "body": [
+                "cAttributeTributeFromPlayer4"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeTributeFromPlayer5": {
+            "prefix": ["cAttributeTributeFromPlayer5"],
+            "body": [
+                "cAttributeTributeFromPlayer5"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeTributeFromPlayer6": {
+            "prefix": ["cAttributeTributeFromPlayer6"],
+            "body": [
+                "cAttributeTributeFromPlayer6"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeTributeFromPlayer7": {
+            "prefix": ["cAttributeTributeFromPlayer7"],
+            "body": [
+                "cAttributeTributeFromPlayer7"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeTributeFromPlayer8": {
+            "prefix": ["cAttributeTributeFromPlayer8"],
+            "body": [
+                "cAttributeTributeFromPlayer8"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeValueCurrentUnits": {
+            "prefix": ["cAttributeValueCurrentUnits"],
+            "body": [
+                "cAttributeValueCurrentUnits"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeValueCurrentBuildings": {
+            "prefix": ["cAttributeValueCurrentBuildings"],
+            "body": [
+                "cAttributeValueCurrentBuildings"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeFoodTotal": {
+            "prefix": ["cAttributeFoodTotal"],
+            "body": [
+                "cAttributeFoodTotal"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeWoodTotal": {
+            "prefix": ["cAttributeWoodTotal"],
+            "body": [
+                "cAttributeWoodTotal"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeStoneTotal": {
+            "prefix": ["cAttributeStoneTotal"],
+            "body": [
+                "cAttributeStoneTotal"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeGoldTotal": {
+            "prefix": ["cAttributeGoldTotal"],
+            "body": [
+                "cAttributeGoldTotal"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeTotalValueOfKills": {
+            "prefix": ["cAttributeTotalValueOfKills"],
+            "body": [
+                "cAttributeTotalValueOfKills"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeTotalTributeReceived": {
+            "prefix": ["cAttributeTotalTributeReceived"],
+            "body": [
+                "cAttributeTotalTributeReceived"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeTotalValueOfRazings": {
+            "prefix": ["cAttributeTotalValueOfRazings"],
+            "body": [
+                "cAttributeTotalValueOfRazings"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeTotalCastlesBuilt": {
+            "prefix": ["cAttributeTotalCastlesBuilt"],
+            "body": [
+                "cAttributeTotalCastlesBuilt"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeTotalWondersBuilt": {
+            "prefix": ["cAttributeTotalWondersBuilt"],
+            "body": [
+                "cAttributeTotalWondersBuilt"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeTributeScore": {
+            "prefix": ["cAttributeTributeScore"],
+            "body": [
+                "cAttributeTributeScore"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeConvertMinAdj": {
+            "prefix": ["cAttributeConvertMinAdj"],
+            "body": [
+                "cAttributeConvertMinAdj"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeConvertMaxAdj": {
+            "prefix": ["cAttributeConvertMaxAdj"],
+            "body": [
+                "cAttributeConvertMaxAdj"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeConvertResistMinAdj": {
+            "prefix": ["cAttributeConvertResistMinAdj"],
+            "body": [
+                "cAttributeConvertResistMinAdj"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeConvertResistMaxAdj": {
+            "prefix": ["cAttributeConvertResistMaxAdj"],
+            "body": [
+                "cAttributeConvertResistMaxAdj"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeConvertBuildingMin": {
+            "prefix": ["cAttributeConvertBuildingMin"],
+            "body": [
+                "cAttributeConvertBuildingMin"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeConvertBuildingMax": {
+            "prefix": ["cAttributeConvertBuildingMax"],
+            "body": [
+                "cAttributeConvertBuildingMax"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeConvertBuildingChance": {
+            "prefix": ["cAttributeConvertBuildingChance"],
+            "body": [
+                "cAttributeConvertBuildingChance"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeSpies": {
+            "prefix": ["cAttributeSpies"],
+            "body": [
+                "cAttributeSpies"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeValueWondersCastles": {
+            "prefix": ["cAttributeValueWondersCastles"],
+            "body": [
+                "cAttributeValueWondersCastles"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeFoodScore": {
+            "prefix": ["cAttributeFoodScore"],
+            "body": [
+                "cAttributeFoodScore"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeWoodScore": {
+            "prefix": ["cAttributeWoodScore"],
+            "body": [
+                "cAttributeWoodScore"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeStoneScore": {
+            "prefix": ["cAttributeStoneScore"],
+            "body": [
+                "cAttributeStoneScore"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeGoldScore": {
+            "prefix": ["cAttributeGoldScore"],
+            "body": [
+                "cAttributeGoldScore"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeWoodBonus": {
+            "prefix": ["cAttributeWoodBonus"],
+            "body": [
+                "cAttributeWoodBonus"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeFoodBonus": {
+            "prefix": ["cAttributeFoodBonus"],
+            "body": [
+                "cAttributeFoodBonus"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeRelicRate": {
+            "prefix": ["cAttributeRelicRate"],
+            "body": [
+                "cAttributeRelicRate"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeHeresy": {
+            "prefix": ["cAttributeHeresy"],
+            "body": [
+                "cAttributeHeresy"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeTheocracy": {
+            "prefix": ["cAttributeTheocracy"],
+            "body": [
+                "cAttributeTheocracy"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeCrenellations": {
+            "prefix": ["cAttributeCrenellations"],
+            "body": [
+                "cAttributeCrenellations"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeConstructionRateMod": {
+            "prefix": ["cAttributeConstructionRateMod"],
+            "body": [
+                "cAttributeConstructionRateMod"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeHunWonderBonus": {
+            "prefix": ["cAttributeHunWonderBonus"],
+            "body": [
+                "cAttributeHunWonderBonus"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeSpiesDiscount": {
+            "prefix": ["cAttributeSpiesDiscount"],
+            "body": [
+                "cAttributeSpiesDiscount"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeTemporaryMapReveal": {
+            "prefix": ["cAttributeTemporaryMapReveal"],
+            "body": [
+                "cAttributeTemporaryMapReveal"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeRvealInitialType": {
+            "prefix": ["cAttributeRvealInitialType"],
+            "body": [
+                "cAttributeRvealInitialType"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeElevationBonusHigher": {
+            "prefix": ["cAttributeElevationBonusHigher"],
+            "body": [
+                "cAttributeElevationBonusHigher"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeElevationBonusLoweer": {
+            "prefix": ["cAttributeElevationBonusLoweer"],
+            "body": [
+                "cAttributeElevationBonusLoweer"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeTriggerSharedLOS": {
+            "prefix": ["cAttributeTriggerSharedLOS"],
+            "body": [
+                "cAttributeTriggerSharedLOS"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeUnused0": {
+            "prefix": ["cAttributeUnused0"],
+            "body": [
+                "cAttributeUnused0"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeUnused1": {
+            "prefix": ["cAttributeUnused1"],
+            "body": [
+                "cAttributeUnused1"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeUnused2": {
+            "prefix": ["cAttributeUnused2"],
+            "body": [
+                "cAttributeUnused2"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeUnused3": {
+            "prefix": ["cAttributeUnused3"],
+            "body": [
+                "cAttributeUnused3"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeUnused4": {
+            "prefix": ["cAttributeUnused4"],
+            "body": [
+                "cAttributeUnused4"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeUnused5": {
+            "prefix": ["cAttributeUnused5"],
+            "body": [
+                "cAttributeUnused5"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeUnused6": {
+            "prefix": ["cAttributeUnused6"],
+            "body": [
+                "cAttributeUnused6"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeUnused7": {
+            "prefix": ["cAttributeUnused7"],
+            "body": [
+                "cAttributeUnused7"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeVillagersKilledByGaia": {
+            "prefix": ["cAttributeVillagersKilledByGaia"],
+            "body": [
+                "cAttributeVillagersKilledByGaia"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeVillgaersKilledByAnimal": {
+            "prefix": ["cAttributeVillgaersKilledByAnimal"],
+            "body": [
+                "cAttributeVillgaersKilledByAnimal"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeVillagersKilledByAIPlayer": {
+            "prefix": ["cAttributeVillagersKilledByAIPlayer"],
+            "body": [
+                "cAttributeVillagersKilledByAIPlayer"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeVillagersKilledByHumanPlayer": {
+            "prefix": ["cAttributeVillagersKilledByHumanPlayer"],
+            "body": [
+                "cAttributeVillagersKilledByHumanPlayer"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeFoodGeneration": {
+            "prefix": ["cAttributeFoodGeneration"],
+            "body": [
+                "cAttributeFoodGeneration"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeWoodGeneration": {
+            "prefix": ["cAttributeWoodGeneration"],
+            "body": [
+                "cAttributeWoodGeneration"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeStoneGeneration": {
+            "prefix": ["cAttributeStoneGeneration"],
+            "body": [
+                "cAttributeStoneGeneration"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeGoldGeneration": {
+            "prefix": ["cAttributeGoldGeneration"],
+            "body": [
+                "cAttributeGoldGeneration"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeSpawnCap": {
+            "prefix": ["cAttributeSpawnCap"],
+            "body": [
+                "cAttributeSpawnCap"
+                ],
+                "description": ""
+    },
+    "xs-constant-DarkAge": {
+            "prefix": ["cDarkAge"],
+            "body": [
+                "cDarkAge"
+                ],
+                "description": ""
+    },
+    "xs-constant-FeudalAge": {
+            "prefix": ["cFeudalAge"],
+            "body": [
+                "cFeudalAge"
+                ],
+                "description": ""
+    },
+    "xs-constant-CastleAge": {
+            "prefix": ["cCastleAge"],
+            "body": [
+                "cCastleAge"
+                ],
+                "description": ""
+    },
+    "xs-constant-ImperialAge": {
+            "prefix": ["cImperialAge"],
+            "body": [
+                "cImperialAge"
+                ],
+                "description": ""
+    },
+    "xs-constant-SetAttribute": {
+            "prefix": ["cSetAttribute"],
+            "body": [
+                "cSetAttribute"
+                ],
+                "description": ""
+    },
+    "xs-constant-ModResource": {
+            "prefix": ["cModResource"],
+            "body": [
+                "cModResource"
+                ],
+                "description": ""
+    },
+    "xs-constant-EnableObject": {
+            "prefix": ["cEnableObject"],
+            "body": [
+                "cEnableObject"
+                ],
+                "description": ""
+    },
+    "xs-constant-UpgradeUnit": {
+            "prefix": ["cUpgradeUnit"],
+            "body": [
+                "cUpgradeUnit"
+                ],
+                "description": ""
+    },
+    "xs-constant-AddAttribute": {
+            "prefix": ["cAddAttribute"],
+            "body": [
+                "cAddAttribute"
+                ],
+                "description": ""
+    },
+    "xs-constant-MulAttribute": {
+            "prefix": ["cMulAttribute"],
+            "body": [
+                "cMulAttribute"
+                ],
+                "description": ""
+    },
+    "xs-constant-MulResource": {
+            "prefix": ["cMulResource"],
+            "body": [
+                "cMulResource"
+                ],
+                "description": ""
+    },
+    "xs-constant-EnableTech": {
+            "prefix": ["cEnableTech"],
+            "body": [
+                "cEnableTech"
+                ],
+                "description": ""
+    },
+    "xs-constant-ModifyTech": {
+            "prefix": ["cModifyTech"],
+            "body": [
+                "cModifyTech"
+                ],
+                "description": ""
+    },
+    "xs-constant-SetPlayerData": {
+            "prefix": ["cSetPlayerData"],
+            "body": [
+                "cSetPlayerData"
+                ],
+                "description": ""
+    },
+    "xs-constant-SetTechCost": {
+            "prefix": ["cSetTechCost"],
+            "body": [
+                "cSetTechCost"
+                ],
+                "description": ""
+    },
+    "xs-constant-AddTechCost": {
+            "prefix": ["cAddTechCost"],
+            "body": [
+                "cAddTechCost"
+                ],
+                "description": ""
+    },
+    "xs-constant-DisableTech": {
+            "prefix": ["cDisableTech"],
+            "body": [
+                "cDisableTech"
+                ],
+                "description": ""
+    },
+    "xs-constant-ModTechTime": {
+            "prefix": ["cModTechTime"],
+            "body": [
+                "cModTechTime"
+                ],
+                "description": ""
+    },
+    "xs-constant-GaiaSetAttribute": {
+            "prefix": ["cGaiaSetAttribute"],
+            "body": [
+                "cGaiaSetAttribute"
+                ],
+                "description": ""
+    },
+    "xs-constant-GaiaModResource": {
+            "prefix": ["cGaiaModResource"],
+            "body": [
+                "cGaiaModResource"
+                ],
+                "description": ""
+    },
+    "xs-constant-GaiaEnableObject": {
+            "prefix": ["cGaiaEnableObject"],
+            "body": [
+                "cGaiaEnableObject"
+                ],
+                "description": ""
+    },
+    "xs-constant-GaiaUpgradeUnit": {
+            "prefix": ["cGaiaUpgradeUnit"],
+            "body": [
+                "cGaiaUpgradeUnit"
+                ],
+                "description": ""
+    },
+    "xs-constant-GaiaAddAttribute": {
+            "prefix": ["cGaiaAddAttribute"],
+            "body": [
+                "cGaiaAddAttribute"
+                ],
+                "description": ""
+    },
+    "xs-constant-GaiaMulAttribute": {
+            "prefix": ["cGaiaMulAttribute"],
+            "body": [
+                "cGaiaMulAttribute"
+                ],
+                "description": ""
+    },
+    "xs-constant-GaiaMulResource": {
+            "prefix": ["cGaiaMulResource"],
+            "body": [
+                "cGaiaMulResource"
+                ],
+                "description": ""
+    },
+    "xs-constant-GaiaEnableTech": {
+            "prefix": ["cGaiaEnableTech"],
+            "body": [
+                "cGaiaEnableTech"
+                ],
+                "description": ""
+    },
+    "xs-constant-GaiaModifyTech": {
+            "prefix": ["cGaiaModifyTech"],
+            "body": [
+                "cGaiaModifyTech"
+                ],
+                "description": ""
+    },
+    "xs-constant-GaiaSetPlayerData": {
+            "prefix": ["cGaiaSetPlayerData"],
+            "body": [
+                "cGaiaSetPlayerData"
+                ],
+                "description": ""
+    },
+    "xs-constant-GaiaSetTechCost": {
+            "prefix": ["cGaiaSetTechCost"],
+            "body": [
+                "cGaiaSetTechCost"
+                ],
+                "description": ""
+    },
+    "xs-constant-GaiaAddTechCost": {
+            "prefix": ["cGaiaAddTechCost"],
+            "body": [
+                "cGaiaAddTechCost"
+                ],
+                "description": ""
+    },
+    "xs-constant-GaiaDisableTech": {
+            "prefix": ["cGaiaDisableTech"],
+            "body": [
+                "cGaiaDisableTech"
+                ],
+                "description": ""
+    },
+    "xs-constant-GaiaModTechTime": {
+            "prefix": ["cGaiaModTechTime"],
+            "body": [
+                "cGaiaModTechTime"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeDisable": {
+            "prefix": ["cAttributeDisable"],
+            "body": [
+                "cAttributeDisable"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeEnable": {
+            "prefix": ["cAttributeEnable"],
+            "body": [
+                "cAttributeEnable"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeForce": {
+            "prefix": ["cAttributeForce"],
+            "body": [
+                "cAttributeForce"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttributeSet": {
+            "prefix": ["cAttributeSet"],
+            "body": [
+                "cAttributeSet"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttriubteAdd": {
+            "prefix": ["cAttriubteAdd"],
+            "body": [
+                "cAttriubteAdd"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttrSetTime": {
+            "prefix": ["cAttrSetTime"],
+            "body": [
+                "cAttrSetTime"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttrAddTime": {
+            "prefix": ["cAttrAddTime"],
+            "body": [
+                "cAttrAddTime"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttrSetFoodCost": {
+            "prefix": ["cAttrSetFoodCost"],
+            "body": [
+                "cAttrSetFoodCost"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttrSetWoodCost": {
+            "prefix": ["cAttrSetWoodCost"],
+            "body": [
+                "cAttrSetWoodCost"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttrSetStoneCost": {
+            "prefix": ["cAttrSetStoneCost"],
+            "body": [
+                "cAttrSetStoneCost"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttrSetGoldCost": {
+            "prefix": ["cAttrSetGoldCost"],
+            "body": [
+                "cAttrSetGoldCost"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttrAddFoodCost": {
+            "prefix": ["cAttrAddFoodCost"],
+            "body": [
+                "cAttrAddFoodCost"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttrAddWoodCost": {
+            "prefix": ["cAttrAddWoodCost"],
+            "body": [
+                "cAttrAddWoodCost"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttrAddStoneCost": {
+            "prefix": ["cAttrAddStoneCost"],
+            "body": [
+                "cAttrAddStoneCost"
+                ],
+                "description": ""
+    },
+    "xs-constant-AttrAddGoldCost": {
+            "prefix": ["cAttrAddGoldCost"],
+            "body": [
+                "cAttrAddGoldCost"
+                ],
+                "description": ""
+    }
+}

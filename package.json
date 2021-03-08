@@ -1,0 +1,39 @@
+{
+    "name": "vscode-xs",
+    "displayName": "AoE XS Scripting",
+    "description": "AoE XS Script Support for VS Code",
+    "version": "0.0.1",
+    "publisher": "Alian713",
+    "engines": {
+        "vscode": "^1.54.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Snippets"
+    ],
+    "license": "See LICENSE.md",
+	"icon": "icon.png",
+    "keywords": [
+		"vscode",
+		"xs",
+		"external subroutines",
+        "age of empires"
+	],
+    "contributes": {
+        "languages": [{
+            "id": "xs",
+            "aliases": ["External Subroutine", "xs"],
+            "extensions": [".xs"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "xs",
+            "scopeName": "source.xs",
+            "path": "./syntaxes/xs.tmLanguage.json"
+        }],
+        "snippets": [{
+            "language": "xs",
+            "path": "./snippets/xs.json"
+        }]
+    }
+}
