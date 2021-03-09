@@ -1,19 +1,19 @@
 {
-    "name": "vscode-xs",
-    "displayName": "AoE XS Scripting",
-    "description": "AoE XS Script Support for VS Code",
-    "version": "0.0.1",
-    "publisher": "Alian713",
-    "engines": {
-        "vscode": "^1.54.0"
-    },
-    "categories": [
-        "Programming Languages",
-        "Snippets"
-    ],
-    "license": "See LICENSE.md",
+	"name": "vscode-xs",
+	"displayName": "AoE XS Scripting",
+	"description": "AoE XS Script Support for VS Code",
+	"version": "0.0.1",
+	"publisher": "Divy",
+	"engines": {
+		"vscode": "^1.54.0"
+	},
+	"categories": [
+		"Programming Languages",
+		"Snippets"
+	],
+	"license": "See LICENSE.md",
 	"icon": "icon.png",
-    "bugs": {
+	"bugs": {
 		"url": "https://github.com/Divy1211/vsc-xs-support/issues"
 	},
 	"homepage": "https://github.com/Divy1211/vsc-xs-support",
@@ -21,27 +21,43 @@
 		"type": "git",
 		"url": "https://github.com/Divy1211/vsc-xs-support.git"
 	},
-    "keywords": [
+	"keywords": [
 		"vscode",
 		"xs",
 		"external subroutines",
-        "age of empires"
+		"age of empires"
 	],
-    "contributes": {
-        "languages": [{
-            "id": "xs",
-            "aliases": ["External Subroutine", "xs"],
-            "extensions": [".xs"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "xs",
-            "scopeName": "source.xs",
-            "path": "./syntaxes/xs.tmLanguage.json"
-        }],
-        "snippets": [{
-            "language": "xs",
-            "path": "./snippets/xs.json"
-        }]
-    }
+	"contributes": {
+		"languages": [
+			{
+				"id": "xs",
+				"aliases": [
+					"External Subroutine",
+					"xs"
+				],
+				"extensions": [
+					".xs"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "xs",
+				"scopeName": "source.xs",
+				"path": "./syntaxes/xs.tmLanguage.json"
+			}
+		],
+		"snippets": [
+			{
+				"language": "xs",
+				"path": "./snippets/xs.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "4fece378-379e-4e94-9b91-60f81e7cb39f",
+		"publisherDisplayName": "Divy",
+		"publisherId": "7ec14592-0f8c-4dae-912d-7fb788be5245"
+	}
 }
