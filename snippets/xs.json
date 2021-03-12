@@ -2313,5 +2313,26 @@
                 "cAttrAddGoldCost"
                 ],
                 "description": ""
+    },
+    "xs-constant-InvalidVector": {
+            "prefix": ["cInvalidVector"],
+            "body": [
+                "cInvalidVector"
+                ],
+                "description": ""
+    },
+    "xs-constant-OriginVector": {
+            "prefix": ["cOriginVector"],
+            "body": [
+                "cOriginVector"
+                ],
+                "description": ""
+    },
+    "xs-constant-ActivationTime": {
+            "prefix": ["cActivationTime"],
+            "body": [
+                "cActivationTime"
+                ],
+                "description": ""
     }
 }
