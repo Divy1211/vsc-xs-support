@@ -2,7 +2,7 @@
 	"name": "vscode-xs",
 	"displayName": "AoE XS Scripting",
 	"description": "AoE XS Script Support for VS Code",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"publisher": "Divy",
 	"engines": {
 		"vscode": "^1.54.0"
