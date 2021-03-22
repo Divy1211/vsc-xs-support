@@ -441,7 +441,7 @@
     "xs-effect-amount": {
         "prefix": ["xsEffectAmount"],
         "body": [
-            "xsEffectAmount(${1:int effectID}, ${2:int unitOrTechnologyID}, ${3:int attributeOrOperation}, ${4:int value}, {5: int playerNumber})"
+            "xsEffectAmount(${1:int effectID}, ${2:int unitOrTechnologyID}, ${3:int attributeOrOperation}, ${4:int value}, ${5: int playerNumber})"
             ],
             "description": "Returns the int value for the number of players in the game"
     },

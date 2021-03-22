@@ -21,9 +21,13 @@ XS Scripts are External Subroutines used by the games AoE2, AoE3 and AoM
 
 ## Release Notes
 
+### 0.0.3
+
+Fixed xsEffectAmount auto-completion not working as intended.
+
 ### 0.0.2
 
-Added Missing Constants and in built functions are now highlighted differently from user defined functions
+Added Missing Constants and in built functions are now highlighted differently from user defined functions.
 
 ### 0.0.1
 
