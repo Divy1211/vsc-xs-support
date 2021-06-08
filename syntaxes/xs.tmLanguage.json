@@ -1,0 +1,116 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "External Subroutine",
+    "patterns": [
+        {
+            "include": "#comments-multiline"
+        },
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#data-types"
+        },
+        {
+            "include": "#operators"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#numbers"
+        },
+		{
+            "include": "#decimal-point"
+        },
+        {
+            "include": "#control-statements"
+        },
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#rules"
+        },
+        {
+            "include": "#built-in-functions"
+        },
+        {
+            "include": "#user-defined-functions"
+        },
+        {
+            "include": "#built-in-constants"
+        },
+        {
+            "include": "#class-names"
+        },
+        {
+            "include": "#punctuations"
+        }
+    ],
+    "repository": {
+        "comments-multiline": {
+            "name": "comment.xs",
+            "begin": "/\\*",
+            "end": "\\*/"
+        },
+        "comments": {
+            "name": "comment.xs",
+            "begin": "//",
+            "end": "\n"
+        },
+        "data-types": {
+            "name": "storage.type.xs",
+            "match": "\\b(void|int|float|bool|String|Vector|string|vector|char|long|double|rule)\\b"
+        },
+        "operators": {
+			"name": "keyword.operator.xs",
+			"match": "(\\+|-|\\*|\\/|%|&&|\\|\\||=|>|<|!)"
+        },
+        "strings": {
+            "name": "string.quoted.double.xs",
+            "match": "(?<=\").+(?=\")"
+        },
+        "numbers": {
+			"name": "constant.numeric.xs",
+			"match": "\\b[0-9]+\\b"
+        },
+		"decimal-point": {
+			"name": "constant.numeric.decimal.xs",
+			"match": "\\.(?=[0-9]+\\b)"
+        },
+        "control-statements": {
+			"name": "keyword.xs",
+			"match": "\\b(if|else|while|for|switch|case|default)\\b"
+        },
+        "keywords": {
+			"name": "keyword.xs",
+			"match": "\\b(break|continue|include|return|extern|const|class)\\b"
+        },
+        "rules": {
+			"name": "keyword.xs",
+			"match": "\\b(minInterval|maxInterval|highFrequency|priority|active|inactive|group|runImmediately)\\b"
+        },
+        "built-in-functions": {
+			"name": "support.function.xs",
+			"match": "\\b(xsDisableRule|xsDisableSelf|xsEnableRule|xsIsRuleEnabled|xsSetRulePriority|xsSetRulePrioritySelf|xsSetRuleMinInterval|xsSetRuleMinIntervalSelf|xsSetRuleMaxInterval|xsSetRuleMaxIntervalSelf|xsEnableRuleGroup|xsDisableRuleGroup|xsIsRuleGroupEnabled|xsVectorGetX|xsVectorGetY|xsVectorGetZ|xsVectorSetX|xsVectorSetY|xsVectorSetZ|xsVectorSet|xsVectorLength|xsVectorNormalize|xsArrayCreateInt|xsArraySetInt|xsArrayGetInt|xsArrayResizeInt|xsArrayCreateFloat|xsArraySetFloat|xsArrayGetFloat|xsArrayResizeFloat|xsArrayCreateBool|xsArraySetBool|xsArrayGetInt|xsArrayResizeBool|xsArrayCreateString|xsArraySetString|xsArrayGetString|xsArrayResizeString|xsArrayCreateVector|xsArraySetVector|xsArrayGetVector|xsArrayResizeVector|xsArrayGetSize|xsDumpArrays|xsGetContextPlayer|xsSetContextPlayer|xsGetTime|xsAddRuntimeEvent|xsGetFuntionID|abs|sqrt|pow|sin|cos|tan|asin|acos|atan|atan2|xsChatData|xsGetNumPlayers|xsPlayerAttribute|xsSetPlayerAttribute|xsEffectAmount|xsTriggerVariable|xsSetTriggerVariable|xsBreakPoint)\\b"
+        },
+        "user-defined-functions": {
+            "name": "entity.name.function.xs",
+            "match": "[a-zA-Z_]+\\w+\\s*(?=\\()"
+        },
+        "built-in-constants": {
+			"name": "constant.language.xs",
+			"match": "\\b(cAttributeFood|cAttributeWood|cAttributeStone|cAttributeGold|cAttributePopulationCap|cAttributeReligion|cAttributeCurrentAge|cAttributeRelics|cAttributeTrageBonus|cAttributeTradeGoods|cAttributeTradeProducation|cAttributePopulation|cAttributeDecay|cAttributeDiscovery|cAttributeRuins|cAttributeMeat|cAttributeBerries|cAttributeFish|cAttributeKills|cAttributeResearchCount|cAttributeExploration|cAttributeConvertPriest|cAttributeConvertBuilding|cAttributeBuildingLimit|cAttributeFoodLimit|cAttributeUnitLimit|cAttributeMaintence|cAttributeFaith|cAttributeFaithRechargeRate|cAttributeFarmFood|cAttributeCivilianPopulation|cAttributeAllTechsAchieved|cAttributeMilitaryPopulation|cAttributeConversions|cAttributeWonder|cAttributeRazings|cAttributeKillRatio|cAttributePlayerKilled|cAttributeTributeInefficency|cAttributeGoldBonus|cAttributeTownCenterUnavailable|cAttributeGoldCounter|cAttributeWriting|cAttributeMonasteries|cAttributeTribute|cAttributeHoldRuins|cAttributeHoldRelics|cAttributeOre|cAttributeCapturedUnit|cAttributeTradeGoodQuality|cAttributeTradeMarketLevel|cAttributeFormations|cAttributeBuildingHouseRate|cAttributeGatherTaxRate|cAttributeGatherAccumalation|cAttributeSalvageDecayRate|cAttributeAllowFormations|cAttributeCanConvert|cAttributePlayer1Kills|cAttributePlayer2Kills|cAttributePlayer3Kills|cAttributePlayer4Kills|cAttributePlayer5Kills|cAttributePlayer6Kills|cAttributePlayer7Kills|cAttributePlayer8Kills|cAttributeConvertResistance|cAttributeTradeVigRate|cAttributeStoneBonus|cAttributeQueuedCount|cAttributeTrainingCount|cAttributeRaider|cAttributeBoardingRechargeRate|cAttributeStartingVillagers|cAttributeResearchCostMod|cAttributeResearchTimeMod|cAttributeConvertBoats|cAttributeFishTrapFood|cAttributeHealRateModifer|cAttributeHealRange|cAttributeStartingFood|cAttributeStartingWood|cAttributeStartingStone|cAttributeStartingGold|cAttributeRaiderAbility|cAttributeBerserkerHealTimer|cAttributeDominantSheepControl|cAttributeObjectCostSummation|cAttributeResearchCostSummation|cAttributeRelicIncomeSummation|cAttributeTradeIncomeSummation|cAttributePlayer1Tribute|cAttributePlayer2Tribute|cAttributePlayer3Tribute|cAttributePlayer4Tribute|cAttributePlayer5Tribute|cAttributePlayer6Tribute|cAttributePlayer7Tribute|cAttributePlayer8Tribute|cAttributePlayer1KillValue|cAttributePlayer2KillValue|cAttributePlayer3KillValue|cAttributePlayer4KillValue|cAttributePlayer5KillValue|cAttributePlayer6KillValue|cAttributePlayer7KillValue|cAttributePlayer8KillValue|cAttributePlayer1Razings|cAttributePlayer2Razings|cAttributePlayer3Razings|cAttributePlayer4Razings|cAttributePlayer5Razings|cAttributePlayer6Razings|cAttributePlayer7Razings|cAttributePlayer8Razings|cAttributePlayer1RazingValue|cAttributePlayer2RazingValue|cAttributePlayer3RazingValue|cAttributePlayer4RazingValue|cAttributePlayer5RazingValue|cAttributePlayer6RazingValue|cAttributePlayer7RazingValue|cAttributePlayer8RazingValue|cAttributeCastle|cAttributeHitPointRazings|cAttributeKillsByPlayer1|cAttributeKillsByPlayer2|cAttributeKillsByPlayer3|cAttributeKillsByPlayer4|cAttributeKillsByPlayer5|cAttributeKillsByPlayer6|cAttributeKillsByPlayer7|cAttributeKillsByPlayer8|cAttributeRazingsByPlayer1|cAttributeRazingsByPlayer2|cAttributeRazingsByPlayer3|cAttributeRazingsByPlayer4|cAttributeRazingsByPlayer5|cAttributeRazingsByPlayer6|cAttributeRazingsByPlayer7|cAttributeRazingsByPlayer8|cAttributeValueKilledByOthers|cAttributeValueRazedByOthers|cAttributeKilledByOthers|cAttributeRazedByOthers|cAttributeTributeFromPlayer1|cAttributeTributeFromPlayer2|cAttributeTributeFromPlayer3|cAttributeTributeFromPlayer4|cAttributeTributeFromPlayer5|cAttributeTributeFromPlayer6|cAttributeTributeFromPlayer7|cAttributeTributeFromPlayer8|cAttributeValueCurrentUnits|cAttributeValueCurrentBuildings|cAttributeFoodTotal|cAttributeWoodTotal|cAttributeStoneTotal|cAttributeGoldTotal|cAttributeTotalValueOfKills|cAttributeTotalTributeReceived|cAttributeTotalValueOfRazings|cAttributeTotalCastlesBuilt|cAttributeTotalWondersBuilt|cAttributeTributeScore|cAttributeConvertMinAdj|cAttributeConvertMaxAdj|cAttributeConvertResistMinAdj|cAttributeConvertResistMaxAdj|cAttributeConvertBuildingMin|cAttributeConvertBuildingMax|cAttributeConvertBuildingChance|cAttributeSpies|cAttributeValueWondersCastles|cAttributeFoodScore|cAttributeWoodScore|cAttributeStoneScore|cAttributeGoldScore|cAttributeWoodBonus|cAttributeFoodBonus|cAttributeRelicRate|cAttributeHeresy|cAttributeTheocracy|cAttributeCrenellations|cAttributeConstructionRateMod|cAttributeHunWonderBonus|cAttributeSpiesDiscount|cAttributeTemporaryMapReveal|cAttributeRvealInitialType|cAttributeElevationBonusHigher|cAttributeElevationBonusLoweer|cAttributeTriggerSharedLOS|cAttributeUnused0|cAttributeUnused1|cAttributeUnused2|cAttributeUnused3|cAttributeUnused4|cAttributeUnused5|cAttributeUnused6|cAttributeUnused7|cAttributeVillagersKilledByGaia|cAttributeVillgaersKilledByAnimal|cAttributeVillagersKilledByAIPlayer|cAttributeVillagersKilledByHumanPlayer|cAttributeFoodGeneration|cAttributeWoodGeneration|cAttributeStoneGeneration|cAttributeGoldGeneration|cAttributeSpawnCap|cDarkAge|cFeudalAge|cCastleAge|cImperialAge|cSetAttribute|cModResource|cEnableObject|cUpgradeUnit|cAddAttribute|cMulAttribute|cMulResource|cEnableTech|cModifyTech|cSetPlayerData|cSetTechCost|cAddTechCost|cDisableTech|cModTechTime|cGaiaSetAttribute|cGaiaModResource|cGaiaEnableObject|cGaiaUpgradeUnit|cGaiaAddAttribute|cGaiaMulAttribute|cGaiaMulResource|cGaiaEnableTech|cGaiaModifyTech|cGaiaSetPlayerData|cGaiaSetTechCost|cGaiaAddTechCost|cGaiaDisableTech|cGaiaModTechTime|cAttributeDisable|cAttributeEnable|cAttributeForce|cAttributeSet|cAttriubteAdd|cAttrSetTime|cAttrAddTime|cAttrSetFoodCost|cAttrSetWoodCost|cAttrSetStoneCost|cAttrSetGoldCost|cAttrAddFoodCost|cAttrAddWoodCost|cAttrAddStoneCost|cAttrAddGoldCost|cInvalidVector|cOriginVector|cActivationTime)\\b"
+        },
+        "class-names": {
+            "name": "entity.name.class.xs",
+            "match": "[a-zA-Z_]+\\w+(?=\\s+{)"
+        },
+        "punctuations": {
+            "name": "punctuation.xs",
+            "match": "[.,;:'\"{}\\[\\]()]"
+        }
+    },
+    "scopeName": "source.xs"
+}

@@ -1,0 +1,1137 @@
+{
+    "main": {
+        "name": "main",
+        "return_type": "void",
+        "params": [],
+        "desc": "When defined, this function automatically runs when the XS file is included in an RMS. This function should never be declared with any arguments!"
+    },
+    "xsDisableRule": {
+        "name": "xsDisableRule",
+        "return_type": "void",
+        "params": [
+            {
+                "name": "ruleName",
+                "type": "String",
+                "required": true,
+                "desc": "The name of the rule to disable"
+            }
+        ],
+        "desc": "Disables the given rule."
+    },
+    "xsDisableSelf": {
+        "name": "xsDisableSelf",
+        "return_type": "void",
+        "params": [],
+        "desc": "Disables the rule this function is called inside. Cannot be used outside of a rule's body!"
+    },
+    "xsEnableRule": {
+        "name": "xsEnableRule",
+        "return_type": "void",
+        "params": [
+            {
+                "name": "ruleName",
+                "type": "String",
+                "required": true,
+                "desc": "The name of the rule to enable"
+            }
+        ],
+        "desc": "Enables the given rule."
+    },
+    "xsIsRuleEnabled": {
+        "name": "xsIsRuleEnabled",
+        "return_type": "bool",
+        "params": [
+            {
+                "name": "ruleName",
+                "type": "String",
+                "required": true,
+                "desc": "The name of the rule to check"
+            }
+        ],
+        "desc": "Returns true if the rule is enabled, else returns false."
+    },
+    "xsSetRulePriority": {
+        "name": "xsSetRulePriority",
+        "return_type": "void",
+        "params": [
+            {
+                "name": "ruleName",
+                "type": "String",
+                "required": true,
+                "desc": "The name of the rule to set the priority of"
+            },
+            {
+                "name": "priority",
+                "type": "int",
+                "required": true,
+                "desc": "The new priority of the rule"
+            }
+        ],
+        "desc": "Sets the priority of the given rule."
+    },
+    "xsSetRulePrioritySelf": {
+        "name": "xsSetRulePrioritySelf",
+        "return_type": "void",
+        "params": [
+            {
+                "name": "priority",
+                "type": "int",
+                "required": true,
+                "desc": "The new priority of the rule"
+            }
+        ],
+        "desc": "Sets the priority of the rule this function is called inside. Cannot be used outside of a rule's body!"
+    },
+    "xsSetRuleMinInterval": {
+        "name": "xsSetRuleMinInterval",
+        "return_type": "void",
+        "params": [
+            {
+                "name": "ruleName",
+                "type": "String",
+                "required": true,
+                "desc": "The name of the rule to set the min interval of"
+            },
+            {
+                "name": "interval",
+                "type": "int",
+                "required": true,
+                "desc": "The new min interval of the rule"
+            }
+        ],
+        "desc": "Sets the min interval of the given rule."
+    },
+    "xsSetRuleMinIntervalSelf": {
+        "name": "xsSetRuleMinIntervalSelf",
+        "return_type": "void",
+        "params": [
+            {
+                "name": "interval",
+                "type": "int",
+                "required": true,
+                "desc": "The new min interval of the rule"
+            }
+        ],
+        "desc": "Sets the min interval of the rule this function is called inside. Cannot be used outside of a rule's body!"
+    },
+    "xsSetRuleMaxInterval": {
+        "name": "xsSetRuleMaxInterval",
+        "return_type": "void",
+        "params": [
+            {
+                "name": "ruleName",
+                "type": "String",
+                "required": true,
+                "desc": "The name of the rule to set the max interval of"
+            },
+            {
+                "name": "interval",
+                "type": "int",
+                "required": true,
+                "desc": "The new max interval of the rule"
+            }
+        ],
+        "desc": "Sets the max interval of the given rule."
+    },
+    "xsSetRuleMaxIntervalSelf": {
+        "name": "xsSetRuleMaxIntervalSelf",
+        "return_type": "void",
+        "params": [
+            {
+                "name": "interval",
+                "type": "int",
+                "required": true,
+                "desc": "The new max interval of the rule"
+            }
+        ],
+        "desc": "Sets the max interval of the rule this function is called inside. Cannot be used outside of a rule's body!"
+    },
+    "xsEnableRuleGroup": {
+        "name": "xsEnableRuleGroup",
+        "return_type": "void",
+        "params": [
+            {
+                "name": "ruleGroupName",
+                "type": "String",
+                "required": true,
+                "desc": "The name of the rule group to enable"
+            }
+        ],
+        "desc": "Enables all the rules in the given rule group"
+    },
+    "xsDisableRuleGroup": {
+        "name": "xsDisableRuleGroup",
+        "return_type": "void",
+        "params": [
+            {
+                "name": "ruleGroupName",
+                "type": "String",
+                "required": true,
+                "desc": "The name of the rule group to disable"
+            }
+        ],
+        "desc": "Disables all the rules in the given rule group"
+    },
+    "xsIsRuleGroupEnabled": {
+        "name": "xsIsRuleGroupEnabled",
+        "return_type": "bool",
+        "params": [
+            {
+                "name": "ruleGroupName",
+                "type": "String",
+                "required": true,
+                "desc": "The name of the rule group to check"
+            }
+        ],
+        "desc": "Returns true, if all the rules in the given rule group are enabled"
+    },
+    "xsVectorGetX": {
+        "name": "xsVectorGetX",
+        "return_type": "float",
+        "params": [
+            {
+                "name": "v",
+                "type": "Vector",
+                "required": true,
+                "desc": "The vector to get the X coordinate of"
+            }
+        ],
+        "desc": "The X coordinate of the vector given."
+    },
+    "xsVectorGetY": {
+        "name": "xsVectorGetY",
+        "return_type": "float",
+        "params": [
+            {
+                "name": "v",
+                "type": "Vector",
+                "required": true,
+                "desc": "The vector to get the Y coordinate of"
+            }
+        ],
+        "desc": "The Y coordinate of the vector given."
+    },
+    "xsVectorGetZ": {
+        "name": "xsVectorGetZ",
+        "return_type": "float",
+        "params": [
+            {
+                "name": "v",
+                "type": "Vector",
+                "required": true,
+                "desc": "The vector to get the Z coordinate of"
+            }
+        ],
+        "desc": "The Z coordinate of the vector given."
+    },
+    "xsVectorSetX": {
+        "name": "xsVectorSetX",
+        "return_type": "Vector",
+        "params": [
+            {
+                "name": "v",
+                "type": "Vector",
+                "required": true,
+                "desc": "The vector to modify the X coordinate of"
+            },
+            {
+                "name": "x",
+                "type": "float",
+                "required": true,
+                "desc": "The value to set the X coordinate to"
+            }
+        ],
+        "desc": "Returns a new vector with the X component of the given vector changed to the given value. Note: This function DOES NOT modify the vector given as the parameter!"
+    },
+    "xsVectorSetY": {
+        "name": "xsVectorSetY",
+        "return_type": "Vector",
+        "params": [
+            {
+                "name": "v",
+                "type": "Vector",
+                "required": true,
+                "desc": "The vector to modify the Y coordinate of"
+            },
+            {
+                "name": "y",
+                "type": "float",
+                "required": true,
+                "desc": "The value to set the Y coordinate to"
+            }
+        ],
+        "desc": "Returns a new vector with the Y component of the given vector changed to the given value. Note: This function DOES NOT modify the vector given as the parameter!"
+    },
+    "xsVectorSetZ": {
+        "name": "xsVectorSetZ",
+        "return_type": "Vector",
+        "params": [
+            {
+                "name": "v",
+                "type": "Vector",
+                "required": true,
+                "desc": "The vector to modify the Z coordinate of"
+            },
+            {
+                "name": "z",
+                "type": "float",
+                "required": true,
+                "desc": "The value to set the Z coordinate to"
+            }
+        ],
+        "desc": "Returns a new vector with the Z component of the given vector changed to the given value. Note: This function DOES NOT modify the vector given as the parameter!"
+    },
+    "xsVectorSet": {
+        "name": "xsVectorSet",
+        "return_type": "Vector",
+        "params": [
+            {
+                "name": "x",
+                "type": "float",
+                "required": true,
+                "desc": "The value to set the X coordinate to"
+            },
+            {
+                "name": "y",
+                "type": "float",
+                "required": true,
+                "desc": "The value to set the Y coordinate to"
+            },
+            {
+                "name": "z",
+                "type": "float",
+                "required": true,
+                "desc": "The value to set the Z coordinate to"
+            }
+        ],
+        "desc": "Returns a vector with the given X, Y and Z components."
+    },
+    "xsVectorLength": {
+        "name": "xsVectorLength",
+        "return_type": "float",
+        "params": [
+            {
+                "name": "v",
+                "type": "Vector",
+                "required": true,
+                "desc": "The vector to calculate the length of"
+            }
+        ],
+        "desc": "Returns the length of the given vector."
+    },
+    "xsVectorNormalize": {
+        "name": "xsVectorNormalize",
+        "return_type": "Vector",
+        "params": [
+            {
+                "name": "v",
+                "type": "Vector",
+                "required": true,
+                "desc": "The vector to normalise"
+            }
+        ],
+        "desc": "Returns the normalised vector in the direction of the given vector."
+    },
+    "xsArrayCreateInt": {
+        "name": "xsArrayCreateInt",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "size",
+                "type": "int",
+                "required": true,
+                "desc": "The length of the array to create"
+            },
+            {
+                "name": "defaultValue",
+                "type": "int",
+                "required": true,
+                "desc": "The default value to initialise all the values in the array to"
+            },
+            {
+                "name": "uniqueName",
+                "type": "String",
+                "required": true,
+                "desc": "A unique name of the created array"
+            }
+        ],
+        "desc": "Creates an array of type int and returns its ID."
+    },
+    "xsArrayCreateFloat": {
+        "name": "xsArrayCreateFloat",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "size",
+                "type": "int",
+                "required": true,
+                "desc": "The length of the array to create"
+            },
+            {
+                "name": "defaultValue",
+                "type": "float",
+                "required": true,
+                "desc": "The default value to initialise all the values in the array to"
+            },
+            {
+                "name": "uniqueName",
+                "type": "String",
+                "required": true,
+                "desc": "A unique name of the created array"
+            }
+        ],
+        "desc": "Creates an array of type float and returns its ID."
+    },
+    "xsArrayCreateBool": {
+        "name": "xsArrayCreateBool",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "size",
+                "type": "int",
+                "required": true,
+                "desc": "The length of the array to create"
+            },
+            {
+                "name": "defaultValue",
+                "type": "bool",
+                "required": true,
+                "desc": "The default value to initialise all the values in the array to"
+            },
+            {
+                "name": "uniqueName",
+                "type": "String",
+                "required": true,
+                "desc": "A unique name of the created array"
+            }
+        ],
+        "desc": "Creates an array of type bool and returns its ID."
+    },
+    "xsArrayCreateString": {
+        "name": "xsArrayCreateString",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "size",
+                "type": "int",
+                "required": true,
+                "desc": "The length of the array to create"
+            },
+            {
+                "name": "defaultValue",
+                "type": "String",
+                "required": true,
+                "desc": "The default value to initialise all the values in the array to"
+            },
+            {
+                "name": "uniqueName",
+                "type": "String",
+                "required": true,
+                "desc": "A unique name of the created array"
+            }
+        ],
+        "desc": "Creates an array of type String and returns its ID."
+    },
+    "xsArrayCreateVector": {
+        "name": "xsArrayCreateVector",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "size",
+                "type": "int",
+                "required": true,
+                "desc": "The length of the array to create"
+            },
+            {
+                "name": "defaultValue",
+                "type": "Vector",
+                "required": true,
+                "desc": "The default value to initialise all the values in the array to"
+            },
+            {
+                "name": "uniqueName",
+                "type": "String",
+                "required": true,
+                "desc": "A unique name of the created array"
+            }
+        ],
+        "desc": "Creates an array of type Vector and returns its ID."
+    },
+    "xsArraySetInt": {
+        "name": "xsArraySetInt",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "arrayID",
+                "type": "int",
+                "required": true,
+                "desc": "The ID of the array to set the value in"
+            },
+            {
+                "name": "index",
+                "type": "int",
+                "required": true,
+                "desc": "The index to set the value of"
+            },
+            {
+                "name": "value",
+                "type": "int",
+                "required": true,
+                "desc": "The new value to set"
+            }
+        ],
+        "desc": "Sets the valat the specified indedx ue of the given int arrindex to the provided value and returns 1."
+    },
+    "xsArraySetFloat": {
+        "name": "xsArraySetFloat",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "arrayID",
+                "type": "int",
+                "required": true,
+                "desc": "The ID of the array to set the value in"
+            },
+            {
+                "name": "index",
+                "type": "int",
+                "required": true,
+                "desc": "The index to set the value of"
+            },
+            {
+                "name": "value",
+                "type": "float",
+                "required": true,
+                "desc": "The new value to set"
+            }
+        ],
+        "desc": "Sets the valueat the specified indedx  of the given float array to the provided value and returns 1."
+    },
+    "xsArraySetBool": {
+        "name": "xsArraySetBool",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "arrayID",
+                "type": "int",
+                "required": true,
+                "desc": "The ID of the array to set the value in"
+            },
+            {
+                "name": "index",
+                "type": "int",
+                "required": true,
+                "desc": "The index to set the value of"
+            },
+            {
+                "name": "value",
+                "type": "bool",
+                "required": true,
+                "desc": "The new value to set"
+            }
+        ],
+        "desc": "Sets the valuat the specified indedx e of the given bool arrindex to the provided value and returns 1."
+    },
+    "xsArraySetString": {
+        "name": "xsArraySetString",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "arrayID",
+                "type": "int",
+                "required": true,
+                "desc": "The ID of the array to set the value in"
+            },
+            {
+                "name": "index",
+                "type": "int",
+                "required": true,
+                "desc": "The index to set the value of"
+            },
+            {
+                "name": "value",
+                "type": "String",
+                "required": true,
+                "desc": "The new value to set"
+            }
+        ],
+        "desc": "Sets the value at the specified indedx of the given String array to the provided value and returns 1."
+    },
+    "xsArraySetVector": {
+        "name": "xsArraySetVector",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "arrayID",
+                "type": "int",
+                "required": true,
+                "desc": "The ID of the array to set the value in"
+            },
+            {
+                "name": "index",
+                "type": "int",
+                "required": true,
+                "desc": "The index to set the value of"
+            },
+            {
+                "name": "value",
+                "type": "Vector",
+                "required": true,
+                "desc": "The new value to set"
+            }
+        ],
+        "desc": "Sets the value at the specified indedx of the given Vector array to the provided value and returns 1."
+    },
+    "xsArrayGetInt": {
+        "name": "xsArrayGetInt",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "arrayID",
+                "type": "int",
+                "required": true,
+                "desc": "The ID of the array to get the value from"
+            },
+            {
+                "name": "index",
+                "type": "int",
+                "required": true,
+                "desc": "The index to get the value of"
+            }
+        ],
+        "desc": "Gets and returns the value of the given int array at the specifed index."
+    },
+    "xsArrayGetFloat": {
+        "name": "xsArrayGetFloat",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "arrayID",
+                "type": "int",
+                "required": true,
+                "desc": "The ID of the array to get the value from"
+            },
+            {
+                "name": "index",
+                "type": "int",
+                "required": true,
+                "desc": "The index to get the value of"
+            }
+        ],
+        "desc": "Gets and returns the value of the given float array at the specifed index."
+    },
+    "xsArrayGetBool": {
+        "name": "xsArrayGetBool",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "arrayID",
+                "type": "int",
+                "required": true,
+                "desc": "The ID of the array to get the value from"
+            },
+            {
+                "name": "index",
+                "type": "int",
+                "required": true,
+                "desc": "The index to get the value of"
+            }
+        ],
+        "desc": "Gets and returns the value of the given bool array at the specifed index."
+    },
+    "xsArrayGetString": {
+        "name": "xsArrayGetString",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "arrayID",
+                "type": "int",
+                "required": true,
+                "desc": "The ID of the array to get the value from"
+            },
+            {
+                "name": "index",
+                "type": "int",
+                "required": true,
+                "desc": "The index to get the value of"
+            }
+        ],
+        "desc": "Gets and returns the value of the given String array at the specifed index."
+    },
+    "xsArrayGetVector": {
+        "name": "xsArrayGetVector",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "arrayID",
+                "type": "int",
+                "required": true,
+                "desc": "The ID of the array to get the value from"
+            },
+            {
+                "name": "index",
+                "type": "int",
+                "required": true,
+                "desc": "The index to get the value of"
+            }
+        ],
+        "desc": "Gets and returns the value of the given Vector array at the specifed index."
+    },
+    "xsArrayResizeInt": {
+        "name": "xsArrayResizeInt",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "arrayID",
+                "type": "int",
+                "required": true,
+                "desc": "The ID of the array to resize"
+            },
+            {
+                "name": "newSize",
+                "type": "int",
+                "required": true,
+                "desc": "The new size of the array"
+            }
+        ],
+        "desc": "Resizes the the given int array to the specifed size and returns 1."
+    },
+    "xsArrayResizeFloat": {
+        "name": "xsArrayResizeFloat",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "arrayID",
+                "type": "int",
+                "required": true,
+                "desc": "The ID of the array to resize"
+            },
+            {
+                "name": "newSize",
+                "type": "int",
+                "required": true,
+                "desc": "The new size of the array"
+            }
+        ],
+        "desc": "Resizes the the given float array to the specifed size and returns 1."
+    },
+    "xsArrayResizeBool": {
+        "name": "xsArrayResizeBool",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "arrayID",
+                "type": "int",
+                "required": true,
+                "desc": "The ID of the array to resize"
+            },
+            {
+                "name": "newSize",
+                "type": "int",
+                "required": true,
+                "desc": "The new size of the array"
+            }
+        ],
+        "desc": "Resizes the the given bool array to the specifed size and returns 1."
+    },
+    "xsArrayResizeString": {
+        "name": "xsArrayResizeString",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "arrayID",
+                "type": "int",
+                "required": true,
+                "desc": "The ID of the array to resize"
+            },
+            {
+                "name": "newSize",
+                "type": "int",
+                "required": true,
+                "desc": "The new size of the array"
+            }
+        ],
+        "desc": "Resizes the the given String array to the specifed size and returns 1."
+    },
+    "xsArrayResizeVector": {
+        "name": "xsArrayResizeVector",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "arrayID",
+                "type": "int",
+                "required": true,
+                "desc": "The ID of the array to resize"
+            },
+            {
+                "name": "newSize",
+                "type": "int",
+                "required": true,
+                "desc": "The new size of the array"
+            }
+        ],
+        "desc": "Resizes the the given Vector array to the specifed size and returns 1."
+    },
+    "xsArrayGetSize": {
+        "name": "xsArrayGetSize",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "arrayID",
+                "type": "int",
+                "required": true,
+                "desc": "The ID of the array to get the length of"
+            }
+        ],
+        "desc": "Returns the length of the given array."
+    },
+    "abs": {
+        "name": "abs",
+        "return_type": "float",
+        "params": [
+            {
+                "name": "x",
+                "type": "float",
+                "required": true,
+                "desc": "The number to find the absolute value of"
+            }
+        ],
+        "desc": "Returns the absolute value (magnitude) of the given number."
+    },
+    "sqrt": {
+        "name": "sqrt",
+        "return_type": "float",
+        "params": [
+            {
+                "name": "x",
+                "type": "float",
+                "required": true,
+                "desc": "The number to find the square root of"
+            }
+        ],
+        "desc": "Returns the square root of the given number."
+    },
+    "pow": {
+        "name": "pow",
+        "return_type": "float",
+        "params": [
+            {
+                "name": "x",
+                "type": "float",
+                "required": true,
+                "desc": "The base value"
+            },
+            {
+                "name": "y",
+                "type": "float",
+                "required": true,
+                "desc": "The exponenet to raise the base value to"
+            }
+        ],
+        "desc": "Returns x raised to the power y (x**y)."
+    },
+    "sin": {
+        "name": "sin",
+        "return_type": "float",
+        "params": [
+            {
+                "name": "x",
+                "type": "float",
+                "required": true,
+                "desc": "The angle (in radians) to find the sine of"
+            }
+        ],
+        "desc": "Returns the sine of the angle in radians."
+    },
+    "cos": {
+        "name": "cos",
+        "return_type": "float",
+        "params": [
+            {
+                "name": "x",
+                "type": "float",
+                "required": true,
+                "desc": "The angle (in radians) to find the cosine of"
+            }
+        ],
+        "desc": "Returns the cosine of the angle in radians"
+    },
+    "tan": {
+        "name": "tan",
+        "return_type": "float",
+        "params": [
+            {
+                "name": "x",
+                "type": "float",
+                "required": true,
+                "desc": "The angle (in radians) to find the tangent of"
+            }
+        ],
+        "desc": "Returns the tangent of the angle in radians"
+    },
+    "asin": {
+        "name": "asin",
+        "return_type": "float",
+        "params": [
+            {
+                "name": "x",
+                "type": "float",
+                "required": true,
+                "desc": "The value to find the inverse sine of"
+            }
+        ],
+        "desc": "Returns the inverse sine (arcsin) of the given value"
+    },
+    "acos": {
+        "name": "acos",
+        "return_type": "float",
+        "params": [
+            {
+                "name": "x",
+                "type": "float",
+                "required": true,
+                "desc": "The value to find the inverse cosine of"
+            }
+        ],
+        "desc": "Returns the inverse cosine (arccos) of the given value"
+    },
+    "atan": {
+        "name": "atan",
+        "return_type": "float",
+        "params": [
+            {
+                "name": "x",
+                "type": "float",
+                "required": true,
+                "desc": "The value to find the inverse tangent of"
+            }
+        ],
+        "desc": "Returns the inverse tangent (arctan) of the given value"
+    },
+    "atan2": {
+        "name": "atan2",
+        "return_type": "float",
+        "params": [
+            {
+                "name": "x",
+                "type": "float",
+                "required": true,
+                "desc": "The X coordinate of the point to find the amplitude of"
+            }
+        ],
+        "desc": "This is supposed to be the atan2(y, x) function but apparently it only takes one input. ThxDE"
+    },
+    "xsPlayerAttribute": {
+        "name": "xsPlayerAttribute",
+        "return_type": "float",
+        "params": [
+            {
+                "name": "playerNumber",
+                "type": "int",
+                "required": true,
+                "desc": "The player to get the resource of (0 for Gaia)"
+            },
+            {
+                "name": "resourceID",
+                "type": "int",
+                "required": true,
+                "desc": "The ID of the resource to get the amount of"
+            }
+        ],
+        "desc": "Returns the amount the specified resource of the given player."
+    },
+    "xsSetPlayerAttribute": {
+        "name": "xsSetPlayerAttribute",
+        "return_type": "void",
+        "params": [
+            {
+                "name": "playerNumber",
+                "type": "int",
+                "required": true,
+                "desc": "The player to set the resource of (0 for Gaia)"
+            },
+            {
+                "name": "resourceID",
+                "type": "int",
+                "required": true,
+                "desc": "The ID of the resource to set the amount of"
+            },
+            {
+                "name": "value",
+                "type": "float",
+                "required": true,
+                "desc": "The amount to set the resource to"
+            }
+        ],
+        "desc": "Sets the amount of the specified resource of the given player to the provided value."
+    },
+    "xsTriggerVariable": {
+        "name": "xsTriggerVariable",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "variableID",
+                "type": "int",
+                "required": true,
+                "desc": "The ID of the variable to get the value of"
+            }
+        ],
+        "desc": "Returns the value of the variable of the given variable ID."
+    },
+    "xsSetTriggerVariable": {
+        "name": "xsSetTriggerVariable",
+        "return_type": "void",
+        "params": [
+            {
+                "name": "variableID",
+                "type": "int",
+                "required": true,
+                "desc": "The ID of the variable to set the value of"
+            },
+            {
+                "name": "value",
+                "type": "int",
+                "required": true,
+                "desc": "The value to set the variable to"
+            }
+        ],
+        "desc": "Sets the value of the variable of the given variable ID to the provided value."
+    },
+    "xsGetNumPlayers": {
+        "name": "xsGetNumPlayers",
+        "return_type": "int",
+        "params": [],
+        "desc": "Returns the number of players in the game"
+    },
+    "xsChatData": {
+        "name": "xsChatData",
+        "return_type": "void",
+        "params": [
+            {
+                "name": "message",
+                "type": "String",
+                "required": true,
+                "desc": "The message to display in chat"
+            },
+            {
+                "name": "value",
+                "type": "int",
+                "required": false,
+                "desc": "This value is inserted in place of any `%d` used in the message of the function"
+            }
+        ],
+        "desc": "Shows the given message in the game chat"
+    },
+    "xsGetTime": {
+        "name": "xsGetTime",
+        "return_type": "int",
+        "params": [],
+        "desc": "Returns the current game time in seconds"
+    },
+    "xsEffectAmount": {
+        "name": "xsEffectAmount",
+        "return_type": "void",
+        "params": [
+            {
+                "name": "effectID",
+                "type": "int",
+                "required": true,
+                "desc": "The ID of the effect to use"
+            },
+            {
+                "name": "unitOrTechnologyID",
+                "type": "int",
+                "required": true,
+                "desc": "The ID of the unit or technology to effect"
+            },
+            {
+                "name": "attribtueOrOperation",
+                "type": "int",
+                "required": true,
+                "desc": "The attribute to modify or the operation to perform"
+            },
+            {
+                "name": "value",
+                "type": "int",
+                "required": true,
+                "desc": "The value of the effect"
+            },
+            {
+                "name": "playerNumber",
+                "type": "int",
+                "required": false,
+                "desc": "The player to apply the effect to. If unspecified, applies to all players except Gaia."
+            }
+        ],
+        "desc": "Change the given attribute of the specified unit or technology by the value for the provided player."
+    },
+    "xsDumpArrays": {
+        "name": "xsDumpArrays",
+        "return_type": "void",
+        "params": [],
+        "desc": "Blogs out all XS arrays. Unknown: where does it dump this information?"
+    },
+    "xsGetContextPlayer": {
+        "name": "xsGetContextPlayer",
+        "return_type": "int",
+        "params": [],
+        "desc": "Returns the current context player ID. Unknown: Unused feature?"
+    },
+    "xsSetContextPlayer": {
+        "name": "xsSetContextPlayer",
+        "return_type": "void",
+        "params": [
+            {
+                "name": "playerID",
+                "type": "int",
+                "required": true,
+                "desc": "The player ID for the new context player"
+            }
+        ],
+        "desc": "Sets the current context player ID. Used to retrieve more detailed information about the new player. Unknown: Unused Feature?"
+    },
+    "xsGetFuntionID": {
+        "name": "xsGetFuntionID",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "functionName",
+                "type": "String",
+                "required": true,
+                "desc": "The name of the function to get the internal ID of"
+            }
+        ],
+        "desc": "Returns the ID of the given function name. If the function does not exist, returns -1. Unknown: What can this be used for?"
+    },
+    "xsBreakPoint": {
+        "name": "xsBreakPoint",
+        "return_type": "void",
+        "params": [],
+        "desc": "Crashes the game... ThxDE. Unknown: Why can an XS function crash your game? Just why"
+    },
+    "xsAddRuntimeEvent": {
+        "name": "xsAddRuntimeEvent",
+        "return_type": "bool",
+        "params": [
+            {
+                "name": "foo",
+                "type": "String",
+                "required": true,
+                "desc": "unknown"
+            },
+            {
+                "name": "bar",
+                "type": "String",
+                "required": true,
+                "desc": "unknown"
+            },
+            {
+                "name": "something",
+                "type": "int",
+                "required": true,
+                "desc": "unknown"
+            }
+        ],
+        "desc": "Setups a runtime event. Unknown: Doesn't seem to do anything"
+    }
+}

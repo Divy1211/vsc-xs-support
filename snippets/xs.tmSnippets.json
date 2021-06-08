@@ -1,0 +1,72 @@
+{
+	"xs-switch-case": {
+		"prefix": ["switch", "case", "switch-case"],
+		"body": [
+			"switch(${1:variable}) {",
+			"\tcase ${2:value 1} : {",
+			"\t\t${3://code}",
+			"\t}",
+			"\tcase ${4:value 2} : {",
+			"\t\t${5://code}",
+			"\t}",
+			"\tdefault : {",
+			"\t\t${6://code}",
+			"\t}",
+			"}"
+		],
+		"description": ""
+	},
+	"xs-for": {
+		"prefix": ["for"],
+		"body": [
+			"for(${1:variable} = ${2:initial_value}; ${3:terminating_condition}) {",
+			"\t${4://code}",
+			"}"
+		],
+		"description": ""
+	},
+	"xs-while": {
+		"prefix": ["while"],
+		"body": [
+			"while(${1:condition}) {",
+			"\t${2://code}",
+			"}"
+		],
+		"description": "while loop"
+	},
+	"xs-if-else-if": {
+		"prefix": ["if else if"],
+		"body": [
+			"if(${1:condition}) {",
+			"\t${2://code}",
+			"}",
+			"else if(${3:condition}) {",
+			"\t${4://code}",
+			"}",
+			"else {",
+			"\t${5://code}",
+			"}"
+		],
+		"description": ""
+	},
+	"xs-function-definition": {
+		"prefix": ["function"],
+		"body": [
+			"${1:returnType} ${2:name}(${3:parameters}) {",
+			"\t${4://code}",
+			"}"
+		],
+		"description": ""
+	},
+	"xs-rule-definition": {
+		"prefix": ["rule"],
+		"body": [
+			"rule ${1:ruleName}${2:\n\tactive}${3:\n\tinactive}",
+			"\tgroup ${4:groupName}${5:\n\trunImmediately}${6:\n\thighFrequency}${7:\n\tminInterval ${8:value}}${9:\n\tmaxInterval ${10:value}}${11:\n\tpriority ${12:value}}",
+			"{",
+			"\t${13://code}",
+			"}"
+		],
+		"description": ""
+	}
+}
