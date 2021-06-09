@@ -13,9 +13,9 @@ function toTitle(str: string): string {
 
 export class HoverProvider implements vscode.HoverProvider {
     provideHover(document: any, position: vscode.Position): vscode.ProviderResult<vscode.Hover> {
-        const line = document.getText().split(/\r\n/g)[position.line];
-        const wordPosition = line.slice(0, position.character).split(/\b/g).length - 1;
-        const words = line.split(/\b/g);
+        const cusrsorLine = document.getText().split(/\r\n/g)[position.line];
+        const wordPosition = cusrsorLine.slice(0, position.character).split(/\b/g).length - 1;
+        const words = cusrsorLine.split(/\b/g);
         const word = words[wordPosition];
         const wordStart = words.slice(0, wordPosition).join("").length;
         const wordEnd = words.slice(0, wordPosition + 1).join("").length;
