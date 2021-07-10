@@ -11,7 +11,7 @@
         "params": [
             {
                 "name": "ruleName",
-                "type": "String",
+                "type": "string",
                 "required": true,
                 "desc": "The name of the rule to disable"
             }
@@ -30,7 +30,7 @@
         "params": [
             {
                 "name": "ruleName",
-                "type": "String",
+                "type": "string",
                 "required": true,
                 "desc": "The name of the rule to enable"
             }
@@ -43,7 +43,7 @@
         "params": [
             {
                 "name": "ruleName",
-                "type": "String",
+                "type": "string",
                 "required": true,
                 "desc": "The name of the rule to check"
             }
@@ -56,7 +56,7 @@
         "params": [
             {
                 "name": "ruleName",
-                "type": "String",
+                "type": "string",
                 "required": true,
                 "desc": "The name of the rule to set the priority of"
             },
@@ -88,7 +88,7 @@
         "params": [
             {
                 "name": "ruleName",
-                "type": "String",
+                "type": "string",
                 "required": true,
                 "desc": "The name of the rule to set the min interval of"
             },
@@ -120,7 +120,7 @@
         "params": [
             {
                 "name": "ruleName",
-                "type": "String",
+                "type": "string",
                 "required": true,
                 "desc": "The name of the rule to set the max interval of"
             },
@@ -152,7 +152,7 @@
         "params": [
             {
                 "name": "ruleGroupName",
-                "type": "String",
+                "type": "string",
                 "required": true,
                 "desc": "The name of the rule group to enable"
             }
@@ -165,7 +165,7 @@
         "params": [
             {
                 "name": "ruleGroupName",
-                "type": "String",
+                "type": "string",
                 "required": true,
                 "desc": "The name of the rule group to disable"
             }
@@ -178,7 +178,7 @@
         "params": [
             {
                 "name": "ruleGroupName",
-                "type": "String",
+                "type": "string",
                 "required": true,
                 "desc": "The name of the rule group to check"
             }
@@ -191,7 +191,7 @@
         "params": [
             {
                 "name": "v",
-                "type": "Vector",
+                "type": "vector",
                 "required": true,
                 "desc": "The vector to get the X coordinate of"
             }
@@ -204,7 +204,7 @@
         "params": [
             {
                 "name": "v",
-                "type": "Vector",
+                "type": "vector",
                 "required": true,
                 "desc": "The vector to get the Y coordinate of"
             }
@@ -217,7 +217,7 @@
         "params": [
             {
                 "name": "v",
-                "type": "Vector",
+                "type": "vector",
                 "required": true,
                 "desc": "The vector to get the Z coordinate of"
             }
@@ -226,11 +226,11 @@
     },
     "xsVectorSetX": {
         "name": "xsVectorSetX",
-        "return_type": "Vector",
+        "return_type": "vector",
         "params": [
             {
                 "name": "v",
-                "type": "Vector",
+                "type": "vector",
                 "required": true,
                 "desc": "The vector to modify the X coordinate of"
             },
@@ -245,11 +245,11 @@
     },
     "xsVectorSetY": {
         "name": "xsVectorSetY",
-        "return_type": "Vector",
+        "return_type": "vector",
         "params": [
             {
                 "name": "v",
-                "type": "Vector",
+                "type": "vector",
                 "required": true,
                 "desc": "The vector to modify the Y coordinate of"
             },
@@ -264,11 +264,11 @@
     },
     "xsVectorSetZ": {
         "name": "xsVectorSetZ",
-        "return_type": "Vector",
+        "return_type": "vector",
         "params": [
             {
                 "name": "v",
-                "type": "Vector",
+                "type": "vector",
                 "required": true,
                 "desc": "The vector to modify the Z coordinate of"
             },
@@ -283,7 +283,7 @@
     },
     "xsVectorSet": {
         "name": "xsVectorSet",
-        "return_type": "Vector",
+        "return_type": "vector",
         "params": [
             {
                 "name": "x",
@@ -312,7 +312,7 @@
         "params": [
             {
                 "name": "v",
-                "type": "Vector",
+                "type": "vector",
                 "required": true,
                 "desc": "The vector to calculate the length of"
             }
@@ -321,11 +321,11 @@
     },
     "xsVectorNormalize": {
         "name": "xsVectorNormalize",
-        "return_type": "Vector",
+        "return_type": "vector",
         "params": [
             {
                 "name": "v",
-                "type": "Vector",
+                "type": "vector",
                 "required": true,
                 "desc": "The vector to normalise"
             }
@@ -350,7 +350,7 @@
             },
             {
                 "name": "uniqueName",
-                "type": "String",
+                "type": "string",
                 "required": true,
                 "desc": "A unique name of the created array"
             }
@@ -375,7 +375,7 @@
             },
             {
                 "name": "uniqueName",
-                "type": "String",
+                "type": "string",
                 "required": true,
                 "desc": "A unique name of the created array"
             }
@@ -400,7 +400,7 @@
             },
             {
                 "name": "uniqueName",
-                "type": "String",
+                "type": "string",
                 "required": true,
                 "desc": "A unique name of the created array"
             }
@@ -419,13 +419,13 @@
             },
             {
                 "name": "defaultValue",
-                "type": "String",
+                "type": "string",
                 "required": true,
                 "desc": "The default value to initialise all the values in the array to"
             },
             {
                 "name": "uniqueName",
-                "type": "String",
+                "type": "string",
                 "required": true,
                 "desc": "A unique name of the created array"
             }
@@ -444,13 +444,13 @@
             },
             {
                 "name": "defaultValue",
-                "type": "Vector",
+                "type": "vector",
                 "required": true,
                 "desc": "The default value to initialise all the values in the array to"
             },
             {
                 "name": "uniqueName",
-                "type": "String",
+                "type": "string",
                 "required": true,
                 "desc": "A unique name of the created array"
             }
@@ -550,7 +550,7 @@
             },
             {
                 "name": "value",
-                "type": "String",
+                "type": "string",
                 "required": true,
                 "desc": "The new value to set"
             }
@@ -575,7 +575,7 @@
             },
             {
                 "name": "value",
-                "type": "Vector",
+                "type": "vector",
                 "required": true,
                 "desc": "The new value to set"
             }
@@ -921,6 +921,94 @@
         ],
         "desc": "This is supposed to be the atan2(y, x) function but apparently it only takes one input. ThxDE"
     },
+    "xsGetPlayerCivilization": {
+        "name": "xsGetPlayerCivilization",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "playerNumber",
+                "type": "int",
+                "required": true,
+                "desc": "The player to get the civilization of"
+            }
+        ],
+        "desc": "Returns the civilization ID of the given player."
+    },
+    "xsGetPlayerInGame": {
+        "name": "xsGetPlayerInGame",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "playerNumber",
+                "type": "int",
+                "required": true,
+                "desc": "Check if this player is still alive"
+            }
+        ],
+        "desc": "Returns a 1 if the player given is still alive. Returns a 0 if the player given has been eliminated."
+    },
+    "xsGetMapName": {
+        "name": "xsGetMapName",
+        "return_type": "string",
+        "params": [
+            {
+                "name": "showFileExtension",
+                "type": "bool",
+                "required": true,
+                "desc": "If this is set to true, then the returned name also contains the file extension"
+            }
+        ],
+        "desc": "Returns the name of the map currently being played."
+    },
+    "xsGetMapID": {
+        "name": "xsGetMapID",
+        "return_type": "int",
+        "params": [],
+        "desc": "Returns the AI map type."
+    },
+    "xsGetMapHeight": {
+        "name": "xsGetMapHeight",
+        "return_type": "int",
+        "params": [],
+        "desc": "Returns the Height of the map."
+    },
+    "xsGetMapWidth": {
+        "name": "xsGetMapWidth",
+        "return_type": "int",
+        "params": [],
+        "desc": "Returns the Width of the map."
+    },
+    "xsGetVictoryType": {
+        "name": "xsGetVictoryType",
+        "return_type": "int",
+        "params": [],
+        "desc": "Returns an integer corresponding to different victory settings ingame. These are:\n\n 0: Standard\n\n1: Consquest\n\n2: Time Limit\n\n3: Score\n\n4: Custom (scenarios only).\n\nLast Man Standing returns 0 as well."
+    },
+    "xsGetVictoryPlayer": {
+        "name": "xsGetVictoryPlayer",
+        "return_type": "int",
+        "params": [],
+        "desc": "Returns the number of the player with the highest score in a normal game. Returns the number of the player who owns 5 relics or has a wonder if standard victory is enabled. In a game like KoTH, returns the number of the player who owns the monument."
+    },
+    "xsGetVictoryTime": {
+        "name": "xsGetVictoryTime",
+        "return_type": "int",
+        "params": [],
+        "desc": "For game modes like KoTH and other game modes where there is a timer on the screen, it returns the amount of time left in half seconds. meaning if the value returned is 799, it means there are 399.5s remaining"
+    },
+    "xsGetPlayerNumberOfTechs": {
+        "name": "xsGetPlayerNumberOfTechs",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "playerNumber",
+                "type": "int",
+                "required": true,
+                "desc": "The player whoes technology count is being requested."
+            }
+        ],
+        "desc": "Returns the number of technologies available to the player in the entire game. Always returns 801 for unmodded games."
+    },
     "xsPlayerAttribute": {
         "name": "xsPlayerAttribute",
         "return_type": "float",
@@ -1009,7 +1097,7 @@
         "params": [
             {
                 "name": "message",
-                "type": "String",
+                "type": "string",
                 "required": true,
                 "desc": "The message to display in chat"
             },
@@ -1024,6 +1112,12 @@
     },
     "xsGetTime": {
         "name": "xsGetTime",
+        "return_type": "int",
+        "params": [],
+        "desc": "Returns the current game time - 1 in seconds"
+    },
+    "xsGetGameTime": {
+        "name": "xsGetGameTime",
         "return_type": "int",
         "params": [],
         "desc": "Returns the current game time in seconds"
@@ -1065,30 +1159,61 @@
         ],
         "desc": "Change the given attribute of the specified unit or technology by the value for the provided player."
     },
+    "xsResearchTechnology": {
+        "name": "xsResearchTechnology",
+        "return_type": "bool",
+        "params": [
+            {
+                "name": "techID",
+                "type": "int",
+                "required": true,
+                "desc": "The technology ID to research."
+            },
+            {
+                "name": "force",
+                "type": "bool",
+                "required": true,
+                "desc": "Force researching the tech even if it is not enabled. To force an unavailable tech, the argument `techAvailable` must be set to false"
+            },
+            {
+                "name": "techAvailable",
+                "type": "bool",
+                "required": true,
+                "desc": "This flag determines if it is required to check if a tech is available before researching it"
+            },
+            {
+                "name": "playerNumber",
+                "type": "int",
+                "required": true,
+                "desc": "The player to research the technology for"
+            }
+        ],
+        "desc": "Returns a boolean based on whether the technology was researched or not."
+    },
     "xsDumpArrays": {
         "name": "xsDumpArrays",
         "return_type": "void",
         "params": [],
-        "desc": "Blogs out all XS arrays. Unknown: where does it dump this information?"
+        "desc": "This function is supposed to blogs out all XS arrays. Currently, it does absolutely nothing."
     },
     "xsGetContextPlayer": {
         "name": "xsGetContextPlayer",
         "return_type": "int",
         "params": [],
-        "desc": "Returns the current context player ID. Unknown: Unused feature?"
+        "desc": "Returns the current context player ID."
     },
     "xsSetContextPlayer": {
         "name": "xsSetContextPlayer",
         "return_type": "void",
         "params": [
             {
-                "name": "playerID",
+                "name": "playerNumber",
                 "type": "int",
                 "required": true,
-                "desc": "The player ID for the new context player"
+                "desc": "The player to set the context player to"
             }
         ],
-        "desc": "Sets the current context player ID. Used to retrieve more detailed information about the new player. Unknown: Unused Feature?"
+        "desc": "In other functions involving a `playerNumber` argument, the value of the context player is used if `-1` is passed as `playerNumber` to them. `xsEffectAmount` will use the value of the context player as its player if -2 is passed to it as the player argument."
     },
     "xsGetFuntionID": {
         "name": "xsGetFuntionID",
@@ -1096,42 +1221,42 @@
         "params": [
             {
                 "name": "functionName",
-                "type": "String",
+                "type": "string",
                 "required": true,
-                "desc": "The name of the function to get the internal ID of"
+                "desc": "The name of the function to get the hash of"
             }
         ],
-        "desc": "Returns the ID of the given function name. If the function does not exist, returns -1. Unknown: What can this be used for?"
+        "desc": "Returns the hash of a given function. This function has no practical application and is probably for internal usage only."
     },
     "xsBreakPoint": {
         "name": "xsBreakPoint",
         "return_type": "void",
         "params": [],
-        "desc": "Crashes the game... ThxDE. Unknown: Why can an XS function crash your game? Just why"
+        "desc": "This function adds a break point to the execution of code. Do not use this function and beware, if you do, it will likely cause a crash!"
     },
     "xsAddRuntimeEvent": {
         "name": "xsAddRuntimeEvent",
         "return_type": "bool",
         "params": [
             {
-                "name": "foo",
-                "type": "String",
+                "name": "runtimeName",
+                "type": "string",
                 "required": true,
-                "desc": "unknown"
+                "desc": "This is the name of the runtime to create the event in. This should be `\"Random Map\"` for RMS and `\"Scenario Triggers\"` for scenarios. Find which one to use in a general script by using the `xsGetMapName(true)` function and checking the extension."
             },
             {
-                "name": "bar",
-                "type": "String",
+                "name": "functionName",
+                "type": "string",
                 "required": true,
-                "desc": "unknown"
+                "desc": "This is the name of a function that takes a single integer argument."
             },
             {
-                "name": "something",
+                "name": "functionArgument",
                 "type": "int",
                 "required": true,
-                "desc": "unknown"
+                "desc": "This is an integer argument that is passed to the function given to the argument `functionName` when this event runs."
             }
         ],
-        "desc": "Setups a runtime event. Unknown: Doesn't seem to do anything"
+        "desc": "A runtime event is called after all the XS code has finished executing but before rules start executing. It returns true if the function name given to it exists, otherwise it returns false. Does not work with built-ins."
     }
 }

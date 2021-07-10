@@ -37,15 +37,281 @@
     "cOriginVector": {
         "name": "cOriginVector",
         "value": "(0, 0, 0)",
-        "type": "Vector",
+        "type": "vector",
         "desc": "The Origin Vector",
         "usage": null
     },
     "cInvalidVector": {
         "name": "cInvalidVector",
         "value": "(-1, -1, -1)",
-        "type": "Vector",
+        "type": "vector",
         "desc": "The Invalid Vector",
+        "usage": null
+    },
+    "cGaia": {
+        "name": "cGaia",
+        "value": 0,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cBritons": {
+        "name": "cBritons",
+        "value": 1,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cFranks": {
+        "name": "cFranks",
+        "value": 2,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cGoths": {
+        "name": "cGoths",
+        "value": 3,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cTeutons": {
+        "name": "cTeutons",
+        "value": 4,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cJapanese": {
+        "name": "cJapanese",
+        "value": 5,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cChinese": {
+        "name": "cChinese",
+        "value": 6,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cByzantines": {
+        "name": "cByzantines",
+        "value": 7,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cPersians": {
+        "name": "cPersians",
+        "value": 8,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cSaracens": {
+        "name": "cSaracens",
+        "value": 9,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cTurks": {
+        "name": "cTurks",
+        "value": 10,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cVikings": {
+        "name": "cVikings",
+        "value": 11,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cMongols": {
+        "name": "cMongols",
+        "value": 12,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cCelts": {
+        "name": "cCelts",
+        "value": 13,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cSpanish": {
+        "name": "cSpanish",
+        "value": 14,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cAztecs": {
+        "name": "cAztecs",
+        "value": 15,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cMayans": {
+        "name": "cMayans",
+        "value": 16,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cHuns": {
+        "name": "cHuns",
+        "value": 17,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cKoreans": {
+        "name": "cKoreans",
+        "value": 18,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cItalians": {
+        "name": "cItalians",
+        "value": 19,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cIndians": {
+        "name": "cIndians",
+        "value": 20,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cIncas": {
+        "name": "cIncas",
+        "value": 21,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cMagyars": {
+        "name": "cMagyars",
+        "value": 22,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cSlavs": {
+        "name": "cSlavs",
+        "value": 23,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cPortuguese": {
+        "name": "cPortuguese",
+        "value": 24,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cEthiopians": {
+        "name": "cEthiopians",
+        "value": 25,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cMalians": {
+        "name": "cMalians",
+        "value": 26,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cBerbers": {
+        "name": "cBerbers",
+        "value": 27,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cKhmer": {
+        "name": "cKhmer",
+        "value": 28,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cMalay": {
+        "name": "cMalay",
+        "value": 29,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cBurmese": {
+        "name": "cBurmese",
+        "value": 30,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cVietnamese": {
+        "name": "cVietnamese",
+        "value": 31,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cBulgarians": {
+        "name": "cBulgarians",
+        "value": 32,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cTatars": {
+        "name": "cTatars",
+        "value": 33,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cCumans": {
+        "name": "cCumans",
+        "value": 34,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cLithuanians": {
+        "name": "cLithuanians",
+        "value": 35,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cBurgundians": {
+        "name": "cBurgundians",
+        "value": 36,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cSicilians": {
+        "name": "cSicilians",
+        "value": 37,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
         "usage": null
     },
     "cSetAttribute": {
@@ -55,8 +321,8 @@
         "desc": "This is the ID of the `Set Attribute` effect of the xsEffectAmount function",
         "usage": {
             "syntax": "xsEffectAmount(cSetAttribute, unitID, attributeID, value)",
-            "example": "xsEffectAmount(cSetAttribute, 74, 0, 100)",
-            "explanation": "This sets the attribute 0 (HP) of unit 74 (militia) to 100 (the value)"
+            "example": "xsEffectAmount(cSetAttribute, 74, cHitpoints, 100)",
+            "explanation": "This sets the HP of unit 74 (militia) to 100 (the value)"
         }
     },
     "cModResource": {
@@ -459,6 +725,833 @@
         "value": 16387,
         "type": "int",
         "desc": "This is the ID of the `Attribute Add Gold Cost` modifier for the xsEffectAmount function",
+        "usage": null
+    },
+    "cAttrSetLocation": {
+        "name": "cAttrSetLocation",
+        "value": 4,
+        "type": "int",
+        "desc": "This is the ID of the `Attribute Set Tech Location` modifier for the xsEffectAmount function",
+        "usage": null
+    },
+    "cAttrSetButton": {
+        "name": "cAttrSetButton",
+        "value": 5,
+        "type": "int",
+        "desc": "This is the ID of the `Attribute Set Tech Button` modifier for the xsEffectAmount function",
+        "usage": null
+    },
+    "cAttrSetIcon": {
+        "name": "cAttrSetIcon",
+        "value": 6,
+        "type": "int",
+        "desc": "This is the ID of the `Attribute Set Tech Icon` modifier for the xsEffectAmount function",
+        "usage": null
+    },
+    "cAttrSetName": {
+        "name": "cAttrSetName",
+        "value": 7,
+        "type": "int",
+        "desc": "This is the ID of the `Attribute Set Tech Name` modifier for the xsEffectAmount function",
+        "usage": null
+    },
+    "cAttrSetDescription": {
+        "name": "cAttrSetDescription",
+        "value": 8,
+        "type": "int",
+        "desc": "This is the ID of the `Attribute Set Tech Description` modifier for the xsEffectAmount function",
+        "usage": null
+    },
+    "cAttrSetStacking": {
+        "name": "cAttrSetStacking",
+        "value": 9,
+        "type": "int",
+        "desc": "This is the ID of the `Attribute Set Tech Stacking` modifier for the xsEffectAmount function",
+        "usage": null
+    },
+
+    "cHitpoints": {
+        "name": "cHitpoints",
+        "value": "0",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cLineOfSight": {
+        "name": "cLineOfSight",
+        "value": "1",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cGarrisonCapacity": {
+        "name": "cGarrisonCapacity",
+        "value": "2",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cUnitSizeX": {
+        "name": "cUnitSizeX",
+        "value": "3",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cUnitSizeY": {
+        "name": "cUnitSizeY",
+        "value": "4",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cMovementSpeed": {
+        "name": "cMovementSpeed",
+        "value": "5",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cRotationSpeed": {
+        "name": "cRotationSpeed",
+        "value": "6",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cArmor": {
+        "name": "cArmor",
+        "value": "8",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cAttack": {
+        "name": "cAttack",
+        "value": "9",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cAttackReloadTime": {
+        "name": "cAttackReloadTime",
+        "value": "10",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cAccuracyPercent": {
+        "name": "cAccuracyPercent",
+        "value": "11",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cMaxRange": {
+        "name": "cMaxRange",
+        "value": "12",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cWorkRate": {
+        "name": "cWorkRate",
+        "value": "13",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cCarryCapacity": {
+        "name": "cCarryCapacity",
+        "value": "14",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cBaseArmor": {
+        "name": "cBaseArmor",
+        "value": "15",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cProjectileUnit": {
+        "name": "cProjectileUnit",
+        "value": "16",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cIconGraphicsAngle": {
+        "name": "cIconGraphicsAngle",
+        "value": "17",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cTerrainDefenseBonus": {
+        "name": "cTerrainDefenseBonus",
+        "value": "18",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cEnableSmartProjectile": {
+        "name": "cEnableSmartProjectile",
+        "value": "19",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cMinimumRange": {
+        "name": "cMinimumRange",
+        "value": "20",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cAmountFirstStorage": {
+        "name": "cAmountFirstStorage",
+        "value": "21",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cBlastWidth": {
+        "name": "cBlastWidth",
+        "value": "22",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cSearchRadius": {
+        "name": "cSearchRadius",
+        "value": "23",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cBonusResistance": {
+        "name": "cBonusResistance",
+        "value": "24",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cIconId": {
+        "name": "cIconId",
+        "value": "25",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cHeroStatus": {
+        "name": "cHeroStatus",
+        "value": "40",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cAttackDelay": {
+        "name": "cAttackDelay",
+        "value": "41",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cTrainLocation": {
+        "name": "cTrainLocation",
+        "value": "42",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cTrainButton": {
+        "name": "cTrainButton",
+        "value": "43",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cBlastAttackLevel": {
+        "name": "cBlastAttackLevel",
+        "value": "44",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cBlastDefenseLevel": {
+        "name": "cBlastDefenseLevel",
+        "value": "45",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cShownAttack": {
+        "name": "cShownAttack",
+        "value": "46",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cShownRange": {
+        "name": "cShownRange",
+        "value": "47",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cShownMeleeArmor": {
+        "name": "cShownMeleeArmor",
+        "value": "48",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cShownPierceArmor": {
+        "name": "cShownPierceArmor",
+        "value": "49",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cNameId": {
+        "name": "cNameId",
+        "value": "50",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cDescriptionId": {
+        "name": "cDescriptionId",
+        "value": "51",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cTerrainTable": {
+        "name": "cTerrainTable",
+        "value": "53",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cDeadUnitId": {
+        "name": "cDeadUnitId",
+        "value": "57",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cHotkeyId": {
+        "name": "cHotkeyId",
+        "value": "58",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cResourceCost": {
+        "name": "cResourceCost",
+        "value": "100",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cTrainTime": {
+        "name": "cTrainTime",
+        "value": "101",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cTotalProjectiles": {
+        "name": "cTotalProjectiles",
+        "value": "102",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cFoodCost": {
+        "name": "cFoodCost",
+        "value": "103",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cWoodCost": {
+        "name": "cWoodCost",
+        "value": "104",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cGoldCost": {
+        "name": "cGoldCost",
+        "value": "105",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cStoneCost": {
+        "name": "cStoneCost",
+        "value": "106",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cMaxTotalProjectiles": {
+        "name": "cMaxTotalProjectiles",
+        "value": "107",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cGarrisonHealRate": {
+        "name": "cGarrisonHealRate",
+        "value": "108",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cRegenerationRate": {
+        "name": "cRegenerationRate",
+        "value": "109",
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cArcherClass": {
+        "name": "cArcherClass",
+        "value": 900,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cArtifactClass": {
+        "name": "cArtifactClass",
+        "value": 901,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cTradeBoatClass": {
+        "name": "cTradeBoatClass",
+        "value": 902,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cBuildingClass": {
+        "name": "cBuildingClass",
+        "value": 903,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cVillagerClass": {
+        "name": "cVillagerClass",
+        "value": 904,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cSeaFishClass": {
+        "name": "cSeaFishClass",
+        "value": 905,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cInfantryClass": {
+        "name": "cInfantryClass",
+        "value": 906,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cForageBushClass": {
+        "name": "cForageBushClass",
+        "value": 907,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cStoneMineClass": {
+        "name": "cStoneMineClass",
+        "value": 908,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cPreyAnimalClass": {
+        "name": "cPreyAnimalClass",
+        "value": 909,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cPredatorAnimalClass": {
+        "name": "cPredatorAnimalClass",
+        "value": 910,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cMiscellaneousClass": {
+        "name": "cMiscellaneousClass",
+        "value": 911,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cCavalryClass": {
+        "name": "cCavalryClass",
+        "value": 912,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cSiegeWeaponClass": {
+        "name": "cSiegeWeaponClass",
+        "value": 913,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cTerrainClass": {
+        "name": "cTerrainClass",
+        "value": 914,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cTreeClass": {
+        "name": "cTreeClass",
+        "value": 915,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cTreeStumpClass": {
+        "name": "cTreeStumpClass",
+        "value": 916,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cHealerClass": {
+        "name": "cHealerClass",
+        "value": 917,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cMonkClass": {
+        "name": "cMonkClass",
+        "value": 918,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cTradeCartClass": {
+        "name": "cTradeCartClass",
+        "value": 919,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cTransportShipClass": {
+        "name": "cTransportShipClass",
+        "value": 920,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cFishingBoatClass": {
+        "name": "cFishingBoatClass",
+        "value": 921,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cWarshipClass": {
+        "name": "cWarshipClass",
+        "value": 922,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cConquistadorClass": {
+        "name": "cConquistadorClass",
+        "value": 923,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cWarElephantClass": {
+        "name": "cWarElephantClass",
+        "value": 924,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cHeroClass": {
+        "name": "cHeroClass",
+        "value": 925,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cElephantArcherClass": {
+        "name": "cElephantArcherClass",
+        "value": 926,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cWallClass": {
+        "name": "cWallClass",
+        "value": 927,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cPhalanxClass": {
+        "name": "cPhalanxClass",
+        "value": 928,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cDomesticAnimalClass": {
+        "name": "cDomesticAnimalClass",
+        "value": 929,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cFlagClass": {
+        "name": "cFlagClass",
+        "value": 930,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cDeepSeaFishClass": {
+        "name": "cDeepSeaFishClass",
+        "value": 931,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cGoldMine": {
+        "name": "cGoldMine",
+        "value": 932,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cShoreFish": {
+        "name": "cShoreFish",
+        "value": 933,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cCliffClass": {
+        "name": "cCliffClass",
+        "value": 934,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cPetardClass": {
+        "name": "cPetardClass",
+        "value": 935,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cCavalryArcherClass": {
+        "name": "cCavalryArcherClass",
+        "value": 936,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cDoppelgangerClass": {
+        "name": "cDoppelgangerClass",
+        "value": 937,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cBirdClass": {
+        "name": "cBirdClass",
+        "value": 938,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cGateClass": {
+        "name": "cGateClass",
+        "value": 939,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cSalvagePileClass": {
+        "name": "cSalvagePileClass",
+        "value": 940,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cResourcePileClass": {
+        "name": "cResourcePileClass",
+        "value": 941,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cRelicClass": {
+        "name": "cRelicClass",
+        "value": 942,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cMonKWithRelicClass": {
+        "name": "cMonKWithRelicClass",
+        "value": 943,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cHandCannoneerClass": {
+        "name": "cHandCannoneerClass",
+        "value": 944,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cTwoHandedSwordsmanClass": {
+        "name": "cTwoHandedSwordsmanClass",
+        "value": 945,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cPikemanClass": {
+        "name": "cPikemanClass",
+        "value": 946,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cScoutCavalryClass": {
+        "name": "cScoutCavalryClass",
+        "value": 947,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cOreMineClass": {
+        "name": "cOreMineClass",
+        "value": 948,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cFarmClass": {
+        "name": "cFarmClass",
+        "value": 949,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cSpearmanClass": {
+        "name": "cSpearmanClass",
+        "value": 950,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cPackedUnitClass": {
+        "name": "cPackedUnitClass",
+        "value": 951,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cTowerClass": {
+        "name": "cTowerClass",
+        "value": 952,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cBoardingShipClass": {
+        "name": "cBoardingShipClass",
+        "value": 953,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cUnpackedSiegeUnitClass": {
+        "name": "cUnpackedSiegeUnitClass",
+        "value": 954,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cScorpionClass": {
+        "name": "cScorpionClass",
+        "value": 955,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cRaiderClass": {
+        "name": "cRaiderClass",
+        "value": 956,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cCavalryRaiderClass": {
+        "name": "cCavalryRaiderClass",
+        "value": 957,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cLivestockClass": {
+        "name": "cLivestockClass",
+        "value": 958,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cKingClass": {
+        "name": "cKingClass",
+        "value": 959,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cMiscBuildingClass": {
+        "name": "cMiscBuildingClass",
+        "value": 960,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cControlledAnimalClass": {
+        "name": "cControlledAnimalClass",
+        "value": 961,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
         "usage": null
     },
     "cAttributeFood": {

@@ -1,64 +1,56 @@
 import * as vscode from "vscode";
+import * as fileParser from "../common/fileParser";
+
+function getVariableDefinition(document: vscode.TextDocument, position: vscode.Position, word: string) {
+    const variables = fileParser.variables[document.fileName][word];
+    for(const variable of variables) {
+        if (!(variable.scope[0] <= position.line) || !(variable.scope[1] === -1 || position.line < variable.scope[1])) {
+            continue;
+        }
+        return new vscode.Location(
+            variable.fromFile.uri,
+            new vscode.Range(
+                new vscode.Position(variable.startLine, variable.startChar),
+                new vscode.Position(variable.startLine, variable.startChar + variable.length)
+            )
+        );
+    }
+}
 
 export class GoToDefinitionProvider implements vscode.DefinitionProvider {
     public provideDefinition(document: vscode.TextDocument, position: vscode.Position): vscode.Location | undefined {
-        const lines: any = document.getText().split(/\r\n/g);
+        const text: string = document.getText();
+        const lines = text.split(/\r\n/g);
         const cursorLine = lines[position.line];
-        const wordPosition = cursorLine.slice(0, position.character).split(/\b/g).length - 1;
+        const lineTillCursor = cursorLine.slice(0, position.character);
+        
+        if (lineTillCursor.indexOf("//") !== -1) {
+            return undefined;
+        }
+
+        const wordPosition = lineTillCursor.split(/\b/g).length - 1;
         const words = cursorLine.split(/\b/g);
         const word = words[wordPosition];
-
-        for (var i = 0; i < lines.length; i++) {
-            const line = lines[i];
-            const functions = line.matchAll(
-                new RegExp(
-                    `(?<=(void|int|float|bool|String|Vector|string|vector|char|long|double)[\\s\\r\\n]+)${word}(?=[\\s\\r\\n]*\\()`,
-                    "g"
-                )
-            );
-            for (var definition of functions) {
-                return new vscode.Location(
-                    document.uri,
-                    new vscode.Range(
-                        new vscode.Position(i, definition.index),
-                        new vscode.Position(i, definition.index + definition[0].length)
-                    )
-                );
-            }
+        const word2 = words[0];
+        if (!isNaN(+word)) {
+            return undefined;
         }
+        if(word2 === "include") {
+            var fileName = cursorLine.split("include").slice(1)[0].trim().slice(1, -2).replace("/", "\\");
 
-        for (var i = 0; i < lines.length; i++) {
-            const line = lines[i];
-            const rules = line.matchAll(
-                new RegExp(`(?<=rule[\\s\\r\\n]+)${word}`, "g")
-            );
-            for (var definition of rules) {
-                console.log(i);
-                return new vscode.Location(
-                    document.uri,
-                    new vscode.Range(
-                        new vscode.Position(i, definition.index),
-                        new vscode.Position(i, definition.index + definition[0].length)
-                    )
-                );
+            for(const file of fileParser.includedFiles[document.fileName]) {
+                if(file.fileName.endsWith(fileName)) {
+                    return new vscode.Location(
+                        file.uri,
+                        new vscode.Range(
+                            new vscode.Position(0, 0),
+                            new vscode.Position(0, 0)
+                        )
+                    );
+                }
             }
-        }
-
-        var latestVarDefinition: vscode.Range;
-        for (var i = 0; i <= position.line; i++) {
-            const line = lines[i];
-            const variables = line.matchAll(
-                new RegExp(`(?<=(int|float|bool|String|Vector|string|vector|char|long|double)[\\s\\r\\n]+)${word}`, "g")
-            );
-            for (var definition of variables) {
-                latestVarDefinition = new vscode.Range(
-                    new vscode.Position(i, definition.index),
-                    new vscode.Position(i, definition.index + definition[0].length)
-                );
-            }
-        }
-        if (latestVarDefinition) {
-            return new vscode.Location(document.uri, latestVarDefinition);
+        } else if(word in fileParser.variables[document.fileName]) {
+            return getVariableDefinition(document, position, word);
         }
         return undefined;
     }

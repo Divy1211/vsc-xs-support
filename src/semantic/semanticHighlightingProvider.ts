@@ -1,6 +1,7 @@
 import * as vscode from "vscode";
-import { IParsedToken } from "./IParsedToken";
-import { getConstantTokens, getParameterTokens } from "./parsedTokenGenerator";
+import * as parsedTokenGen from "./parsedTokenGenerator";
+import * as fileParser from "../common/fileParser";
+import { IParsedToken } from "../common/interfaces";
 
 const tokenTypes = new Map<string, number>();
 const tokenModifiers = new Map<string, number>();
@@ -67,18 +68,29 @@ function encodeTokenModifiers(strTokenModifiers: string[]): number {
     return result;
 }
 
-export class TokenProvider implements vscode.DocumentSemanticTokensProvider {
+export class ContextBasedTokenProvider implements vscode.DocumentSemanticTokensProvider {
     async provideDocumentSemanticTokens(document: vscode.TextDocument): Promise<vscode.SemanticTokens> {
+
+        fileParser.startDetectingLiveChanges(document);
+        await fileParser.generateFileInfo(document);
+        
+        // console.log(document.fileName);
+        // console.log(fileParser.constants[document.fileName]);
+        
         
         const tokens: IParsedToken[] = [];
-        tokens.push(...getConstantTokens(document.getText()));
-        tokens.push(...getParameterTokens(document.getText()));
+        tokens.push(...parsedTokenGen.getConstantTokens(document.fileName));
+        // tokens.push(...parsedTokenGen.getParameterTokens(text));
+        // tokens.push(...parsedTokenGen.getRuleTokens(text));
+        // tokens.push(...parsedTokenGen.getIncludedConstantTokens(text, includedFileTexts));
+
+        // tokens.push(...await getIncludedRuleTokens(text, document));
 
         const builder = new vscode.SemanticTokensBuilder();
         tokens.forEach((token) => {
             builder.push(
                 token.line,
-                token.startCharacter,
+                token.startChar,
                 token.length,
                 encodeTokenType(token.tokenType),
                 encodeTokenModifiers(token.tokenModifiers)

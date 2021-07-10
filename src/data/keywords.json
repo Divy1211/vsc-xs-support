@@ -1,0 +1,222 @@
+{
+    "void": {
+        "name": "void",
+        "desc": "This keyword is used to declare a variable of type void",
+        "syntax": null
+    },
+    "int": {
+        "name": "int",
+        "desc": "This keyword is used to declare a variable of type int",
+        "syntax": null
+    },
+    "float": {
+        "name": "float",
+        "desc": "This keyword is used to declare a variable of type float",
+        "syntax": null
+    },
+    "bool": {
+        "name": "bool",
+        "desc": "This keyword is used to declare a variable of type bool",
+        "syntax": null
+    },
+    "String": {
+        "name": "String",
+        "desc": "This keyword is used to declare a variable of type String",
+        "syntax": null
+    },
+    "Vector": {
+        "name": "Vector",
+        "desc": "This keyword is used to declare a variable of type Vector",
+        "syntax": null
+    },
+    "string": {
+        "name": "string",
+        "desc": "This keyword is used to declare a variable of type string",
+        "syntax": null
+    },
+    "vector": {
+        "name": "vector",
+        "desc": "This keyword is used to declare a variable of type vector",
+        "syntax": null
+    },
+    "char": {
+        "name": "char",
+        "desc": "This keyword is used to declare a variable of type char",
+        "syntax": null
+    },
+    "long": {
+        "name": "long",
+        "desc": "This keyword is used to declare a variable of type long",
+        "syntax": null
+    },
+    "double": {
+        "name": "double",
+        "desc": "This keyword is used to declare a variable of type double",
+        "syntax": null
+    },
+    "rule": {
+        "name": "rule",
+        "desc": "This keyowrd is used to declare a rule",
+        "syntax": null
+    },
+    "if": {
+        "name": "if",
+        "desc": "The if statement defines the code block to execute if the condition given to it is true",
+        "syntax": null
+    },
+    "else": {
+        "name": "else",
+        "desc": "The else statement defines the code block to execute if the condition given to an if statement is false. This can only be used immediately after an if code block",
+        "syntax": null
+    },
+    "while": {
+        "name": "while",
+        "desc": "The while statement defines a code block to repeatedly execute until the condition given to it becomes false",
+        "syntax": null
+    },
+    "for": {
+        "name": "for",
+        "desc": "The for statement defines a code block to repeatedly execute a certain number of times",
+        "syntax": null
+    },
+    "switch": {
+        "name": "switch",
+        "desc": "This statement can execute different blocks of code depending on different values of a variable, called cases.",
+        "syntax": null
+    },
+    "case": {
+        "name": "case",
+        "desc": "This keyword defines the code blocks for the individual cases of a switch variable",
+        "syntax": null
+    },
+    "default": {
+        "name": "default",
+        "desc": "This keyword defines the default case for a switch block when the value of the variable doesn't match with any of the other cases",
+        "syntax": null
+    },
+    "break": {
+        "name": "break",
+        "desc": "This Keyword is used to exit out of a loop",
+        "syntax": null
+    },
+    "continue": {
+        "name": "continue",
+        "desc": "This keyowrd starts the next iteration of a loop",
+        "syntax": null
+    },
+    "include": {
+        "name": "include",
+        "desc": "This keyword can be used to import (borrow) functions and extern variables from another script",
+        "syntax": "include \"${1}\";"
+    },
+    "return": {
+        "name": "return",
+        "desc": "This keyword is used inside a function to send back a value",
+        "syntax": null
+    },
+    "extern": {
+        "name": "extern",
+        "desc": "This keyword can be used to export (lend) variables to other scritps",
+        "syntax": null
+    },
+    "const": {
+        "name": "const",
+        "desc": "This keyword is used to declare a variable as a constant. Constant variables cannot be changed after initialisation",
+        "syntax": null
+    },
+    "class": {
+        "name": "class",
+        "desc": "A class can be used to make objects with properties and memeber functions",
+        "syntax": null
+    },
+    "minInterval": {
+        "name": "minInterval",
+        "desc": "This property controls the minimum time that must pass before a rule's body is executed again. This cannot be used together with `highFrequency`",
+        "syntax": null
+    },
+    "maxInterval": {
+        "name": "maxInterval",
+        "desc": "This property controls the maximum time that can pass before a rule's body must be executed again. This cannot be used together with `highFrequency`",
+        "syntax": null
+    },
+    "highFrequency": {
+        "name": "highFrequency",
+        "desc": "If this property is set, then a rule's body is executed 60 times every real life second. This speed of execution is independent of the ingame speed and this cannot be used together with `minInterval` or `maxInterval`",
+        "syntax": null
+    },
+    "runImmediately": {
+        "name": "runImmediately",
+        "desc": "This runs the rule at least once even if the minInterval setting has not been met",
+        "syntax": null
+    },
+    "priority": {
+        "name": "priority",
+        "desc": "Rules are executed in descending order of their priority",
+        "syntax": null
+    },
+    "active": {
+        "name": "active",
+        "desc": "If this property is set, a rule runs automatically from the get go",
+        "syntax": null
+    },
+    "inactive": {
+        "name": "inactive",
+        "desc": "If this property is set, a rule must first be enabled using the xsEnableRule function for it to run",
+        "syntax": null
+    },
+    "group": {
+        "name": "group",
+        "desc": "This property controls which group a rule belongs to",
+        "syntax": null
+    },
+    "then": {
+        "name": "then",
+        "desc": "It is unkown as to how this keyword is meant to be used",
+        "syntax": null
+    },
+    "goto": {
+        "name": "goto",
+        "desc": "It is unkown as to how this keyword is meant to be used",
+        "syntax": null
+    },
+    "label": {
+        "name": "label",
+        "desc": "It is unkown as to how this keyword is meant to be used",
+        "syntax": null
+    },
+    "dbg": {
+        "name": "dbg",
+        "desc": "It is unkown as to how this keyword is meant to be used",
+        "syntax": null
+    },
+    "infiniteLoopLimit": {
+        "name": "infiniteLoopLimit",
+        "desc": "It is unkown as to how this keyword is meant to be used",
+        "syntax": null
+    },
+    "infiniteRecursionLimit": {
+        "name": "infiniteRecursionLimit",
+        "desc": "It is unkown as to how this keyword is meant to be used",
+        "syntax": null
+    },
+    "breakpoint": {
+        "name": "breakpoint",
+        "desc": "This keyword will permanenetly stop the execution of XS when encountered. There is currently no known way to resume execution",
+        "syntax": null
+    },
+    "static": {
+        "name": "static",
+        "desc": "It is unkown as to how this keyword is meant to be used",
+        "syntax": null
+    },
+    "export": {
+        "name": "export",
+        "desc": "It is unkown as to how this keyword is meant to be used",
+        "syntax": null
+    },
+    "mutable": {
+        "name": "mutable",
+        "desc": "It is unkown as to how this keyword is meant to be used",
+        "syntax": null
+    }
+}
