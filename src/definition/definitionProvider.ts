@@ -4,7 +4,7 @@ import * as fileParser from "../common/fileParser";
 function getVariableDefinition(document: vscode.TextDocument, position: vscode.Position, word: string) {
     const variables = fileParser.variables[document.fileName][word];
     for (const variable of variables) {
-        if (!(variable.scope[0] <= position.line) || !(variable.scope[1] === -1 || position.line < variable.scope[1])) {
+        if (!(variable.scope[0] <= position.line) || !(variable.scope[1] === -1 || position.line <= variable.scope[1])) {
             continue;
         }
         return new vscode.Location(

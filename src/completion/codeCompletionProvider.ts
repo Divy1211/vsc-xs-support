@@ -101,7 +101,7 @@ function getVariableCompletion(document: vscode.TextDocument, position: vscode.P
             }
             if (
                 !(variable.scope[0] <= position.line) ||
-                !(variable.scope[1] === -1 || position.line < variable.scope[1])
+                !(variable.scope[1] === -1 || position.line <= variable.scope[1])
             ) {
                 continue;
             }
@@ -203,7 +203,7 @@ function getGroupCompletion(document: vscode.TextDocument, position: vscode.Posi
             ruleList += ruleName + `\n`;
         }
         ruleList += `\n\`\`\``;
-        const completionItem = new vscode.CompletionItem(key, vscode.CompletionItemKind.Function);
+        const completionItem = new vscode.CompletionItem(key, vscode.CompletionItemKind.Module);
         completionItem.insertText = new vscode.SnippetString(key);
         completionItem.documentation = new vscode.MarkdownString(ruleList);
         groupCompletion.push(completionItem);
