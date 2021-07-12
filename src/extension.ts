@@ -7,8 +7,6 @@ import { GoToDefinitionProvider } from "./definition/definitionProvider";
 var resources: vscode.Disposable[] = [];
 
 export function activate() {
-    // fix multiline variable declaration
-    // proper go to function definition with nested CGs
     resources.push(
         vscode.languages.registerDocumentSemanticTokensProvider("xs", new ContextBasedTokenProvider(), tokenLegend)
     );

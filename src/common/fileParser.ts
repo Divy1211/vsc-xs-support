@@ -113,8 +113,8 @@ function generateSelfVariable(document: vscode.TextDocument): { [index: string]:
             if (scope(codeTillOccurance) < variableScope) {
                 continue;
             }
-
             const linesOfCodeTillOccurance = codeTillOccurance.split(/\r\n/g);
+
             const lineCount = linesOfCodeTillOccurance.length - 1;
             const lineCharCount = linesOfCodeTillOccurance.slice(-1)[0].length;
 
@@ -129,7 +129,7 @@ function generateSelfVariable(document: vscode.TextDocument): { [index: string]:
 
         selfVariables[variable[6]] = selfVariables[variable[6]] ?? [];
         selfVariables[variable[6]].push({
-            startLine: lineCount + (variable[4] || variable[5]).split(/\r\n/).length - 2,
+            startLine: lineCount + (variable[5] ?? "").split(/\r\n/).length - 2,
             endLine: lineCount + variable[7].split(/\r\n/).length + variable[8].split(/\r\n/).length - 3,
             startChar: lineCharCount,
             length: variable[6].length,
@@ -349,9 +349,10 @@ function generateImportedRuleInfo(
                 length: occurance[0].length,
             });
         }
-
-        groups[document.fileName][rule.groupName] = groups[document.fileName][rule.groupName] ?? [];
-        groups[document.fileName][rule.groupName].push(rule.name);
+        if(rule.groupName) {
+            groups[document.fileName][rule.groupName] = groups[document.fileName][rule.groupName] ?? [];
+            groups[document.fileName][rule.groupName].push(rule.name);
+        }
 
         importedRules[rule.name] = [];
         importedRules[rule.name].push({
@@ -367,7 +368,7 @@ function generateSelfRuleInfo(document: vscode.TextDocument): { [index: string]:
     const text: any = document.getText();
     const ruleDefs =
         text.matchAll(
-            /(?<=\b)(?<!\/\/.*?)rule[\s\r\n]+([a-zA-Z_]+[a-zA-Z_0-9]*).*?group[\s\r\n]+([a-zA-Z_]+[a-zA-Z_0-9]*).*?[\s\r\n]*{/gs
+            /(?<=\b)(?<!\/\/[^\n]*?)rule[\s\r\n]+([a-zA-Z_]+[a-zA-Z_0-9]*).*?(?:group[\s\r\n]+([a-zA-Z_]+[a-zA-Z_0-9]*).*?)?[\s\r\n]*{/gs
         ) ?? [];
 
     for (const rule of ruleDefs) {
@@ -398,8 +399,10 @@ function generateSelfRuleInfo(document: vscode.TextDocument): { [index: string]:
             });
         }
 
-        groups[document.fileName][rule[2]] = groups[document.fileName][rule[2]] ?? [];
-        groups[document.fileName][rule[2]].push(rule[1]);
+        if(rule[2]) {
+            groups[document.fileName][rule[2]] = groups[document.fileName][rule[2]] ?? [];
+            groups[document.fileName][rule[2]].push(rule[1]);
+        }
 
         selfRules[rule[1]] = [];
         selfRules[rule[1]].push({
@@ -408,7 +411,7 @@ function generateSelfRuleInfo(document: vscode.TextDocument): { [index: string]:
             startChar: lineCharCount,
             fromFile: document,
             name: rule[1],
-            groupName: rule[2],
+            groupName: rule[2] ?? null,
             length: rule[0].length,
             proto: rule[0],
             occurances,
@@ -527,7 +530,7 @@ export async function generateFileInfo(document: vscode.TextDocument, forceParsi
 
     groups[document.fileName] = {};
     rules[document.fileName] = generateAllRuleInfo(document);
-
+    
     lastParsedFileText[document.fileName] = document.getText();
 }
 
