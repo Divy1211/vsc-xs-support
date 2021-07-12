@@ -1,9 +1,9 @@
 import * as vscode from "vscode";
-import fd from "../data/functions.json";
-import cd from "../data/constants.json";
-import kw from "../data/keywords.json";
+import fd from "../common/data/functions.json";
+import cd from "../common/data/constants.json";
+import kw from "../common/data/keywords.json";
 import * as fileParser from "../common/fileParser";
-import { Variable } from "../common/interfaces";
+import { Variable, Function, Rule } from "../common/interfaces";
 
 const functionDocs: { [index: string]: any } = fd;
 const constantDocs: { [index: string]: any } = cd;
@@ -83,6 +83,66 @@ function variableHoverProvider(position: vscode.Position, variables: Variable[],
     }
 }
 
+function functionHoverProvider(position: vscode.Position, func: Function, wordStart: number, wordEnd: number) {
+    var functionDocString = `\`\`\`xs\n${func.returnType} ${func.name}(`;
+    var paramCount = 0;
+    for (var param of func.parameters) {
+        paramCount += 1;
+        functionDocString += "\n\t" + param.type + " " + param.name + " = " + param.defaultValue + ", ";
+    }
+    if (paramCount !== 0) {
+        functionDocString = functionDocString.slice(0, -2) + "\n";
+    }
+    functionDocString += ")\n```\n\n";
+    return new vscode.Hover(
+        new vscode.MarkdownString(functionDocString),
+        new vscode.Range(new vscode.Position(position.line, wordStart), new vscode.Position(position.line, wordEnd))
+    );
+}
+
+function ruleHoverProvider(position: vscode.Position, rule: Rule, wordStart: number, wordEnd: number) {
+    var ruleProto = `\`\`\`xs\n${rule.proto.slice(0, -2)}\n\`\`\``;
+    return new vscode.Hover(
+        new vscode.MarkdownString(ruleProto),
+        new vscode.Range(new vscode.Position(position.line, wordStart), new vscode.Position(position.line, wordEnd))
+    );
+}
+
+function groupHoverProvider(position: vscode.Position, rules: string[], wordStart: number, wordEnd: number) {
+    var ruleList = `The following rules are part of this rule group:\n\n\`\`\`xs\n`;
+    for(var ruleName of rules) {
+        ruleList+=ruleName+`\n`;
+    }
+    ruleList+=`\n\`\`\``;
+    return new vscode.Hover(
+        new vscode.MarkdownString(ruleList),
+        new vscode.Range(new vscode.Position(position.line, wordStart), new vscode.Position(position.line, wordEnd))
+    );
+}
+
+function parameterHoverProvider(document: vscode.TextDocument, position: vscode.Position, word: string, wordStart: number, wordEnd: number) {
+    for (const funcName in fileParser.functions[document.fileName]) {
+        const func = fileParser.functions[document.fileName][funcName][0];
+        if (func.fromFile.fileName === document.fileName) {
+            if (func.startLine < position.line && position.line < func.feLine) {
+                for (const param of func.parameters) {
+                    if (param.name === word) {
+                        var docString = `\`\`\`xs\n${param.type} ${param.name} = ${param.defaultValue}\n\`\`\``;
+                        return new vscode.Hover(
+                            new vscode.MarkdownString(docString),
+                            new vscode.Range(
+                                new vscode.Position(position.line, wordStart),
+                                new vscode.Position(position.line, wordEnd)
+                            )
+                        );
+                    }
+                }
+            }
+        }
+    }
+    return undefined;
+}
+
 export class HoverProvider implements vscode.HoverProvider {
     provideHover(document: any, position: vscode.Position): vscode.ProviderResult<vscode.Hover> {
         const cursorLine = document.getText().split(/\r\n/g)[position.line];
@@ -103,7 +163,14 @@ export class HoverProvider implements vscode.HoverProvider {
             return keywordHoverProvider(position, word, wordStart, wordEnd);
         } else if (word in fileParser.variables[document.fileName]) {
             return variableHoverProvider(position, fileParser.variables[document.fileName][word], wordStart, wordEnd);
+        } else if (word in fileParser.functions[document.fileName]) {
+            return functionHoverProvider(position, fileParser.functions[document.fileName][word][0], wordStart, wordEnd);
+        } else if (word in fileParser.rules[document.fileName]) {
+            return ruleHoverProvider(position, fileParser.rules[document.fileName][word][0], wordStart, wordEnd);
+        } else if (word in fileParser.groups[document.fileName]) {
+            return groupHoverProvider(position, fileParser.groups[document.fileName][word], wordStart, wordEnd);
+        } else {
+            return parameterHoverProvider(document, position, word, wordStart, wordEnd);
         }
-        return undefined;
     }
 }

@@ -70,21 +70,15 @@ function encodeTokenModifiers(strTokenModifiers: string[]): number {
 
 export class ContextBasedTokenProvider implements vscode.DocumentSemanticTokensProvider {
     async provideDocumentSemanticTokens(document: vscode.TextDocument): Promise<vscode.SemanticTokens> {
-
         fileParser.startDetectingLiveChanges(document);
         await fileParser.generateFileInfo(document);
-        
+
         // console.log(document.fileName);
         // console.log(fileParser.constants[document.fileName]);
-        
-        
+
         const tokens: IParsedToken[] = [];
         tokens.push(...parsedTokenGen.getConstantTokens(document.fileName));
-        // tokens.push(...parsedTokenGen.getParameterTokens(text));
-        // tokens.push(...parsedTokenGen.getRuleTokens(text));
-        // tokens.push(...parsedTokenGen.getIncludedConstantTokens(text, includedFileTexts));
-
-        // tokens.push(...await getIncludedRuleTokens(text, document));
+        tokens.push(...parsedTokenGen.getParameterTokens(document.fileName));
 
         const builder = new vscode.SemanticTokensBuilder();
         tokens.forEach((token) => {

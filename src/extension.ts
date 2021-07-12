@@ -3,16 +3,23 @@ import { ContextBasedTokenProvider, tokenLegend } from "./semantic/semanticHighl
 import { CompletionProvider } from "./completion/codeCompletionProvider";
 import { HoverProvider } from "./hover/hoverInfoProvider";
 import { GoToDefinitionProvider } from "./definition/definitionProvider";
-import * as fileParser from "./common/fileParser";
+
+var resources: vscode.Disposable[] = [];
 
 export function activate() {
-    // fileParser.findPaths();
-    vscode.languages.registerDocumentSemanticTokensProvider("xs", new ContextBasedTokenProvider(), tokenLegend);
-    // completion suggestions in wrong scope
-    // for loop var of iteration detection
-    vscode.languages.registerCompletionItemProvider("xs", new CompletionProvider());
-    vscode.languages.registerHoverProvider("xs", new HoverProvider());
-    vscode.languages.registerDefinitionProvider("xs", new GoToDefinitionProvider());
+    // fix multiline variable declaration
+    // proper go to function definition with nested CGs
+    resources.push(
+        vscode.languages.registerDocumentSemanticTokensProvider("xs", new ContextBasedTokenProvider(), tokenLegend)
+    );
+    resources.push(vscode.languages.registerCompletionItemProvider("xs", new CompletionProvider()));
+    resources.push(vscode.languages.registerHoverProvider("xs", new HoverProvider()));
+    resources.push(vscode.languages.registerDefinitionProvider("xs", new GoToDefinitionProvider()));
 }
 
-export function deactivate() {}
+export function deactivate() {
+    for (var resource of resources) {
+        resource.dispose();
+    }
+    resources = [];
+}

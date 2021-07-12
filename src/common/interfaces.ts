@@ -9,7 +9,7 @@ export interface IParsedToken {
 }
 
 export interface Occurance {
-    fileName: string;
+    fileName: string; // this is function name in case of parameter occurance
     startLine: number;
     endLine: number;
     startChar: number;
@@ -35,10 +35,12 @@ export interface Function {
     startLine: number;
     endLine: number;
     startChar: number;
-    endChar: number;
+    fromFile: vscode.TextDocument;
     returnType: string;
     name: string;
-    proto: string;
+    parameters: Parameter[];
+    length: number;
+    feLine: number;
     occurances: Occurance[];
 }
 
@@ -46,11 +48,10 @@ export interface Parameter {
     startLine: number;
     endLine: number;
     startChar: number;
-    endChar: number;
+    length: number;
     type: string;
     name: string;
     defaultValue: any;
-    scope: number[]; // 0: starting line, 1: ending line
     occurances: Occurance[];
 }
 
@@ -58,8 +59,10 @@ export interface Rule {
     startLine: number;
     endLine: number;
     startChar: number;
-    endChar: number;
+    fromFile: vscode.TextDocument;
     name: string;
+    groupName: string;
+    length: number;
     proto: string;
     occurances: Occurance[];
 }
