@@ -5,10 +5,6 @@ import * as extension from "../extension";
 var deletedFiles: string[] = [];
 var lastParsedFileText: { [index: string]: string } = {};
 
-// var installedModsDir = "";
-// var profileDir = "";
-// var gameDir = "";
-
 export var includedFiles: { [index: string]: vscode.TextDocument[] } = {};
 export var variables: { [index: string]: { [index: string]: Variable[] } } = {};
 export var functions: { [index: string]: { [index: string]: Function[] } } = {};

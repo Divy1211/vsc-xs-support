@@ -1,7 +1,5 @@
 import { IParsedToken } from "../common/interfaces";
 import * as fileParser from "../common/fileParser";
-import { DocumentHighlight, TreeViewSelectionChangeEvent } from "vscode";
-import { O_CREAT } from "constants";
 
 export function getConstantTokens(fileName: string): IParsedToken[] {
     const constantTokens: IParsedToken[] = [];
