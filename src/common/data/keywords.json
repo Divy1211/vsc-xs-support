@@ -218,5 +218,15 @@
         "name": "mutable",
         "desc": "It is unkown as to how this keyword is meant to be used",
         "syntax": null
+    },
+    "true": {
+        "name": "true",
+        "desc": "Constant for boolean value true",
+        "syntax": null
+    },
+    "false": {
+        "name": "false",
+        "desc": "Constant for boolean value false",
+        "syntax": null
     }
 }
