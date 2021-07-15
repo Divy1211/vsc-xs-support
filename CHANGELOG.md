@@ -1,5 +1,9 @@
 # Change Log
 
+## Released v1.0.2 on 16-07-2021
+
+- Added two missing constants
+
 ## Released v1.0.1 on 16-07-2021
 
 - Fixed Dynamic function completion providers not scoping correctly
