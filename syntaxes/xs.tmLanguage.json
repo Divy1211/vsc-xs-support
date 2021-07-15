@@ -33,9 +33,6 @@
             "include": "#rules"
         },
         {
-            "include": "#built-in-functions"
-        },
-        {
             "include": "#user-defined-functions"
         },
         {

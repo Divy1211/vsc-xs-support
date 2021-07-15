@@ -5,8 +5,9 @@
 This extension enables
 
 1. Syntax highlighting for XS Scripts
-2. Code tab completion for XS Scripts
-3. Hover Docstrings
+2. Code completion suggestions for XS Scripts
+3. Hover Docstrings for in-built functions and constants in XS Scripts.
+4. Other programmatic language features for XS Scripts that are commonly offered for other languages like javascript
 
 XS Scripts are External Subroutines used by the games AoE2, AoE3 and AoM
 
@@ -26,9 +27,16 @@ XS Scripts are External Subroutines used by the games AoE2, AoE3 and AoM
 
 ## Release Notes
 
-### 1.0.0 (indev)
+### 1.0.0
 
-Major update with tons of new features (hover info) and improvements (code completion, syntax and semantic highlighting)
+Major update with tons of new features:
+
+Semantic Highlighting for parameters and constants
+Better docstrings on hover, now dynamic!
+Better code completion suggestions, now dynamic!
+
+
+check the changelog!
 
 ### 0.0.3
 
