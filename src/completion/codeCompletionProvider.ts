@@ -149,7 +149,7 @@ function getFunctionCompletion(document: vscode.TextDocument, position: vscode.P
             continue;
         }
         const func = fileParser.functions[document.fileName][key][0];
-        if (func.startLine >= position.line) {
+        if (func.fromFile.fileName === document.fileName && !(func.startLine < position.line)) {
             continue;
         }
         const completionItem = new vscode.CompletionItem(func.name, vscode.CompletionItemKind.Function);

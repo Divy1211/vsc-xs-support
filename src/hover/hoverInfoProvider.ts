@@ -83,7 +83,10 @@ function variableHoverProvider(position: vscode.Position, variables: Variable[],
     }
 }
 
-function functionHoverProvider(position: vscode.Position, func: Function, wordStart: number, wordEnd: number) {
+function functionHoverProvider(document: vscode.TextDocument, position: vscode.Position, func: Function, wordStart: number, wordEnd: number) {
+    if (func.fromFile.fileName === document.fileName && !(func.startLine < position.line)) {
+        return undefined;
+    }
     var functionDocString = `\`\`\`xs\n${func.returnType} ${func.name}(`;
     var paramCount = 0;
     for (var param of func.parameters) {
@@ -164,7 +167,7 @@ export class HoverProvider implements vscode.HoverProvider {
         } else if (word in fileParser.variables[document.fileName]) {
             return variableHoverProvider(position, fileParser.variables[document.fileName][word], wordStart, wordEnd);
         } else if (word in fileParser.functions[document.fileName]) {
-            return functionHoverProvider(position, fileParser.functions[document.fileName][word][0], wordStart, wordEnd);
+            return functionHoverProvider(document, position, fileParser.functions[document.fileName][word][0], wordStart, wordEnd);
         } else if (word in fileParser.rules[document.fileName]) {
             return ruleHoverProvider(position, fileParser.rules[document.fileName][word][0], wordStart, wordEnd);
         } else if (word in fileParser.groups[document.fileName]) {

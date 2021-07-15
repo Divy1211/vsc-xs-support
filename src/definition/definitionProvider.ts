@@ -44,6 +44,9 @@ function getParameterDefinition(document: vscode.TextDocument, position: vscode.
 
 function getFunctionDefinition(document: vscode.TextDocument, position: vscode.Position, word: string) {
     const func = fileParser.functions[document.fileName][word][0];
+    if (func.fromFile.fileName === document.fileName && !(func.startLine < position.line)) {
+        return undefined;
+    }
     return new vscode.Location(
         func.fromFile.uri,
         new vscode.Range(
