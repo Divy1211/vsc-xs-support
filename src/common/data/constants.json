@@ -1,4 +1,18 @@
 {
+    "true": {
+        "name": "true",
+        "value": true,
+        "type": "bool",
+        "desc": "Constant for boolean value true",
+        "usage": null
+    },
+    "false": {
+        "name": "false",
+        "value": false,
+        "type": "bool",
+        "desc": "Constant for boolean value false",
+        "usage": null
+    },
     "cDarkAge": {
         "name": "cDarkAge",
         "value": 0,
