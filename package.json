@@ -2,6 +2,7 @@
 	"name": "vscode-xs",
 	"displayName": "AoE2 XS Scripting",
 	"description": "AoE2 XS Support for VSC",
+	"publisher": "Divy",
 	"version": "1.0.0",
 	"engines": {
 		"vscode": "^1.46.0"
@@ -30,12 +31,6 @@
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-		"commands": [
-			{
-				"command": "aoe2xsscripting.helloWorld",
-				"title": "Hello World"
-			}
-		],
 		"languages": [
 			{
 				"id": "xs",
