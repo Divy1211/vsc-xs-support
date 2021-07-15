@@ -1,5 +1,9 @@
 # Change Log
 
+## Released v1.0.1 on 16-07-2021
+
+- Fixed Dynamic function completion providers not scoping correctly
+
 ## Released v1.0.0 on 15-07-2021
 
 - Added Semantic Highlighting for function parameters and constants
