@@ -1213,7 +1213,7 @@
                 "desc": "The player to set the context player to"
             }
         ],
-        "desc": "In other functions involving a `playerNumber` argument, the value of the context player is used if `-1` is passed as `playerNumber` to them. `xsEffectAmount` will use the value of the context player as its player if -2 is passed to it as the player argument."
+        "desc": "In other functions involving a `playerNumber` argument, the value of the context player is used if `-1` is passed as `playerNumber` to them. `xsEffectAmount` will use the value of the context player as its player if `-2` is passed to it as the player argument."
     },
     "xsGetFuntionID": {
         "name": "xsGetFuntionID",
@@ -1248,7 +1248,7 @@
                 "name": "functionName",
                 "type": "string",
                 "required": true,
-                "desc": "This is the name of a function that takes a single integer argument."
+                "desc": "This is the name of a user defined function that takes a single integer argument"
             },
             {
                 "name": "functionArgument",
@@ -1257,6 +1257,6 @@
                 "desc": "This is an integer argument that is passed to the function given to the argument `functionName` when this event runs."
             }
         ],
-        "desc": "A runtime event is called after all the XS code has finished executing but before rules start executing. It returns true if the function name given to it exists, otherwise it returns false. Does not work with built-ins."
+        "desc": "A runtime event is called after all the XS code has finished executing but before rules start executing. It calls the function `functionName` given to it with the `functionArgument` passed to it as a parameter. For programmers familiar with the terminology, this is basically a way to set a callback. It also returns true if the function name given to it exists, otherwise it returns false. Does not work with built-ins"
     }
 }
