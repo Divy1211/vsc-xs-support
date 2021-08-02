@@ -1,5 +1,9 @@
 # Change Log
 
+## Released v1.0.3 on 2-08-2021
+
+- Improved docstring for function xsAddRuntimeEvent
+
 ## Released v1.0.2 on 16-07-2021
 
 - Added two missing constants
