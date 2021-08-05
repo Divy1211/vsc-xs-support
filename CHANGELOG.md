@@ -1,5 +1,9 @@
 # Change Log
 
+## Released v1.0.4 on 5-08-2021
+
+- Fixed Spelling Error in `cAttributeRevealInitialType`
+
 ## Released v1.0.3 on 2-08-2021
 
 - Improved docstring for function xsAddRuntimeEvent

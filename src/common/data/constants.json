@@ -1614,7 +1614,7 @@
         "name": "cAttributeTrageBonus",
         "value": 8,
         "type": "int",
-        "desc": "ID of the player resource RES_NAME",
+        "desc": "ID of the player resource RES_NAME. The name is mispelled in the `Constants.xs` file, so thats how it needs to be used",
         "usage": null
     },
     "cAttributeTradeGoods": {
@@ -2870,8 +2870,8 @@
         "desc": "ID of the player resource RES_NAME",
         "usage": null
     },
-    "cAttributeRvealInitialType": {
-        "name": "cAttributeRvealInitialType",
+    "cAttributeRevealInitialType": {
+        "name": "cAttributeRevealInitialType",
         "value": 210,
         "type": "int",
         "desc": "ID of the player resource RES_NAME",
