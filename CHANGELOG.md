@@ -1,5 +1,12 @@
 # Change Log
 
+## Released v1.0.5 on 12-08-2021
+
+- Added 3 new RNG functions:
+1. `int xsGenerateRandomNumber()`
+2. `int xsGenerateRandomNumberHL(int low, int high)`
+3. `int xsGenerateRandomNumberMax(int max)`
+
 ## Released v1.0.4 on 5-08-2021
 
 - Fixed Spelling Error in `cAttributeRevealInitialType`

@@ -27,9 +27,13 @@ XS Scripts are External Subroutines used by the games AoE2, AoE3 and AoM
 
 ## Release Notes
 
+## 1.0.5
+
+Added new RNG functions
+
 ## 1.0.4
 
-- Fixed Spelling Error in `cAttributeRevealInitialType`
+Fixed Spelling Error in `cAttributeRevealInitialType`
 
 ### 1.0.3
 
