@@ -1265,8 +1265,8 @@
         "params": [],
         "desc": "Returns a random number between 0 and 32766."
     },
-    "xsGetRandomNumberHL": {
-        "name": "xsGetRandomNumberHL",
+    "xsGetRandomNumberLH": {
+        "name": "xsGetRandomNumberLH",
         "return_type": "int",
         "params": [
             {

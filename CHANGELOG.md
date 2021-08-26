@@ -1,5 +1,9 @@
 # Change Log
 
+## Released v1.0.6 on 26-08-2021
+
+Fixed name of `xsGenerateRandomNumberLH` from `xsGenerateRandomNumberHL`
+
 ## Released v1.0.5 on 12-08-2021
 
 - Added 3 new RNG functions:
