@@ -1,5 +1,11 @@
 # Change Log
 
+## Released v1.0.7 on 02-09-2021
+
+Added usage docstring for keywords `static`, `infiniteLoopLimit`, `infiniteRecursionLimit`, `mutable`
+Updated usage docstring for `class` keyword
+Fixed highlighting for keyword `infiniteRecursionLimit`
+
 ## Released v1.0.6 on 26-08-2021
 
 Fixed name of `xsGenerateRandomNumberLH` from `xsGenerateRandomNumberHL`

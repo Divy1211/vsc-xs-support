@@ -88,7 +88,7 @@
         },
         "keywords": {
             "name": "keyword.xs",
-            "match": "\\b(break|continue|include|return|extern|const|class|then|goto|label|dbg|infiniteLoopLimit|infiniteRecuresionLimit|breakpoint|static|export|mutable)\\b"
+            "match": "\\b(break|continue|include|return|extern|const|class|then|goto|label|dbg|infiniteLoopLimit|infiniteRecursionLimit|breakpoint|static|export|mutable)\\b"
         },
         "rules": {
             "name": "keyword.xs",

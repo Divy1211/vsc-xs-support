@@ -126,7 +126,7 @@
     },
     "class": {
         "name": "class",
-        "desc": "A class can be used to make objects with properties and memeber functions",
+        "desc": "This keyword can be used to define a class in XS. Note that while classes can be defined, no members can be created, classes are unimplemented in XS",
         "syntax": null
     },
     "minInterval": {
@@ -191,12 +191,12 @@
     },
     "infiniteLoopLimit": {
         "name": "infiniteLoopLimit",
-        "desc": "It is unkown as to how this keyword is meant to be used",
+        "desc": "This value can be set like a normal variable inside a function to control the maximum number of iterations of a loop before it is forced to break. Maximum number of iterations allowed = this value + 1. Note that hitting this limit does not force XS execution to stop unlike infiniteRecursionLimit",
         "syntax": null
     },
     "infiniteRecursionLimit": {
         "name": "infiniteRecursionLimit",
-        "desc": "It is unkown as to how this keyword is meant to be used",
+        "desc": "This value can be set like a normal variable inside a function to control the maximum number of calls that can be made to that function in one call stack. Hitting this limit will cause an exception and will cause all further XS execution to stop, use with caution!",
         "syntax": null
     },
     "breakpoint": {
@@ -206,7 +206,7 @@
     },
     "static": {
         "name": "static",
-        "desc": "It is unkown as to how this keyword is meant to be used",
+        "desc": "Defining a variable as static inside a function will make it so that it is initialised only once on the first call to that function",
         "syntax": null
     },
     "export": {
@@ -216,7 +216,7 @@
     },
     "mutable": {
         "name": "mutable",
-        "desc": "It is unkown as to how this keyword is meant to be used",
+        "desc": "This keyword can be used to forward declare functions",
         "syntax": null
     },
     "true": {
