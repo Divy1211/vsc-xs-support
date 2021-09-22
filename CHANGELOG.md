@@ -1,5 +1,9 @@
 # Change Log
 
+## Released v1.0.8 on 22-09-2021
+
+Fixed escaped backslash followed by a double quote not detecting the end of a string
+
 ## Released v1.0.7 on 02-09-2021
 
 Added usage docstring for keywords `static`, `infiniteLoopLimit`, `infiniteRecursionLimit`, `mutable`

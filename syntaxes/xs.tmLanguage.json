@@ -68,10 +68,9 @@
             "name": "string.quoted.double.xs",
             "begin": "\"",
             "beginCaptures": { "0": { "name": "punctuation.definition.string.begin.xs" } },
-            "end": "((?<!\\\\)\")|((?:[^\\\\\\n])$)",
+            "end": "(?:(?!\")(?:\\\\.|[^\\\\]))*(\")",
             "endCaptures": {
-                "1": { "name": "punctuation.definition.string.end.xs" },
-                "2": { "name": "invalid.illegal.newline.xs" }
+                "1": { "name": "punctuation.definition.string.end.xs" }
             }
         },
         "numbers": {
