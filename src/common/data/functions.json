@@ -3,7 +3,7 @@
         "name": "main",
         "return_type": "void",
         "params": [],
-        "desc": "When defined, this function automatically runs when the XS file is included in an RMS. This function should never be declared with any arguments!"
+        "desc": "When defined, this function automatically runs at the start of the game. Never define a main function with arguments!"
     },
     "xsDisableRule": {
         "name": "xsDisableRule",

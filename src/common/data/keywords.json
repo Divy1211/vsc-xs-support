@@ -216,7 +216,7 @@
     },
     "mutable": {
         "name": "mutable",
-        "desc": "This keyword can be used to forward declare functions",
+        "desc": "Functions defined using this Keyword may be redefined later. Only the last definition of the function actually works. This is the XS equivalent of forward declarations in C++",
         "syntax": null
     },
     "true": {

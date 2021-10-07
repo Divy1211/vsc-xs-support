@@ -1,5 +1,31 @@
 # Change Log
 
+## Released v1.0.9 on 07-10-2021
+
+Added & Renamed new constants from the update
+### Resource consts
+01. cAttributeMaintence -> cAttributeMaintenance           (33)
+02. cAttributeUnused0   -> cAttributeFeudalTownCenterLimit (218)
+03. cAttributeUnused3   -> cAttributeMonumentFoodTrickle   (221)
+04. cAttributeUnused4   -> cAttributeMonumentWoodTrickle   (222)
+05. cAttributeUnused5   -> cAttributeMonumentStoneTrickle  (223)
+06. cAttributeUnused6   -> cAttributeMonumentGoldTrickle   (224)
+07. cAttributeUnused7   -> cAttributeRelicFoodRate         (225)
+08. cAttriubteAdd       -> cAttributeAdd                   (1)
+09. + cAttributeFlemishMilitiaPop           (235)
+10. + cAttributeGoldFarmingProductivity     (236)
+11. + cAttributeFolwarkCollectionAmount     (237)
+12. + cAttributeFolwarkCollectionType       (238)
+13. + cAttributeBuildingId                  (239)
+14. + cAttributeUnitsConverted              (240)
+15. + cAttributeStoneGoldMiningProductivity (241)
+16. + cAttributeWorkshopFoodTrickle         (242)
+17. + cAttributeWorkshopWoodTrickle         (243)
+18. + cAttributeWorkshopStoneTrickle        (244)
+19. + cAttributeWorkshopGoldTrickle         (245)
+20. + cPoles     (38)
+21. + cBohemians (39)
+
 ## Released v1.0.8 on 22-09-2021
 
 Fixed escaped backslash followed by a double quote not detecting the end of a string

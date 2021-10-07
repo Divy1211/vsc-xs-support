@@ -314,6 +314,20 @@
         "desc": "This is the civilization ID of CIV_NAME",
         "usage": null
     },
+    "cPoles": {
+        "name": "cPoles",
+        "value": 38,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cBohemians": {
+        "name": "cBohemians",
+        "value": 39,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
     "cSetAttribute": {
         "name": "cSetAttribute",
         "value": 0,
@@ -651,7 +665,7 @@
         "usage": null
     },
     "cAttriubteAdd": {
-        "name": "cAttriubteAdd",
+        "name": "cAttributeAdd",
         "value": 1,
         "type": "int",
         "desc": "This is the ID of the `Attribute Add` modifier for the xsEffectAmount function",
@@ -1736,8 +1750,8 @@
         "desc": "ID of the player resource RES_NAME",
         "usage": null
     },
-    "cAttributeMaintence": {
-        "name": "cAttributeMaintence",
+    "cAttributeMaintenance": {
+        "name": "cAttributeMaintenance",
         "value": 33,
         "type": "int",
         "desc": "ID of the player resource RES_NAME",
@@ -2899,7 +2913,7 @@
         "usage": null
     },
     "cAttributeUnused0": {
-        "name": "cAttributeUnused0",
+        "name": "cAttributeFeudalTownCenterLimit",
         "value": 218,
         "type": "int",
         "desc": "ID of the player resource RES_NAME",
@@ -2919,36 +2933,36 @@
         "desc": "ID of the player resource RES_NAME",
         "usage": null
     },
-    "cAttributeUnused3": {
-        "name": "cAttributeUnused3",
+    "cAttributeMonumentFoodTrickle": {
+        "name": "cAttributeMonumentFoodTrickle",
         "value": 221,
         "type": "int",
         "desc": "ID of the player resource RES_NAME",
         "usage": null
     },
-    "cAttributeUnused4": {
-        "name": "cAttributeUnused4",
+    "cAttributeMonumentWoodTrickle": {
+        "name": "cAttributeMonumentWoodTrickle",
         "value": 222,
         "type": "int",
         "desc": "ID of the player resource RES_NAME",
         "usage": null
     },
-    "cAttributeUnused5": {
-        "name": "cAttributeUnused5",
+    "cAttributeMonumentStoneTrickle": {
+        "name": "cAttributeMonumentStoneTrickle",
         "value": 223,
         "type": "int",
         "desc": "ID of the player resource RES_NAME",
         "usage": null
     },
-    "cAttributeUnused6": {
-        "name": "cAttributeUnused6",
+    "cAttributeMonumentGoldTrickle": {
+        "name": "cAttributeMonumentGoldTrickle",
         "value": 224,
         "type": "int",
         "desc": "ID of the player resource RES_NAME",
         "usage": null
     },
-    "cAttributeUnused7": {
-        "name": "cAttributeUnused7",
+    "cAttributeRelicFoodRate": {
+        "name": "cAttributeRelicFoodRate",
         "value": 225,
         "type": "int",
         "desc": "ID of the player resource RES_NAME",
@@ -3013,6 +3027,83 @@
     "cAttributeSpawnCap": {
         "name": "cAttributeSpawnCap",
         "value": 234,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME",
+        "usage": null
+    },
+    "cAttributeFlemishMilitiaPop": {
+        "name": "cAttributeFlemishMilitiaPop",
+        "value": 235,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME",
+        "usage": null
+    },
+    "cAttributeGoldFarmingProductivity": {
+        "name": "cAttributeGoldFarmingProductivity",
+        "value": 236,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME",
+        "usage": null
+    },
+    "cAttributeFolwarkCollectionAmount": {
+        "name": "cAttributeFolwarkCollectionAmount",
+        "value": 237,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME",
+        "usage": null
+    },
+    "cAttributeFolwarkCollectionType": {
+        "name": "cAttributeFolwarkCollectionType",
+        "value": 238,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME",
+        "usage": null
+    },
+    "cAttributeBuildingId": {
+        "name": "cAttributeBuildingId",
+        "value": 239,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME",
+        "usage": null
+    },
+    "cAttributeUnitsConverted": {
+        "name": "cAttributeUnitsConverted",
+        "value": 240,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME",
+        "usage": null
+    },
+    "cAttributeStoneGoldMiningProductivity": {
+        "name": "cAttributeStoneGoldMiningProductivity",
+        "value": 241,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME",
+        "usage": null
+    },
+    "cAttributeWorkshopFoodTrickle": {
+        "name": "cAttributeWorkshopFoodTrickle",
+        "value": 242,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME",
+        "usage": null
+    },
+    "cAttributeWorkshopWoodTrickle": {
+        "name": "cAttributeWorkshopWoodTrickle",
+        "value": 243,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME",
+        "usage": null
+    },
+    "cAttributeWorkshopStoneTrickle": {
+        "name": "cAttributeWorkshopStoneTrickle",
+        "value": 244,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME",
+        "usage": null
+    },
+    "cAttributeWorkshopGoldTrickle": {
+        "name": "cAttributeWorkshopGoldTrickle",
+        "value": 245,
         "type": "int",
         "desc": "ID of the player resource RES_NAME",
         "usage": null

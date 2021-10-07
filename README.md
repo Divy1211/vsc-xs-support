@@ -26,6 +26,11 @@ XS Scripts are External Subroutines used by the games AoE2, AoE3 and AoM
     ![Hover Docstrings](https://i.imgur.com/nthb5cX.png)
 
 ## Release Notes
+
+## 1.0.9
+
+Added & Renamed constants from the update
+
 ## 1.0.8
 
 Fixed a problem in string detection
