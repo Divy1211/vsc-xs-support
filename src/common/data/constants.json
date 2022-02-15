@@ -1,4 +1,32 @@
 {
+    "cOffsetString": {
+        "name": "cOffsetString",
+        "value": 0,
+        "type": "int",
+        "desc": "Used with the `xsOffsetFilePosition` function. Makes the offset function move the file position by the number of bytes it takes to store a string (4 bytes + a number of bytes that is determined by the integer that the first 4 bytes represent)",
+        "usage": null
+    },
+    "cOffsetInterger": {
+        "name": "cOffsetInterger",
+        "value": 1,
+        "type": "int",
+        "desc": "Used with the `xsOffsetFilePosition` function. Makes the offset function move the file position by the number of bytes it takes to store an integer (4 bytes)",
+        "usage": null
+    },
+    "cOffsetFloat": {
+        "name": "cOffsetFloat",
+        "value": 2,
+        "type": "int",
+        "desc": "Used with the `xsOffsetFilePosition` function. Makes the offset function move the file position by the number of bytes it takes to store a float (4 bytes)",
+        "usage": null
+    },
+    "cOffsetVector": {
+        "name": "cOffsetVector",
+        "value": 3,
+        "type": "int",
+        "desc": "Used with the `xsOffsetFilePosition` function. Makes the offset function move the file position by the number of bytes it takes to store a vector (12 bytes)",
+        "usage": null
+    },
     "cDarkAge": {
         "name": "cDarkAge",
         "value": 0,
@@ -369,7 +397,7 @@
         "usage": {
             "syntax": "xsEffectAmount(cUpgradeUnit, oldUnitID, newUnitID, 0)",
             "example": "xsEffectAmount(cUpgradeUnit, 74, 75, 0)",
-            "explanation": "This replaces all units 74 (militia) with 75 (man at arms) on the map and also disables unit 74 and enables unit 75"
+            "explanation": "This copies all units attributes except ID and available from unit 75 (man at arms) to 74 (militia)"
         }
     },
     "cAddAttribute": {

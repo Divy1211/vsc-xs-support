@@ -68,7 +68,7 @@ function generateSelfVariable(document: vscode.TextDocument): { [index: string]:
     const text: any = document.getText();
     const variableDefs =
         text.matchAll(
-            /(?<=(?<!\/\/.*)(extern[\s\r\n]+)?(const[\s\r\n]+)?(?:(int|float|bool|String|Vector|string|vector|char|long|double)([\s\r\n]+))|for(\([\s\r\n]*))([a-zA-Z_]+[a-zA-Z_0-9]*)([\s\r\n]+)=([\s\r\n]+)(.*?);/g
+            /(?<=(?<!\/\/.*)(extern[\s\r\n]+)?(const[\s\r\n]+)?(?:(int|float|bool|String|Vector|string|vector|char|long|double)([\s\r\n]+))|for(\([\s\r\n]*))([a-zA-Z_]+[a-zA-Z_0-9]*)([\s\r\n]*)=([\s\r\n]*)(.*?);/g
         ) ?? [];
 
     for (const variable of variableDefs) {
@@ -156,7 +156,7 @@ function generateParameterInfo(name: string, functionSign: string, functionBody:
     const parameters: Parameter[] = [];
 
     const params = (functionSign.trim() + ",").matchAll(
-        /(?<=(int|float|bool|String|Vector|string|vector|char|long|double)([\s\r\n]+))([a-zA-Z_]+[a-zA-Z_0-9]*)(?=([\s\r\n]+)=([\s\r\n]+)(.*?),(?![^(]*\)))/g
+        /(?<=(int|float|bool|String|Vector|string|vector|char|long|double)([\s\r\n]+))([a-zA-Z_]+[a-zA-Z_0-9]*)(?=([\s\r\n]*)=([\s\r\n]*)(.*?),(?![^(]*\)))/g
     );
     for (const param of params) {
         var lineCharCount = 0;

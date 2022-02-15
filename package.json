@@ -3,7 +3,7 @@
 	"displayName": "AoE2 XS Scripting",
 	"description": "AoE2 XS Support for VSC",
 	"publisher": "Divy",
-	"version": "1.0.9",
+	"version": "1.0.10",
 	"engines": {
 		"vscode": "^1.46.0"
 	},
@@ -27,7 +27,9 @@
 		"age of empires"
 	],
 	"activationEvents": [
-		"onLanguage:xs"
+		"onLanguage:xs",
+		"onCommand:xs.format",
+		"onCommand:xs.minify"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -55,6 +57,16 @@
 			{
 				"language": "xs",
 				"path": "./snippets/xs.tmSnippets.json"
+			}
+		],
+		"commands": [
+			{
+				"command": "xs.format",
+				"title": "Format"
+			},
+			{
+				"command": "xs.minify",
+				"title": "Minify"
 			}
 		]
 	},

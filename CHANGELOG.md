@@ -1,5 +1,31 @@
 # Change Log
 
+## Released v1.0.10 on 16-02-2021
+
+Added new functions and constants from the update
+
+
+### New Functions
+01. \+ `xsCreateFile`
+02. \+ `xsOpenFile`
+03. \+ `xsWriteString`
+04. \+ `xsWriteInt`
+05. \+ `xsWriteFloat`
+06. \+ `xsWriteVector`
+07. \+ `xsReadString`
+08. \+ `xsReadInt`
+09. \+ `xsReadFloat`
+10. \+ `xsReadVector`
+11. \+ `xsSetFilePosition`
+12. \+ `xsOffsetFilePosition`
+13. \+ `xsCloseFile`
+
+### New Constants
+1. \+ `cOffsetString`   (0)
+2. \+ `cOffsetInterger` (1)
+3. \+ `cOffsetFloat`    (2)
+4. \+ `cOffsetVector`   (3)
+
 ## Released v1.0.9 on 07-10-2021
 
 Added & Renamed new constants from the update
@@ -12,19 +38,19 @@ Added & Renamed new constants from the update
 06. cAttributeUnused6   -> cAttributeMonumentGoldTrickle   (224)
 07. cAttributeUnused7   -> cAttributeRelicFoodRate         (225)
 08. cAttriubteAdd       -> cAttributeAdd                   (1)
-09. + cAttributeFlemishMilitiaPop           (235)
-10. + cAttributeGoldFarmingProductivity     (236)
-11. + cAttributeFolwarkCollectionAmount     (237)
-12. + cAttributeFolwarkCollectionType       (238)
-13. + cAttributeBuildingId                  (239)
-14. + cAttributeUnitsConverted              (240)
-15. + cAttributeStoneGoldMiningProductivity (241)
-16. + cAttributeWorkshopFoodTrickle         (242)
-17. + cAttributeWorkshopWoodTrickle         (243)
-18. + cAttributeWorkshopStoneTrickle        (244)
-19. + cAttributeWorkshopGoldTrickle         (245)
-20. + cPoles     (38)
-21. + cBohemians (39)
+09. \+ cAttributeFlemishMilitiaPop           (235)
+10. \+ cAttributeGoldFarmingProductivity     (236)
+11. \+ cAttributeFolwarkCollectionAmount     (237)
+12. \+ cAttributeFolwarkCollectionType       (238)
+13. \+ cAttributeBuildingId                  (239)
+14. \+ cAttributeUnitsConverted              (240)
+15. \+ cAttributeStoneGoldMiningProductivity (241)
+16. \+ cAttributeWorkshopFoodTrickle         (242)
+17. \+ cAttributeWorkshopWoodTrickle         (243)
+18. \+ cAttributeWorkshopStoneTrickle        (244)
+19. \+ cAttributeWorkshopGoldTrickle         (245)
+20. \+ cPoles     (38)
+21. \+ cBohemians (39)
 
 ## Released v1.0.8 on 22-09-2021
 
@@ -53,7 +79,7 @@ Fixed name of `xsGenerateRandomNumberLH` from `xsGenerateRandomNumberHL`
 
 ## Released v1.0.3 on 2-08-2021
 
-- Improved docstring for function xsAddRuntimeEvent
+- Improved docstring for function `xsAddRuntimeEvent`
 
 ## Released v1.0.2 on 16-07-2021
 
