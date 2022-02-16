@@ -56,10 +56,6 @@
             "begin": "//",
             "end": "\n"
         },
-        "data-types": {
-            "name": "storage.type.xs",
-            "match": "\\b(void|int|float|bool|String|Vector|string|vector|char|long|double|rule)\\b"
-        },
         "operators": {
             "name": "keyword.operator.xs",
             "match": "(\\+|-|\\*|\\/|%|&&|\\|\\||=|>|<|!)"
@@ -67,10 +63,16 @@
         "strings": {
             "name": "string.quoted.double.xs",
             "begin": "\"",
-            "beginCaptures": { "0": { "name": "punctuation.definition.string.begin.xs" } },
+            "beginCaptures": {
+                "0": {
+                    "name": "punctuation.definition.string.begin.xs"
+                }
+            },
             "end": "(?:(?!\")(?:\\\\.|[^\\\\]))*(\")",
             "endCaptures": {
-                "1": { "name": "punctuation.definition.string.end.xs" }
+                "1": {
+                    "name": "punctuation.definition.string.end.xs"
+                }
             }
         },
         "numbers": {
@@ -78,20 +80,36 @@
             "match": "\\b[0-9]+\\b"
         },
         "decimal-point": {
-            "name": "constant.numeric.decimal.xs",
-            "match": "\\.(?=[0-9]+\\b)"
-        },
-        "control-statements": {
-            "name": "keyword.xs",
-            "match": "\\b(if|else|while|for|switch|case|default)\\b"
+            "name": "constant.numeric.xs",
+            "match": "\\b-?(([0-9]+[.]?[0-9]*)|([.][0-9]+))(?:e[0-9]+)?\\b"
         },
         "keywords": {
-            "name": "keyword.xs",
-            "match": "\\b(break|continue|include|return|extern|const|class|then|goto|label|dbg|infiniteLoopLimit|infiniteRecursionLimit|breakpoint|static|export|mutable)\\b"
-        },
-        "rules": {
-            "name": "keyword.xs",
-            "match": "\\b(minInterval|maxInterval|highFrequency|priority|active|inactive|group|runImmediately)\\b"
+            "patterns": [
+                {
+                    "name": "keyword.control.xs",
+                    "match": "\\b(if|else|while|for|return|break|continue|switch|case|default|goto|label)\\b"
+                },
+                {
+                    "name": "storage.modifier.xs",
+                    "match": "\\b(extern|static|const|mutable)\\b"
+                },
+                {
+                    "name": "storage.type.xs",
+                    "match": "\\b(bool|int|float|string|vector|void)\\b"
+                },
+                {
+                    "name": "keyword.include.xs",
+                    "match": "\\b(include)\\b"
+                },
+                {
+                    "name": "keyword.rules.xs",
+                    "match": "\\b(rule|active|inactive|runImmediately|highFrequency|minInterval|maxInterval|group)\\b"
+                },
+                {
+                    "name": "keyword.other.reserved.xs",
+                    "match": "\\b(priority|infiniteRecursionLimit|infiniteLoopLimit|dbg|breakpoint|export|class)\\b"
+                }
+            ]
         },
         "user-defined-functions": {
             "name": "entity.name.function.xs",
