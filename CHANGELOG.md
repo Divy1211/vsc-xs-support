@@ -3,6 +3,7 @@
 ## Released v1.0.12 on 04-04-2021
 
 Fixed typo in `xsGetFunctionID`
+Fixed typo in `xsSetFilePosition` parameters
 
 ## Released v1.0.11 on 03-04-2021
 
