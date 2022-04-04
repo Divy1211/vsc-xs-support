@@ -811,6 +811,13 @@
         "desc": "This is the ID of the `Attribute Set Tech Stacking` modifier for the xsEffectAmount function",
         "usage": null
     },
+    "cAttrSetStackingResearchCap": {
+        "name": "cAttrSetStackingResearchCap",
+        "value": 10,
+        "type": "int",
+        "desc": "This is the ID of the `Attribute Set Stacking Research Cap` modifier for the xsEffectAmount function",
+        "usage": null
+    },
 
     "cHitpoints": {
         "name": "cHitpoints",
@@ -985,6 +992,13 @@
         "value": "25",
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cFogFlag": {
+        "name": "cFogFlag",
+        "value": "28",
+        "type": "int" ,
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit ",
         "usage": null
     },
     "cHeroStatus": {

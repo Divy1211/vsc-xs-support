@@ -1,5 +1,16 @@
 # Change Log
 
+## Released v1.0.12 on 04-04-2021
+
+Fixed typo in `xsGetFunctionID`
+
+## Released v1.0.11 on 03-04-2021
+
+Added new functions and constants from the PUP
+
+01. \+ `cAttrSetStackingResearchCap`
+02. \+ `cFogFlag`
+
 ## Released v1.0.10 on 16-02-2021
 
 Added new functions and constants from the update
