@@ -1,5 +1,9 @@
 # Change Log
 
+## Released v1.0.13 on 04-04-2021
+
+Fixed typo in `xsEffectAmount` parameters
+
 ## Released v1.0.12 on 04-04-2021
 
 Fixed typo in `xsGetFunctionID`
