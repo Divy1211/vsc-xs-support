@@ -2,6 +2,57 @@
 
 ## Released v1.0.13 on 04-04-2021
 
+### New constants
+01. \+ `cDravidians`
+02. \+ `cBengalis`
+03. \+ `cGurjaras`
+
+04. \+ `cAttrSetHotkey`
+
+05. \+ `cOcclusionMode`
+06. \+ `cGarrisonType`
+07. \+ `cUnitSizeZ`
+08. \+ `cTraits`
+09. \+ `cTraitPiece`
+10. \+ `cMaxCharge`
+11. \+ `cRechargeRate`
+12. \+ `cChargeEvent`
+13. \+ `cChargeType`
+14. \+ `cCombatAbility`
+15. \+ `cAttackDispersion`
+16. \+ `cSecondaryProjectileUnit`
+17. \+ `cBloodUnitId`
+18. \+ `cHitMode`
+19. \+ `cVanishMode`
+20. \+ `cProjectileArc`
+21. \+ `cPopulation`
+
+22. \+ `cAttributeUnitsValueTotal`
+23. \+ `cAttributeBuildingsValueTotal`
+24. \+ `cAttributeVillagersCreatedTotal`
+25. \+ `cAttributeVillagersIdlePeriodsTotal`
+26. \+ `cAttributeVillagersIdleSecondsTotal`
+27. \+ `cAttributeTradeFoodPercent`
+28. \+ `cAttributeTradeWoodPercent`
+29. \+ `cAttributeTradeStonePercent`
+30. \+ `cAttributeLivestockFoodProductivity`
+31. \+ `cAttributeSpeedUpBuildingType`
+32. \+ `cAttributeSpeedUpBuildingRange`
+33. \+ `cAttributeSpeedUpPercentage`
+34. \+ `cAttributeSpeedUpObjectType`
+35. \+ `cAttributeSpeedUpEffectType`
+36. \+ `cAttributeSpeedUpSecondaryEffectType`
+37. \+ `cAttributeSpeedUpSecondaryPercentage`
+38. \+ `cAttributeExtraElephantConvertResist`
+39. \+ `cAttributeStartingScoutID`
+40. \+ `cAttributeRelicWoodRate`
+41. \+ `cAttributeRelicStoneRate`
+
+42. `cAttributeBerserkerHealTimer` -> `cAttributeNoDropsiteFarmers` (96)
+43. `cAttributeUnused0` -> `cAttributeFeudalTownCenterLimit` (218)
+
+## Released v1.0.13 on 04-04-2021
+
 Fixed typo in `xsEffectAmount` parameters
 
 ## Released v1.0.12 on 04-04-2021

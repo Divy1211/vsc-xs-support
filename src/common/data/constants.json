@@ -356,6 +356,27 @@
         "desc": "This is the civilization ID of CIV_NAME",
         "usage": null
     },
+    "cDravidians": { 
+        "name": "cDravidians",
+        "value": 40,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cBengalis": { 
+        "name": "cBengalis",
+        "value": 41,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cGurjaras": { 
+        "name": "cGurjaras",
+        "value": 42,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
     "cSetAttribute": {
         "name": "cSetAttribute",
         "value": 0,
@@ -692,7 +713,7 @@
         "desc": "This is the ID of the `Attribute Set` modifier for the xsEffectAmount function",
         "usage": null
     },
-    "cAttriubteAdd": {
+    "cAttributeAdd": {
         "name": "cAttributeAdd",
         "value": 1,
         "type": "int",
@@ -818,360 +839,499 @@
         "desc": "This is the ID of the `Attribute Set Stacking Research Cap` modifier for the xsEffectAmount function",
         "usage": null
     },
-
+    "cAttrSetHotkey": {
+        "name": "cAttrSetHotkey",
+        "value": 11,
+        "type": "int",
+        "desc": "This is the ID of the `Attribute Set Hotkey` modifier for the xsEffectAmount function",
+        "usage": null
+    },
     "cHitpoints": {
         "name": "cHitpoints",
-        "value": "0",
+        "value": 0,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cLineOfSight": {
         "name": "cLineOfSight",
-        "value": "1",
+        "value": 1,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cGarrisonCapacity": {
         "name": "cGarrisonCapacity",
-        "value": "2",
+        "value": 2,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cUnitSizeX": {
         "name": "cUnitSizeX",
-        "value": "3",
+        "value": 3,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cUnitSizeY": {
         "name": "cUnitSizeY",
-        "value": "4",
+        "value": 4,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cMovementSpeed": {
         "name": "cMovementSpeed",
-        "value": "5",
+        "value": 5,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cRotationSpeed": {
         "name": "cRotationSpeed",
-        "value": "6",
+        "value": 6,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cArmor": {
         "name": "cArmor",
-        "value": "8",
+        "value": 8,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cAttack": {
         "name": "cAttack",
-        "value": "9",
+        "value": 9,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cAttackReloadTime": {
         "name": "cAttackReloadTime",
-        "value": "10",
+        "value": 10,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cAccuracyPercent": {
         "name": "cAccuracyPercent",
-        "value": "11",
+        "value": 11,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cMaxRange": {
         "name": "cMaxRange",
-        "value": "12",
+        "value": 12,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cWorkRate": {
         "name": "cWorkRate",
-        "value": "13",
+        "value": 13,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cCarryCapacity": {
         "name": "cCarryCapacity",
-        "value": "14",
+        "value": 14,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cBaseArmor": {
         "name": "cBaseArmor",
-        "value": "15",
+        "value": 15,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cProjectileUnit": {
         "name": "cProjectileUnit",
-        "value": "16",
+        "value": 16,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cIconGraphicsAngle": {
         "name": "cIconGraphicsAngle",
-        "value": "17",
+        "value": 17,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cTerrainDefenseBonus": {
         "name": "cTerrainDefenseBonus",
-        "value": "18",
+        "value": 18,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cEnableSmartProjectile": {
         "name": "cEnableSmartProjectile",
-        "value": "19",
+        "value": 19,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cMinimumRange": {
         "name": "cMinimumRange",
-        "value": "20",
+        "value": 20,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cAmountFirstStorage": {
         "name": "cAmountFirstStorage",
-        "value": "21",
+        "value": 21,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cBlastWidth": {
         "name": "cBlastWidth",
-        "value": "22",
+        "value": 22,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cSearchRadius": {
         "name": "cSearchRadius",
-        "value": "23",
+        "value": 23,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cBonusResistance": {
         "name": "cBonusResistance",
-        "value": "24",
+        "value": 24,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cIconId": {
         "name": "cIconId",
-        "value": "25",
+        "value": 25,
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cAmountSecondStorage": {
+        "name": "cAmountSecondStorage",
+        "value": 26,
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cAmountThirdStorage": {
+        "name": "cAmountThirdStorage",
+        "value": 27,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cFogFlag": {
         "name": "cFogFlag",
-        "value": "28",
+        "value": 28,
         "type": "int" ,
         "desc": "This is the ID of the ATTR_NAME attribute of the unit ",
         "usage": null
     },
+    "cOcclusionMode": {
+        "name": "cOcclusionMode",
+        "value": 29,
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cGarrisonType": {
+        "name": "cGarrisonType",
+        "value": 30,
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cUnitSizeZ": {
+        "name": "cUnitSizeZ",
+        "value": 32,
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
     "cHeroStatus": {
         "name": "cHeroStatus",
-        "value": "40",
+        "value": 40,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cAttackDelay": {
         "name": "cAttackDelay",
-        "value": "41",
+        "value": 41,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cTrainLocation": {
         "name": "cTrainLocation",
-        "value": "42",
+        "value": 42,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cTrainButton": {
         "name": "cTrainButton",
-        "value": "43",
+        "value": 43,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cBlastAttackLevel": {
         "name": "cBlastAttackLevel",
-        "value": "44",
+        "value": 44,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cBlastDefenseLevel": {
         "name": "cBlastDefenseLevel",
-        "value": "45",
+        "value": 45,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cShownAttack": {
         "name": "cShownAttack",
-        "value": "46",
+        "value": 46,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cShownRange": {
         "name": "cShownRange",
-        "value": "47",
+        "value": 47,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cShownMeleeArmor": {
         "name": "cShownMeleeArmor",
-        "value": "48",
+        "value": 48,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cShownPierceArmor": {
         "name": "cShownPierceArmor",
-        "value": "49",
+        "value": 49,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cNameId": {
         "name": "cNameId",
-        "value": "50",
+        "value": 50,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cDescriptionId": {
         "name": "cDescriptionId",
-        "value": "51",
+        "value": 51,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cTerrainTable": {
         "name": "cTerrainTable",
-        "value": "53",
+        "value": 53,
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cTraits": {
+        "name": "cTraits",
+        "value": 54,
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cTraitPiece": {
+        "name": "cTraitPiece",
+        "value": 56,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cDeadUnitId": {
         "name": "cDeadUnitId",
-        "value": "57",
+        "value": 57,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cHotkeyId": {
         "name": "cHotkeyId",
-        "value": "58",
+        "value": 58,
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cMaxCharge": {
+        "name": "cMaxCharge",
+        "value": 59,
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cRechargeRate": {
+        "name": "cRechargeRate",
+        "value": 60,
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cChargeEvent": {
+        "name": "cChargeEvent",
+        "value": 61,
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cChargeType": {
+        "name": "cChargeType",
+        "value": 62,
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cCombatAbility": {
+        "name": "cCombatAbility",
+        "value": 63,
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cAttackDispersion": {
+        "name": "cAttackDispersion",
+        "value": 64,
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cSecondaryProjectileUnit": {
+        "name": "cSecondaryProjectileUnit",
+        "value": 65,
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cBloodUnitId": {
+        "name": "cBloodUnitId",
+        "value": 66,
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cHitMode": {
+        "name": "cHitMode",
+        "value": 67,
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cVanishMode": {
+        "name": "cVanishMode",
+        "value": 68,
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cProjectileArc": {
+        "name": "cProjectileArc",
+        "value": 69,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cResourceCost": {
         "name": "cResourceCost",
-        "value": "100",
+        "value": 100,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cTrainTime": {
         "name": "cTrainTime",
-        "value": "101",
+        "value": 101,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cTotalProjectiles": {
         "name": "cTotalProjectiles",
-        "value": "102",
+        "value": 102,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cFoodCost": {
         "name": "cFoodCost",
-        "value": "103",
+        "value": 103,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cWoodCost": {
         "name": "cWoodCost",
-        "value": "104",
+        "value": 104,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cGoldCost": {
         "name": "cGoldCost",
-        "value": "105",
+        "value": 105,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cStoneCost": {
         "name": "cStoneCost",
-        "value": "106",
+        "value": 106,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cMaxTotalProjectiles": {
         "name": "cMaxTotalProjectiles",
-        "value": "107",
+        "value": 107,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cGarrisonHealRate": {
         "name": "cGarrisonHealRate",
-        "value": "108",
+        "value": 108,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
     },
     "cRegenerationRate": {
         "name": "cRegenerationRate",
-        "value": "109",
+        "value": 109,
+        "type": "int",
+        "desc": "This is the ID of the ATTR_NAME attribute of the unit",
+        "usage": null
+    },
+    "cPopulation": {
+        "name": "cPopulation",
+        "value": 110,
         "type": "int",
         "desc": "This is the ID of the ATTR_NAME attribute of the unit",
         "usage": null
@@ -1670,7 +1830,7 @@
         "name": "cAttributeTrageBonus",
         "value": 8,
         "type": "int",
-        "desc": "ID of the player resource RES_NAME. The name is mispelled in the `Constants.xs` file, so thats how it needs to be used",
+        "desc": "ID of the player resource RES_NAME",
         "usage": null
     },
     "cAttributeTradeGoods": {
@@ -2205,8 +2365,8 @@
         "desc": "ID of the player resource RES_NAME",
         "usage": null
     },
-    "cAttributeBerserkerHealTimer": {
-        "name": "cAttributeBerserkerHealTimer",
+    "cAttributeNoDropsiteFarmers": {
+        "name": "cAttributeNoDropsiteFarmers",
         "value": 96,
         "type": "int",
         "desc": "ID of the player resource RES_NAME",
@@ -2730,8 +2890,8 @@
         "desc": "ID of the player resource RES_NAME",
         "usage": null
     },
-    "cAttributeTotalTributeReceived": {
-        "name": "cAttributeTotalTributeReceived",
+    "cAttributeTotalTributeReceived ": {
+        "name": "cAttributeTotalTributeReceived ",
         "value": 171,
         "type": "int",
         "desc": "ID of the player resource RES_NAME",
@@ -2954,7 +3114,7 @@
         "desc": "ID of the player resource RES_NAME",
         "usage": null
     },
-    "cAttributeUnused0": {
+    "cAttributeFeudalTownCenterLimit": {
         "name": "cAttributeFeudalTownCenterLimit",
         "value": 218,
         "type": "int",
@@ -3146,6 +3306,146 @@
     "cAttributeWorkshopGoldTrickle": {
         "name": "cAttributeWorkshopGoldTrickle",
         "value": 245,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME",
+        "usage": null
+    },
+    "cAttributeUnitsValueTotal": {
+        "name": "cAttributeUnitsValueTotal",
+        "value": 246,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME",
+        "usage": null
+    },
+    "cAttributeBuildingsValueTotal": {
+        "name": "cAttributeBuildingsValueTotal",
+        "value": 247,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME",
+        "usage": null
+    },
+    "cAttributeVillagersCreatedTotal": {
+        "name": "cAttributeVillagersCreatedTotal",
+        "value": 248,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME",
+        "usage": null
+    },
+    "cAttributeVillagersIdlePeriodsTotal": {
+        "name": "cAttributeVillagersIdlePeriodsTotal",
+        "value": 249,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME",
+        "usage": null
+    },
+    "cAttributeVillagersIdleSecondsTotal": {
+        "name": "cAttributeVillagersIdleSecondsTotal",
+        "value": 250,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME",
+        "usage": null
+    },
+    "cAttributeTradeFoodPercent": {
+        "name": "cAttributeTradeFoodPercent",
+        "value": 251,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME",
+        "usage": null
+    },
+    "cAttributeTradeWoodPercent": {
+        "name": "cAttributeTradeWoodPercent",
+        "value": 252,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME",
+        "usage": null
+    },
+    "cAttributeTradeStonePercent": {
+        "name": "cAttributeTradeStonePercent",
+        "value": 253,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME",
+        "usage": null
+    },
+    "cAttributeLivestockFoodProductivity": {
+        "name": "cAttributeLivestockFoodProductivity",
+        "value": 254,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME",
+        "usage": null
+    },
+    "cAttributeSpeedUpBuildingType": {
+        "name": "cAttributeSpeedUpBuildingType",
+        "value": 255,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME",
+        "usage": null
+    },
+    "cAttributeSpeedUpBuildingRange": {
+        "name": "cAttributeSpeedUpBuildingRange",
+        "value": 256,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME",
+        "usage": null
+    },
+    "cAttributeSpeedUpPercentage": {
+        "name": "cAttributeSpeedUpPercentage",
+        "value": 257,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME",
+        "usage": null
+    },
+    "cAttributeSpeedUpObjectType": {
+        "name": "cAttributeSpeedUpObjectType",
+        "value": 258,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME",
+        "usage": null
+    },
+    "cAttributeSpeedUpEffectType": {
+        "name": "cAttributeSpeedUpEffectType",
+        "value": 259,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME",
+        "usage": null
+    },
+    "cAttributeSpeedUpSecondaryEffectType": {
+        "name": "cAttributeSpeedUpSecondaryEffectType",
+        "value": 260,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME",
+        "usage": null
+    },
+    "cAttributeSpeedUpSecondaryPercentage": {
+        "name": "cAttributeSpeedUpSecondaryPercentage",
+        "value": 261,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME",
+        "usage": null
+    },
+    "cAttributeExtraElephantConvertResist": {
+        "name": "cAttributeExtraElephantConvertResist",
+        "value": 262,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME",
+        "usage": null
+    },
+    "cAttributeStartingScoutID": {
+        "name": "cAttributeStartingScoutID",
+        "value": 263,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME",
+        "usage": null
+    },
+    "cAttributeRelicWoodRate": {
+        "name": "cAttributeRelicWoodRate",
+        "value": 264,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME",
+        "usage": null
+    },
+    "cAttributeRelicStoneRate": {
+        "name": "cAttributeRelicStoneRate",
+        "value": 265,
         "type": "int",
         "desc": "ID of the player resource RES_NAME",
         "usage": null
