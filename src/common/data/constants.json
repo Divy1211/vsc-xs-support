@@ -76,6 +76,34 @@
         "desc": "The Invalid Vector",
         "usage": null
     },
+    "cStandardVictory": {
+        "name": "cStandardVictory",
+        "value": 100,
+        "type": "int",
+        "desc": "one of the values returned by the `xsGetVictoryCondition` function",
+        "usage": null
+    },
+    "cWonderVictory": {
+        "name": "cWonderVictory",
+        "value": 101,
+        "type": "int",
+        "desc": "one of the values returned by the `xsGetVictoryCondition` function",
+        "usage": null
+    },
+    "cRelicVictory": {
+        "name": "cRelicVictory",
+        "value": 102,
+        "type": "int",
+        "desc": "one of the values returned by the `xsGetVictoryCondition` function",
+        "usage": null
+    },
+    "cKingOfTheHillVictory": {
+        "name": "cKingOfTheHillVictory",
+        "value": 103,
+        "type": "int",
+        "desc": "one of the values returned by the `xsGetVictoryCondition` function",
+        "usage": null
+    },
     "cGaia": {
         "name": "cGaia",
         "value": 0,

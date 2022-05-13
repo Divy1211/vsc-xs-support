@@ -1,6 +1,25 @@
 # Change Log
 
-## Released v1.0.13 on 04-04-2021
+## Released v1.0.15 on 13-05-2022
+
+### New Constants
+1. \+ `cStandardVictory`
+2. \+ `cWonderVictory`
+3. \+ `cRelicVictory`
+4. \+ `cKingOfTheHillVictory`
+
+### New Functions
+1. \+ `xsGetFilePosition`
+2. \+ `xsGetDataTypeSize`
+3. \+ `xsGetFileSize`
+4. \+ `xsGetObjectCount`
+5. \+ `xsGetObjectCountTotal`
+6. \+ `xsGetVictoryPlayerForSecondaryGameMode`
+7. \+ `xsGetVictoryTimeForSecondaryGameMode`
+8. \+ `xsGetVictoryCondition`
+9. \+ `xsGetVictoryConditionForSecondaryGameMode`
+
+## Released v1.0.14 on 08-05-2022
 
 ### New constants
 01. \+ `cDravidians`
@@ -51,23 +70,23 @@
 42. `cAttributeBerserkerHealTimer` -> `cAttributeNoDropsiteFarmers` (96)
 43. `cAttributeUnused0` -> `cAttributeFeudalTownCenterLimit` (218)
 
-## Released v1.0.13 on 04-04-2021
+## Released v1.0.13 on 07-05-2022
 
 Fixed typo in `xsEffectAmount` parameters
 
-## Released v1.0.12 on 04-04-2021
+## Released v1.0.12 on 04-04-2022
 
 Fixed typo in `xsGetFunctionID`
 Fixed typo in `xsSetFilePosition` parameters
 
-## Released v1.0.11 on 03-04-2021
+## Released v1.0.11 on 03-04-2022
 
 Added new functions and constants from the PUP
 
 01. \+ `cAttrSetStackingResearchCap`
 02. \+ `cFogFlag`
 
-## Released v1.0.10 on 16-02-2021
+## Released v1.0.10 on 16-02-2022
 
 Added new functions and constants from the update
 
