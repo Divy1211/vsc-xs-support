@@ -1,5 +1,9 @@
 # Change Log
 
+## Released v1.0.16 on 29-06-2022
+
+Fixed typo in monk with relic class constant
+
 ## Released v1.0.15 on 13-05-2022
 
 ### New Constants
