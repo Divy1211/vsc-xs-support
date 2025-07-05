@@ -25,6 +25,51 @@
 		],
 		"description": ""
 	},
+	"xs-for-int": {
+		"prefix": ["for-int"],
+		"body": [
+			"for(i = 0; < xsArrayGetSize(${1:array})) {",
+			"\tint ${2:variable} = xsArrayGetInt(${1:array});",
+			"}"
+		],
+		"description": ""
+	},
+	"xs-for-float": {
+		"prefix": ["for-float"],
+		"body": [
+			"for(i = 0; < xsArrayGetSize(${1:array})) {",
+			"\tfloat ${2:variable} = xsArrayGetFloat(${1:array});",
+			"}"
+		],
+		"description": ""
+	},
+	"xs-for-bool": {
+		"prefix": ["for-bool"],
+		"body": [
+			"for(i = 0; < xsArrayGetSize(${1:array})) {",
+			"\tbool ${2:variable} = xsArrayGetBool(${1:array});",
+			"}"
+		],
+		"description": ""
+	},
+	"xs-for-string": {
+		"prefix": ["for-string"],
+		"body": [
+			"for(i = 0; < xsArrayGetSize(${1:array})) {",
+			"\tstring ${2:variable} = xsArrayGetString(${1:array});",
+			"}"
+		],
+		"description": ""
+	},
+	"xs-for-vector": {
+		"prefix": ["for-vector"],
+		"body": [
+			"for(i = 0; < xsArrayGetSize(${1:array})) {",
+			"\tvector ${2:variable} = xsArrayGetVector(${1:array});",
+			"}"
+		],
+		"description": ""
+	},
 	"xs-while": {
 		"prefix": ["while"],
 		"body": [

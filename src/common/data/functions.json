@@ -61,7 +61,7 @@
                 "desc": "The name of the rule to set the priority of"
             },
             {
-                "name": "priority",
+                "name": "rulePriority",
                 "type": "int",
                 "required": true,
                 "desc": "The new priority of the rule"
@@ -74,7 +74,7 @@
         "return_type": "void",
         "params": [
             {
-                "name": "priority",
+                "name": "rulePriority",
                 "type": "int",
                 "required": true,
                 "desc": "The new priority of the rule"
@@ -345,17 +345,17 @@
             {
                 "name": "defaultValue",
                 "type": "int",
-                "required": true,
-                "desc": "The default value to initialise all the values in the array to"
+                "required": false,
+                "desc": "The default value to initialise all the values in the array to. If not set all array values will be 0"
             },
             {
                 "name": "uniqueName",
                 "type": "string",
-                "required": true,
-                "desc": "A unique name of the created array"
+                "required": false,
+                "desc": "A unique name of the created array. Note that when set, this name cannot be reused, and subsequent array creation attempts with the same name will fail (e.g. in loops)"
             }
         ],
-        "desc": "Creates an array of type int and returns its ID."
+        "desc": "Creates an array of type int and returns its ID. Created arrays never go out of scope so be careful when creating them inside repeated code patterns as that can introduce memory leaks."
     },
     "xsArrayCreateFloat": {
         "name": "xsArrayCreateFloat",
@@ -370,17 +370,17 @@
             {
                 "name": "defaultValue",
                 "type": "float",
-                "required": true,
-                "desc": "The default value to initialise all the values in the array to"
+                "required": false,
+                "desc": "The default value to initialise all the values in the array to. If not set all array values will be 0.0"
             },
             {
                 "name": "uniqueName",
                 "type": "string",
-                "required": true,
-                "desc": "A unique name of the created array"
+                "required": false,
+                "desc": "A unique name of the created array. Note that when set, this name cannot be reused, and subsequent array creation attempts with the same name will fail (e.g. in loops)"
             }
         ],
-        "desc": "Creates an array of type float and returns its ID."
+        "desc": "Creates an array of type float and returns its ID. Created arrays never go out of scope so be careful when creating them inside repeated code patterns as that can introduce memory leaks."
     },
     "xsArrayCreateBool": {
         "name": "xsArrayCreateBool",
@@ -395,17 +395,17 @@
             {
                 "name": "defaultValue",
                 "type": "bool",
-                "required": true,
-                "desc": "The default value to initialise all the values in the array to"
+                "required": false,
+                "desc": "The default value to initialise all the values in the array to. If not set all array values will be false"
             },
             {
                 "name": "uniqueName",
                 "type": "string",
-                "required": true,
-                "desc": "A unique name of the created array"
+                "required": false,
+                "desc": "A unique name of the created array. Note that when set, this name cannot be reused, and subsequent array creation attempts with the same name will fail (e.g. in loops)"
             }
         ],
-        "desc": "Creates an array of type bool and returns its ID."
+        "desc": "Creates an array of type bool and returns its ID. Created arrays never go out of scope so be careful when creating them inside repeated code patterns as that can introduce memory leaks."
     },
     "xsArrayCreateString": {
         "name": "xsArrayCreateString",
@@ -420,17 +420,17 @@
             {
                 "name": "defaultValue",
                 "type": "string",
-                "required": true,
-                "desc": "The default value to initialise all the values in the array to"
+                "required": false,
+                "desc": "The default value to initialise all the values in the array to. If not set all array values will be \"<default string>\""
             },
             {
                 "name": "uniqueName",
                 "type": "string",
-                "required": true,
-                "desc": "A unique name of the created array"
+                "required": false,
+                "desc": "A unique name of the created array. Note that when set, this name cannot be reused, and subsequent array creation attempts with the same name will fail (e.g. in loops)"
             }
         ],
-        "desc": "Creates an array of type String and returns its ID."
+        "desc": "Creates an array of type String and returns its ID. Created arrays never go out of scope so be careful when creating them inside repeated code patterns as that can introduce memory leaks."
     },
     "xsArrayCreateVector": {
         "name": "xsArrayCreateVector",
@@ -445,17 +445,17 @@
             {
                 "name": "defaultValue",
                 "type": "vector",
-                "required": true,
-                "desc": "The default value to initialise all the values in the array to"
+                "required": false,
+                "desc": "The default value to initialise all the values in the array to. If not set all array values will be vector(-1.0, -1.0, -1.0)"
             },
             {
                 "name": "uniqueName",
                 "type": "string",
-                "required": true,
-                "desc": "A unique name of the created array"
+                "required": false,
+                "desc": "A unique name of the created array. Note that when set, this name cannot be reused, and subsequent array creation attempts with the same name will fail (e.g. in loops)"
             }
         ],
-        "desc": "Creates an array of type Vector and returns its ID."
+        "desc": "Creates an array of type Vector and returns its ID. Created arrays never go out of scope so be careful when creating them inside repeated code patterns as that can introduce memory leaks."
     },
     "xsArraySetInt": {
         "name": "xsArraySetInt",
@@ -480,7 +480,7 @@
                 "desc": "The new value to set"
             }
         ],
-        "desc": "Sets the valat the specified indedx ue of the given int arrindex to the provided value and returns 1."
+        "desc": "Sets the value at the specified index of the given int array to the provided value and returns 1."
     },
     "xsArraySetFloat": {
         "name": "xsArraySetFloat",
@@ -505,7 +505,7 @@
                 "desc": "The new value to set"
             }
         ],
-        "desc": "Sets the valueat the specified indedx  of the given float array to the provided value and returns 1."
+        "desc": "Sets the value at the specified index of the given float array to the provided value and returns 1."
     },
     "xsArraySetBool": {
         "name": "xsArraySetBool",
@@ -530,7 +530,7 @@
                 "desc": "The new value to set"
             }
         ],
-        "desc": "Sets the valuat the specified indedx e of the given bool arrindex to the provided value and returns 1."
+        "desc": "Sets the value at the specified index of the given bool array to the provided value and returns 1."
     },
     "xsArraySetString": {
         "name": "xsArraySetString",
@@ -555,7 +555,7 @@
                 "desc": "The new value to set"
             }
         ],
-        "desc": "Sets the value at the specified indedx of the given String array to the provided value and returns 1."
+        "desc": "Sets the value at the specified index of the given string array to the provided value and returns 1."
     },
     "xsArraySetVector": {
         "name": "xsArraySetVector",
@@ -580,7 +580,7 @@
                 "desc": "The new value to set"
             }
         ],
-        "desc": "Sets the value at the specified indedx of the given Vector array to the provided value and returns 1."
+        "desc": "Sets the value at the specified index of the given vector array to the provided value and returns 1."
     },
     "xsArrayGetInt": {
         "name": "xsArrayGetInt",
@@ -599,11 +599,11 @@
                 "desc": "The index to get the value of"
             }
         ],
-        "desc": "Gets and returns the value of the given int array at the specifed index."
+        "desc": "Gets and returns the value of the given int array at the specified index."
     },
     "xsArrayGetFloat": {
         "name": "xsArrayGetFloat",
-        "return_type": "int",
+        "return_type": "float",
         "params": [
             {
                 "name": "arrayID",
@@ -618,11 +618,11 @@
                 "desc": "The index to get the value of"
             }
         ],
-        "desc": "Gets and returns the value of the given float array at the specifed index."
+        "desc": "Gets and returns the value of the given float array at the specified index."
     },
     "xsArrayGetBool": {
         "name": "xsArrayGetBool",
-        "return_type": "int",
+        "return_type": "bool",
         "params": [
             {
                 "name": "arrayID",
@@ -637,11 +637,11 @@
                 "desc": "The index to get the value of"
             }
         ],
-        "desc": "Gets and returns the value of the given bool array at the specifed index."
+        "desc": "Gets and returns the value of the given bool array at the specified index."
     },
     "xsArrayGetString": {
         "name": "xsArrayGetString",
-        "return_type": "int",
+        "return_type": "string",
         "params": [
             {
                 "name": "arrayID",
@@ -656,11 +656,11 @@
                 "desc": "The index to get the value of"
             }
         ],
-        "desc": "Gets and returns the value of the given String array at the specifed index."
+        "desc": "Gets and returns the value of the given string array at the specified index."
     },
     "xsArrayGetVector": {
         "name": "xsArrayGetVector",
-        "return_type": "int",
+        "return_type": "vector",
         "params": [
             {
                 "name": "arrayID",
@@ -675,7 +675,7 @@
                 "desc": "The index to get the value of"
             }
         ],
-        "desc": "Gets and returns the value of the given Vector array at the specifed index."
+        "desc": "Gets and returns the value of the given vector array at the specified index."
     },
     "xsArrayResizeInt": {
         "name": "xsArrayResizeInt",
@@ -694,7 +694,7 @@
                 "desc": "The new size of the array"
             }
         ],
-        "desc": "Resizes the the given int array to the specifed size and returns 1."
+        "desc": "Resizes the the given int array to the specified size and returns 1."
     },
     "xsArrayResizeFloat": {
         "name": "xsArrayResizeFloat",
@@ -713,7 +713,7 @@
                 "desc": "The new size of the array"
             }
         ],
-        "desc": "Resizes the the given float array to the specifed size and returns 1."
+        "desc": "Resizes the the given float array to the specified size and returns 1."
     },
     "xsArrayResizeBool": {
         "name": "xsArrayResizeBool",
@@ -732,7 +732,7 @@
                 "desc": "The new size of the array"
             }
         ],
-        "desc": "Resizes the the given bool array to the specifed size and returns 1."
+        "desc": "Resizes the the given bool array to the specified size and returns 1."
     },
     "xsArrayResizeString": {
         "name": "xsArrayResizeString",
@@ -751,7 +751,7 @@
                 "desc": "The new size of the array"
             }
         ],
-        "desc": "Resizes the the given String array to the specifed size and returns 1."
+        "desc": "Resizes the the given string array to the specified size and returns 1."
     },
     "xsArrayResizeVector": {
         "name": "xsArrayResizeVector",
@@ -770,7 +770,7 @@
                 "desc": "The new size of the array"
             }
         ],
-        "desc": "Resizes the the given Vector array to the specifed size and returns 1."
+        "desc": "Resizes the the given vector array to the specified size and returns 1."
     },
     "xsArrayGetSize": {
         "name": "xsArrayGetSize",
@@ -825,7 +825,7 @@
                 "name": "y",
                 "type": "float",
                 "required": true,
-                "desc": "The exponenet to raise the base value to"
+                "desc": "The exponent to raise the base value to"
             }
         ],
         "desc": "Returns x raised to the power y (x**y)."
@@ -921,6 +921,57 @@
         ],
         "desc": "This is supposed to be the atan2(y, x) function but apparently it only takes one input. ThxDE"
     },
+    "xsCeilToInt": {
+        "name": "xsCeilToInt",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "value",
+                "type": "float",
+                "required": true,
+                "desc": "The value to determine the ceil of"
+            }
+        ],
+        "desc": "Rounds the number **up** to the next integer"
+    },
+    "xsGetRandomNumber": {
+        "name": "xsGetRandomNumber",
+        "return_type": "int",
+        "params": [],
+        "desc": "Returns a random number between 0 and 32766."
+    },
+    "xsGetRandomNumberLH": {
+        "name": "xsGetRandomNumberLH",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "low",
+                "type": "int",
+                "required": true,
+                "desc": "The lower bound for the range for the random number returned (included)"
+            },
+            {
+                "name": "high",
+                "type": "int",
+                "required": true,
+                "desc": "The upper bound for the range for the random number returned (excluded)"
+            }
+        ],
+        "desc": "Returns a random number between `low` and `high`"
+    },
+    "xsGetRandomNumberMax": {
+        "name": "xsGetRandomNumberMax",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "max",
+                "type": "int",
+                "required": true,
+                "desc": "The upper bound for the range for the random number returned (excluded)"
+            }
+        ],
+        "desc": "Returns a random number between 0 and `max`."
+    },
     "xsGetPlayerCivilization": {
         "name": "xsGetPlayerCivilization",
         "return_type": "int",
@@ -932,7 +983,7 @@
                 "desc": "The player to get the civilization of"
             }
         ],
-        "desc": "Returns the civilization ID of the given player."
+        "desc": "Returns the civilization ID of the given player. Refer to the [Constant Reference](../constants/#3-civs \"Jump to: XS Scripting > Constant Reference > #3. Civs\") for all the different civ IDs"
     },
     "xsGetPlayerInGame": {
         "name": "xsGetPlayerInGame",
@@ -982,7 +1033,7 @@
         "name": "xsGetVictoryType",
         "return_type": "int",
         "params": [],
-        "desc": "Returns an integer corresponding to different victory settings ingame. These are:\n\n 0: Standard\n\n1: Consquest\n\n2: Time Limit\n\n3: Score\n\n4: Custom (scenarios only).\n\nLast Man Standing returns 0 as well."
+        "desc": "Returns an integer corresponding to different victory settings in game. These are:\n\n 0: Standard\n\n1: Conquest\n\n2: Time Limit\n\n3: Score\n\n4: Custom (scenarios only).\n\nLast Man Standing returns 0 as well."
     },
     "xsGetVictoryPlayer": {
         "name": "xsGetVictoryPlayer",
@@ -990,11 +1041,35 @@
         "params": [],
         "desc": "Returns the number of the player with the highest score in a normal game. Returns the number of the player who owns 5 relics or has a wonder if standard victory is enabled. In a game like KoTH, returns the number of the player who owns the monument."
     },
+    "xsGetVictoryPlayerForSecondaryGameMode": {
+        "name": "xsGetVictoryPlayerForSecondaryGameMode",
+        "return_type": "int",
+        "params": [],
+        "desc": "Returns `1` when no secondary game mode is set. Returns the number of the player who owns the monument in game modes like KotH"
+    },
     "xsGetVictoryTime": {
         "name": "xsGetVictoryTime",
         "return_type": "int",
         "params": [],
         "desc": "For game modes like KoTH and other game modes where there is a timer on the screen, it returns the amount of time left in half seconds. meaning if the value returned is 799, it means there are 399.5s remaining. Returns `-1` otherwise"
+    },
+    "xsGetVictoryTimeForSecondaryGameMode": {
+        "name": "xsGetVictoryTimeForSecondaryGameMode",
+        "return_type": "int",
+        "params": [],
+        "desc": "For game modes like KoTH and other game modes where there is a timer on the screen, it returns the amount of time left in half seconds. meaning if the value returned is 799, it means there are 399.5s remaining. Returns `-1` otherwise"
+    },
+    "xsGetVictoryCondition": {
+        "name": "xsGetVictoryCondition",
+        "return_type": "int",
+        "params": [],
+        "desc": "Returns one of these constants: `cStandardVictory` `cWonderVictory` `cRelicVictory` `cKingOfTheHillVictory`"
+    },
+    "xsGetVictoryConditionForSecondaryGameMode": {
+        "name": "xsGetVictoryConditionForSecondaryGameMode",
+        "return_type": "int",
+        "params": [],
+        "desc": "Returns one of these constants: `cStandardVictory` `cWonderVictory` `cRelicVictory` `cKingOfTheHillVictory`"
     },
     "xsGetPlayerNumberOfTechs": {
         "name": "xsGetPlayerNumberOfTechs",
@@ -1004,10 +1079,53 @@
                 "name": "playerNumber",
                 "type": "int",
                 "required": true,
-                "desc": "The player whoes technology count is being requested."
+                "desc": "The player whose technology count is being requested."
             }
         ],
         "desc": "Returns the number of technologies available to the player in the entire game."
+    },
+    "xsObjectHasAction": {
+        "name": "xsObjectHasAction",
+        "return_type": "bool",
+        "params": [
+            {
+                "name": "playerID",
+                "type": "int",
+                "required": true,
+                "desc": "The player to check unit actions for"
+            },
+            {
+                "name": "unitType",
+                "type": "int",
+                "required": true,
+                "desc": "The type of unit to check actions for. Values 9xx refer to classes"
+            },
+            {
+                "name": "actionId",
+                "type": "int",
+                "required": true,
+                "desc": "The type of action to check for"
+            },
+            {
+                "name": "targetPlayerID",
+                "type": "int",
+                "required": false,
+                "desc": "Check if the action is being performed on a unit (eg. attacking) of this player. Can use -1 to ignore this filter."
+            },
+            {
+                "name": "targetType",
+                "type": "int",
+                "required": false,
+                "desc": "Check if the action is being performed on a unit of this type. Values 9xx refer to classes. Can use -1 to ignore this filter."
+            },
+            {
+                "name": "targetUnitLevel",
+                "type": "int",
+                "required": false,
+                "desc": "Check if the action is being performed on a unit with this `Interface Kind` (look in the A.G.E.), eg: 3 - villagers, 4 - most military units. Can be used as an alternative to `targetType`. If both are used, will pick units that match either. Can use -1 to ignore this filter."
+            }
+        ],
+        "desc": "Checks and returns if any unit matching the set filters of the given player has the specified action."
     },
     "xsPlayerAttribute": {
         "name": "xsPlayerAttribute",
@@ -1157,7 +1275,7 @@
                 "desc": "The player to apply the effect to. If unspecified, applies to all players except Gaia."
             }
         ],
-        "desc": "Change the given attribute of the specified unit or technology by the value for the provided player."
+        "desc": "Change the specified attribute of the specified unit or technology by the value for the specified player. For more information on this, check the [UserPatch](\"Jump to: UserPatch NON EXISTENT\") section of the guide"
     },
     "xsResearchTechnology": {
         "name": "xsResearchTechnology",
@@ -1189,6 +1307,379 @@
             }
         ],
         "desc": "Returns a boolean based on whether the technology was researched or not."
+    },
+    "xsGetObjectCount": {
+        "name": "xsGetObjectCount",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "playerId",
+                "type": "int",
+                "required": true,
+                "desc": "The player to get the object count for"
+            },
+            {
+                "name": "id",
+                "type": "int",
+                "required": true,
+                "desc": "The ID of the object to get the count for"
+            }
+        ],
+        "desc": "Returns the number of currently alive objects with the given ID of the specified player"
+    },
+    "xsGetObjectCountTotal": {
+        "name": "xsGetObjectCountTotal",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "playerId",
+                "type": "int",
+                "required": true,
+                "desc": "The player to get the object count for"
+            },
+            {
+                "name": "id",
+                "type": "int",
+                "required": true,
+                "desc": "The ID of the object to get the count for"
+            }
+        ],
+        "desc": "Returns the number of currently alive/standing + queued/foundation objects with the given ID of the specified player"
+    },
+    "xsTaskAmount": {
+        "name": "xsTaskAmount",
+        "return_type": "void",
+        "params": [
+            {
+                "name": "taskFieldId",
+                "type": "int",
+                "required": true,
+                "desc": "Specifies which property of the task to change (names correspond with A.G.E.):\n    - 0: Work Value 1 (Task 155 - Quantity to mul/add to the attribute modified)\n    - 1: Work Value 2 (Task 155 - Min number of units required to activate the effect. See Monaspa)\n    - 2: Work Range\n    - 3: Work Flag 2\n    - 4: Search Wait Time (Task 155 - Attribute to modify. Only some attributes are supported: [Movement Speed](../../attributes/attributes/#5-movement-speed), [Attack](../../attributes/attributes/#9-attack), [Attack Reload Time](../../attributes/attributes/#10-attack-reload-time), [Work Rate](../../attributes/attributes/#13-work-rate), [Regeneration Rate](../../attributes/attributes/#109-regeneration-rate), [Conversion Chance Modifier](../../attributes/attributes/#113-conversion-chance-modifier), 116 - Melee Armor, 117 - Pierce Armor)\n    - 5: Unused Flag (Task 155 - Combinable bitfield: 1 - Multiply instead of Add, 2 - Circular instead of Rectangular radius, 4 - Range indicator shown, 8 - Temporary Aura, 16 - Use with 8 - applies buffs only units around when the ability is triggered, 32 - Translucent)\n    - 6: Target Diplomacy"
+            },
+            {
+                "name": "value",
+                "type": "float",
+                "required": true,
+                "desc": "The value to set the task field to"
+            }
+        ],
+        "desc": "Sets the value of the given field of the global XS task struct to the provided value. See also [xsTask](./#531-xstask). It is recommended to always set all values before inserting or updating a task otherwise the insert/update might fail."
+    },
+    "xsTask": {
+        "name": "xsTask",
+        "return_type": "void",
+        "params": [
+            {
+                "name": "unitId",
+                "type": "int",
+                "required": true,
+                "desc": "The unit to add the task to"
+            },
+            {
+                "name": "actionType",
+                "type": "int",
+                "required": true,
+                "desc": "Task type. Eg.: 105 for heal, 155 for aura and etc. Look in the A.G.E."
+            },
+            {
+                "name": "targetUnitId",
+                "type": "int",
+                "required": false,
+                "desc": "Target unitId for the task if exists. Values 9xx refer to classes."
+            },
+            {
+                "name": "playerId",
+                "type": "int",
+                "required": false,
+                "desc": "The player to whose units the task will be inserted. If unspecified or -1, applies to all players except Gaia."
+            }
+        ],
+        "desc": "Adds a new (or edits an existing) task with the fields previously defined by calls to [xsTaskAmount](./#532-xstaskamount) for the specified unit at the end of the task list (see A.G.E.). If a task with the specified `actionType`, `unitId`, and `Search Wait Time` (set by `xsTaskAmount`) already exists, it is edited instead of a new one being added.\n\nNote that `xsTaskAmount` modifies a global task struct which is re-used every time `#!xs xsTask` is called (For non programmers, this is similar to filling out a form once (the calls to [xsTaskAmount](./#532-xstaskamount)) and then submitting multiple copies of it for different people)"
+    },
+    "xsRemoveTask": {
+        "name": "xsRemoveTask",
+        "return_type": "void",
+        "params": [
+            {
+                "name": "unitId",
+                "type": "int",
+                "required": true,
+                "desc": "Unit to remove the task from."
+            },
+            {
+                "name": "actionType",
+                "type": "int",
+                "required": true,
+                "desc": "Task type. Eg.: 105 for heal, 155 for aura and etc. Look in the A.G.E."
+            },
+            {
+                "name": "targetUnitId",
+                "type": "int",
+                "required": false,
+                "desc": "Target unitId for the task if exists. Values 9xx refer to classes."
+            },
+            {
+                "name": "playerId",
+                "type": "int",
+                "required": false,
+                "desc": "The player from whose units the task will be removed. If unspecified or -1, applies to all players except Gaia."
+            }
+        ],
+        "desc": "Removes a task from a unit if the specified `actionType`, `unitId`, and `Search Wait Time` (set by [xsTaskAmount](./#532-xstaskamount)) match an existing task in a unit. No other fields are used for filtering (same as when [xsTask](./#531-xstask) edits instead of adding a new task)"
+    },
+    "xsGetObjectAttribute": {
+        "name": "xsGetObjectAttribute",
+        "return_type": "float",
+        "params": [
+            {
+                "name": "playerId",
+                "type": "int",
+                "required": true,
+                "desc": "The player whose unit to get the attribute for"
+            },
+            {
+                "name": "objectId",
+                "type": "int",
+                "required": true,
+                "desc": "The unit to get the attribute for"
+            },
+            {
+                "name": "attribute",
+                "type": "int",
+                "required": true,
+                "desc": "The attribute to get"
+            }
+        ],
+        "desc": "Returns the attribute value for an object"
+    },
+    "xsCreateFile": {
+        "name": "xsCreateFile",
+        "return_type": "bool",
+        "params": [
+            {
+                "name": "append",
+                "type": "bool",
+                "required": false,
+                "desc": "Default: `#!xs true`. If set to `#!xs false`, this will overwrite any existing file with the same name."
+            }
+        ],
+        "desc": "Creates a new (or appends to an existing) `.xsdat` file with the same name as the RMS/scenario being played. After invoking this function, the writing functions can be used to write data to the file. Returns `#!xs true` if the file was successfully created. In a multiplayer game a file is created for each player, and subsequent writes will be duplicated to each player."
+    },
+    "xsOpenFile": {
+        "name": "xsOpenFile",
+        "return_type": "bool",
+        "params": [
+            {
+                "name": "filename",
+                "type": "string",
+                "required": true,
+                "desc": "The name of the file to open, without the `.xsdat` extension"
+            }
+        ],
+        "desc": "Opens an existing `.xsdat`file in read only mode. After invoking this function, the reading functions can be used to read data from the file. Returns `#!xs true` if the file was successfully opened. In a multiplayer game, the file being read must exist for all players and contain the same data to avoid an out of sync error"
+    },
+    "xsWriteString": {
+        "name": "xsWriteString",
+        "return_type": "bool",
+        "params": [
+            {
+                "name": "data",
+                "type": "string",
+                "required": true,
+                "desc": "The string to write"
+            }
+        ],
+        "desc": "Writes a string to the previously created `.xsdat` file. Causes an error if a file hasn't been opened before using. Returns `#!xs true` if the string was successfully written. A string is written to the file in two parts, an unsigned 32 bit integer (indicates the length of the string) followed by that many bytes making up the actual characters of the string"
+    },
+    "xsWriteInt": {
+        "name": "xsWriteInt",
+        "return_type": "bool",
+        "params": [
+            {
+                "name": "data",
+                "type": "int",
+                "required": true,
+                "desc": "The integer to write"
+            }
+        ],
+        "desc": "Writes an integer to the previously created `.xsdat` file. Causes an error if a file hasn't been opened before using. Returns `#!xs true` if the integer was successfully written. Integers are written as signed 32 bit numbers"
+    },
+    "xsWriteFloat": {
+        "name": "xsWriteFloat",
+        "return_type": "bool",
+        "params": [
+            {
+                "name": "data",
+                "type": "float",
+                "required": true,
+                "desc": "The float value to write"
+            }
+        ],
+        "desc": "Writes a floating point number to the previously created `.xsdat` file. Causes an error if a file hasn't been opened before using. Returns `#!xs true` if the floating point number was successfully written. Floats are written in the 32 bit IEEE 754 format"
+    },
+    "xsWriteVector": {
+        "name": "xsWriteVector",
+        "return_type": "bool",
+        "params": [
+            {
+                "name": "data",
+                "type": "vector",
+                "required": true,
+                "desc": "The vector to write"
+            }
+        ],
+        "desc": "Writes a vector to the previously created `.xsdat` file. Causes an error if a file hasn't been opened before using. Returns `#!xs true` if the vector was successfully written. Vectors are written as 3 consecutive floating point numbers, one for each coordinate."
+    },
+    "xsReadString": {
+        "name": "xsReadString",
+        "return_type": "string",
+        "params": [],
+        "desc": "Reads and returns a string from the previously opened `.xsdat` file. Note that this function does not check if the value being read is actually meant to be a string, which means the value being read is bit casted into a string regardless of what it originally was. This function also moves the file position forward by 4 bytes + the amount of bytes in the length of the string"
+    },
+    "xsReadInt": {
+        "name": "xsReadInt",
+        "return_type": "int",
+        "params": [],
+        "desc": "Reads and returns an integer from the previously opened `.xsdat` file. Note that this function does not check if the value being read is actually meant to be an integer, which means the value being read is bit casted into an integer regardless of what it originally was. This function also moves the file position forward by 4 bytes"
+    },
+    "xsReadFloat": {
+        "name": "xsReadFloat",
+        "return_type": "float",
+        "params": [],
+        "desc": "Reads and returns a float from the previously opened `.xsdat` file. Note that this function does not check if the value being read is actually meant to be a float, which means the value being read is bit casted into a float regardless of what it originally was. This function also moves the file position forward by 4 bytes"
+    },
+    "xsReadVector": {
+        "name": "xsReadVector",
+        "return_type": "vector",
+        "params": [],
+        "desc": "Reads and returns a vector from the previously opened `.xsdat` file. Note that this function does not check if the value being read is actually meant to be a vector, which means the value being read is bit casted into a vector regardless of what it originally was. This function also moves the file position forward by 12 bytes"
+    },
+    "xsSetFilePosition": {
+        "name": "xsSetFilePosition",
+        "return_type": "bool",
+        "params": [
+            {
+                "name": "byteOffset",
+                "type": "int",
+                "required": true,
+                "desc": "0 indexed byte offset to determine which byte to read and return from the file"
+            }
+        ],
+        "desc": "Sets the byte (0-indexed) of the file that the next read function will start reading from."
+    },
+    "xsOffsetFilePosition": {
+        "name": "xsOffsetFilePosition",
+        "return_type": "bool",
+        "params": [
+            {
+                "name": "dataType",
+                "type": "int",
+                "required": true,
+                "desc": "The [cOffset constants](../constants/#1-readwrite \"Jump To: XS > Constant Reference > Read/Write Constants\") can be used to specify the datatype used for the offset. Integers and floats are 4 bytes long, vectors are 12 bytes long and strings can be of variable length (specified by the 32 bit int preceding the chars of the string)"
+            },
+            {
+                "name": "forward",
+                "type": "bool",
+                "required": false,
+                "desc": "Default: `#!xs true`. Setting this to `#!xs false` will make the file position move back"
+            }
+        ],
+        "desc": "Moves the file position forward (or backward) relative to the current file position, and by an amount of bytes equivalent to reading the given data type"
+    },
+    "xsCloseFile": {
+        "name": "xsCloseFile",
+        "return_type": "bool",
+        "params": [],
+        "desc": "Close the currently opened or created file. Returns `#!xs true` if the file was successfully closed"
+    },
+    "xsGetFilePosition": {
+        "name": "xsGetFilePosition",
+        "return_type": "int",
+        "params": [],
+        "desc": "Gets the byte (0-indexed) of the file that the next read function will start reading from."
+    },
+    "xsGetDataTypeSize": {
+        "name": "xsGetDataTypeSize",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "type",
+                "type": "int",
+                "required": true,
+                "desc": "One of the `cOffsetXXX` constants may be used as a parameter"
+            }
+        ],
+        "desc": "Returns the number of bytes used to store a given type value."
+    },
+    "xsGetFileSize": {
+        "name": "xsGetFileSize",
+        "return_type": "int",
+        "params": [],
+        "desc": "Gets the size (in bytes) of the currently open file"
+    },
+    "xsGetGoal": {
+        "name": "xsGetGoal",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "id",
+                "type": "int",
+                "required": true,
+                "desc": "The goal id/number to get for the current AI"
+            }
+        ],
+        "desc": "Gets the goal id/number of the current AI"
+    },
+    "xsGetStrategicNumber": {
+        "name": "xsGetStrategicNumber",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "id",
+                "type": "int",
+                "required": true,
+                "desc": "The SN to get for the current AI"
+            }
+        ],
+        "desc": "Gets the SN of the current AI"
+    },
+    "xsSetGoal": {
+        "name": "xsSetGoal",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "id",
+                "type": "int",
+                "required": true,
+                "desc": "The goal id/number to get for the current AI"
+            },
+            {
+                "name": "value",
+                "type": "int",
+                "required": true,
+                "desc": "The value to set the goal id/number to"
+            }
+        ],
+        "desc": "Sets the goal id/number of the current AI"
+    },
+    "xsSetStrategicNumber": {
+        "name": "xsSetStrategicNumber",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "id",
+                "type": "int",
+                "required": true,
+                "desc": "The SN to get for the current AI"
+            },
+            {
+                "name": "value",
+                "type": "int",
+                "required": true,
+                "desc": "The value to set the SN to"
+            }
+        ],
+        "desc": "Sets the SN of the current AI"
     },
     "xsDumpArrays": {
         "name": "xsDumpArrays",
@@ -1232,7 +1723,7 @@
         "name": "xsBreakPoint",
         "return_type": "void",
         "params": [],
-        "desc": "This function adds a break point to the execution of code. Do not use this function and beware, if you do, it will likely cause a crash!"
+        "desc": "This function is meant to add a break point to the execution of XS code for debugging. This used to cause a crash in crash earlier versions of DE."
     },
     "xsAddRuntimeEvent": {
         "name": "xsAddRuntimeEvent",
@@ -1242,7 +1733,7 @@
                 "name": "runtimeName",
                 "type": "string",
                 "required": true,
-                "desc": "This is the name of the runtime to create the event in. This should be `\"Random Map\"` for RMS and `\"Scenario Triggers\"` for scenarios. Find which one to use in a general script by using the `xsGetMapName(true)` function and checking the extension."
+                "desc": "This is the name of the runtime to create the event in. This should be `\"Random Map\"` for RMS and `\"Scenario Triggers\"` for scenarios. Find which one to use in a general script by using the `#!xs xsGetMapName(true)` [function](./#56-xsgetmapname \"Jump To: Function Reference > xsGetMapName\") and checking the extension. To use with an AI, set the runtime name to \"Expert\" and pass the player number as the arg"
             },
             {
                 "name": "functionName",
@@ -1258,270 +1749,5 @@
             }
         ],
         "desc": "A runtime event is called after all the XS code has finished executing but before rules start executing. It calls the function `functionName` given to it with the `functionArgument` passed to it as a parameter. For programmers familiar with the terminology, this is basically a way to set a callback. It also returns true if the function name given to it exists, otherwise it returns false. Does not work with built-ins"
-    },
-    "xsGetRandomNumber": {
-        "name": "xsGetRandomNumber",
-        "return_type": "int",
-        "params": [],
-        "desc": "Returns a random number between 0 and 32766."
-    },
-    "xsGetRandomNumberLH": {
-        "name": "xsGetRandomNumberLH",
-        "return_type": "int",
-        "params": [
-            {
-                "name": "low",
-                "type": "int",
-                "required": true,
-                "desc": "The lower bound for the range for the random number returned (included)"
-            },
-            {
-                "name": "high",
-                "type": "int",
-                "required": true,
-                "desc": "The upper bound for the range for the random number returned (excluded)"
-            }
-        ],
-        "desc": "Returns a random number between `low` and `high`"
-    },
-    "xsGetRandomNumberMax": {
-        "name": "xsGetRandomNumberMax",
-        "return_type": "int",
-        "params": [
-            {
-                "name": "max",
-                "type": "int",
-                "required": true,
-                "desc": "The upper bound for the range for the random number returned (excluded)"
-            }
-        ],
-        "desc": "Returns a random number between 0 and `max`."
-    },
-    "xsCreateFile": {
-        "name": "xsCreateFile",
-        "return_type": "bool",
-        "params": [
-            {
-                "name": "append",
-                "type": "bool",
-                "required": false,
-                "desc": "Default: `#!cpp true`. If set to `#!cpp false`, this will overwrite any existing file with the same name."
-            }
-        ],
-        "desc": "Creates a new (or appends to an existing) `.xsdat` file with the same name as the RMS/scenario being played. After invoking this function, the writing functions can be used to write data to the file. Returns `#!cpp true` if the file was successfully created"
-    },
-    "xsOpenFile": {
-        "name": "xsOpenFile",
-        "return_type": "bool",
-        "params": [
-            {
-                "name": "filename",
-                "type": "string",
-                "required": true,
-                "desc": "The name of the file to open, without the `.xsdat` extension"
-            }
-        ],
-        "desc": "Opens an existing `.xsdat`file in read only mode. After invoking this function, the reading functions can be used to read data from the file. Returns `#!cpp true` if the file was successfully opened"
-    },
-    "xsWriteString": {
-        "name": "xsWriteString",
-        "return_type": "bool",
-        "params": [
-            {
-                "name": "data",
-                "type": "string",
-                "required": true,
-                "desc": "The string to write"
-            }
-        ],
-        "desc": "Writes a string to the previously created `.xsdat` file. Causes an error if a file hasn't been opened before using. Returns `#!cpp true` if the string was successfully written. A string is made up of two parts, an unsigned 32 bit integer (the length of the string) followed by that many bytes making up the actual characters of the string"
-    },
-    "xsWriteInt": {
-        "name": "xsWriteInt",
-        "return_type": "bool",
-        "params": [
-            {
-                "name": "data",
-                "type": "int",
-                "required": true,
-                "desc": "The integer to write"
-            }
-        ],
-        "desc": "Writes an integer to the previously created `.xsdat` file. Causes an error if a file hasn't been opened before using. Returns `#!cpp true` if the integer was successfully written. Integers are written as signed 32 bit numbers"
-    },
-    "xsWriteFloat": {
-        "name": "xsWriteFloat",
-        "return_type": "bool",
-        "params": [
-            {
-                "name": "data",
-                "type": "float",
-                "required": true,
-                "desc": "The float value to write"
-            }
-        ],
-        "desc": "Writes a floating point number to the previously created `.xsdat` file. Causes an error if a file hasn't been opened before using. Returns `#!cpp true` if the floating point number was successfully written. Floats are written in the 32 bit IEEE 754 format"
-    },
-    "xsWriteVector": {
-        "name": "xsWriteVector",
-        "return_type": "bool",
-        "params": [
-            {
-                "name": "data",
-                "type": "vector",
-                "required": true,
-                "desc": "The vector to write"
-            }
-        ],
-        "desc": "Writes a vector to the previously created `.xsdat` file. Causes an error if a file hasn't been opened before using. Returns `#!cpp true` if the vector was successfully written. Vectors are written as 3 consecutive floating point numbers, one for each coordinate."
-    },
-    "xsReadString": {
-        "name": "xsReadString",
-        "return_type": "string",
-        "params": [],
-        "desc": "Reads and returns a string from the previously opened `.xsdat` file. Note that this function does not check if the value being read is actually meant to be a string, which means the value being read is bit casted into a string regardless of what it originally was. This function also moves the file position forward by 4 bytes + the amount of bytes in the length of the string"
-    },
-    "xsReadInt": {
-        "name": "xsReadInt",
-        "return_type": "int",
-        "params": [],
-        "desc": "Reads and returns an integer from the previously opened `.xsdat` file. Note that this function does not check if the value being read is actually meant to be an integer, which means the value being read is bit casted into an integer regardless of what it originally was. This function also moves the file position forward by 4 bytes"
-    },
-    "xsReadFloat": {
-        "name": "xsReadFloat",
-        "return_type": "float",
-        "params": [],
-        "desc": "Reads and returns a float from the previously opened `.xsdat` file. Note that this function does not check if the value being read is actually meant to be a float, which means the value being read is bit casted into a float regardless of what it originally was. This function also moves the file position forward by 4 bytes"
-    },
-    "xsReadVector": {
-        "name": "xsReadVector",
-        "return_type": "vector",
-        "params": [],
-        "desc": "Reads and returns a vector from the previously opened `.xsdat` file. Note that this function does not check if the value being read is actually meant to be a vector, which means the value being read is bit casted into a vector regardless of what it originally was. This function also moves the file position forward by 12 bytes"
-    },
-    "xsSetFilePosition": {
-        "name": "xsSetFilePosition",
-        "return_type": "bool",
-        "params": [
-            {
-                "name": "byteOffset",
-                "type": "int",
-                "required": true,
-                "desc": "0 indexed byte offset to determine which byte to read and return from the file"
-            }
-        ],
-        "desc": "This is the byte (0-indexed) of the file that the next read function will start reading from."
-    },
-    "xsOffsetFilePosition": {
-        "name": "xsOffsetFilePosition",
-        "return_type": "bool",
-        "params": [
-            {
-                "name": "dataType",
-                "type": "int",
-                "required": true,
-                "desc": "The [cOffset constants](../constants/#1-readwrite \"Jump To: XS > Constant Reference > Read/Write Constants\") can be used to specify the datatype used for the offset. Integers and floats are 4 bytes long, vectors are 12 bytes long and strings can be of variable length (specified by the 32 bit int preceeding the chars of the string)"
-            },
-            {
-                "name": "forward",
-                "type": "bool",
-                "required": false,
-                "desc": "Default: `#!cpp true`. Setting this to `#!cpp false` will make the file position move back"
-            }
-        ],
-        "desc": "Moves the file position forward (or backward) relative to the current file position, and by an amount of bytes equivalent to reading the given data type"
-    },
-    "xsCloseFile": {
-        "name": "xsCloseFile",
-        "return_type": "bool",
-        "params": [],
-        "desc": "Close the currently opened or created file. Returns `#!cpp true` if the file was successfully closed"
-    },
-    "xsGetFilePosition": {
-        "name": "xsGetFilePosition",
-        "return_type": "int",
-        "params": [],
-        "desc": "Gets the byte (0-indexed) of the file that the next read function will start reading from."
-    },
-    "xsGetDataTypeSize": {
-        "name": "xsGetDataTypeSize",
-        "return_type": "int",
-        "params": [
-            {
-                "name": "type",
-                "type": "int",
-                "required": true,
-                "desc": "One of the `cOffsetXXX` constants may be used as a parameter"
-            }
-        ],
-        "desc": "Returns the number of bytes used to store a given type value."
-    },
-    "xsGetFileSize": {
-        "name": "xsGetFileSize",
-        "return_type": "int",
-        "params": [],
-        "desc": "Gets the size (in bytes) of the currently open file"
-    },
-    "xsGetObjectCount": {
-        "name": "xsGetObjectCount",
-        "return_type": "int",
-        "params": [
-            {
-                "name": "playerId",
-                "type": "int",
-                "required": true,
-                "desc": "The player to get the object count for"
-            },
-            {
-                "name": "id",
-                "type": "int",
-                "required": true,
-                "desc": "The ID of the object to get the count for"
-            }
-        ],
-        "desc": "Returns the number of currently alive objects of with the given ID of the specified player. The behaviours of these two functions is identical, the same descriptions are not a mistake."
-    },
-    "xsGetObjectCountTotal": {
-        "name": "xsGetObjectCountTotal",
-        "return_type": "int",
-        "params": [
-            {
-                "name": "playerId",
-                "type": "int",
-                "required": true,
-                "desc": "The player to get the object count for"
-            },
-            {
-                "name": "id",
-                "type": "int",
-                "required": true,
-                "desc": "The ID of the object to get the count for"
-            }
-        ],
-        "desc": "Returns the number of currently alive objects of with the given ID of the specified player. The behaviours of these two functions is identical, the same descriptions are not a mistake."
-    },
-    "xsGetVictoryPlayerForSecondaryGameMode": {
-        "name": "xsGetVictoryPlayerForSecondaryGameMode",
-        "return_type": "int",
-        "params": [],
-        "desc": "Returns `1` when no secondary game mode is set. Returns the number of the player who owns the monument in game modes like KotH."
-    },
-    "xsGetVictoryTimeForSecondaryGameMode": {
-        "name": "xsGetVictoryTimeForSecondaryGameMode",
-        "return_type": "int",
-        "params": [],
-        "desc": "For game modes like KoTH and other game modes where there is a timer on the screen, it returns the amount of time left in half seconds. meaning if the value returned is 799, it means there are 399.5s remaining. Returns `-1` otherwise"
-    },
-    "xsGetVictoryCondition": {
-        "name": "xsGetVictoryCondition",
-        "return_type": "int",
-        "params": [],
-        "desc": "Returns one of these constants: `cStandardVictory` `cWonderVictory` `cRelicVictory` `cKingOfTheHillVictory`"
-    },
-    "xsGetVictoryConditionForSecondaryGameMode": {
-        "name": "xsGetVictoryConditionForSecondaryGameMode",
-        "return_type": "int",
-        "params": [],
-        "desc": "Returns one of these constants: `cStandardVictory` `cWonderVictory` `cRelicVictory` `cKingOfTheHillVictory`"
     }
 }

@@ -3,7 +3,7 @@
 	"displayName": "AoE2 XS Scripting",
 	"description": "AoE2 XS Support for VSC",
 	"publisher": "Divy",
-	"version": "1.0.16",
+	"version": "1.0.17",
 	"engines": {
 		"vscode": "^1.46.0"
 	},
