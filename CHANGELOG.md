@@ -1,5 +1,14 @@
 # Change Log
 
+## Released v1.0.18 on 08-07-2025
+
+1. Fixed missing index in for-each snippets
+
+## Released v1.0.17 on 07-07-2025
+
+1. Added new functions and constants
+2. Added new snippets for for-each loop over arrays
+
 ## Released v1.0.16 on 29-06-2022
 
 Fixed typo in monk with relic class constant
