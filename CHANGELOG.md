@@ -1,5 +1,9 @@
 # Change Log
 
+## Released v1.0.19 on 20-07-2025
+
+1. Added new functions and constants
+
 ## Released v1.0.18 on 08-07-2025
 
 1. Fixed missing index in for-each snippets

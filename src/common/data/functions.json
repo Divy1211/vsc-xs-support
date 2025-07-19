@@ -1,10 +1,4 @@
 {
-    "main": {
-        "name": "main",
-        "return_type": "void",
-        "params": [],
-        "desc": "When defined, this function automatically runs at the start of the game. Never define a main function with arguments!"
-    },
     "xsDisableRule": {
         "name": "xsDisableRule",
         "return_type": "void",
@@ -934,6 +928,32 @@
         ],
         "desc": "Rounds the number **up** to the next integer"
     },
+    "bitCastToFloat": {
+        "name": "bitCastToFloat",
+        "return_type": "float",
+        "params": [
+            {
+                "name": "value",
+                "type": "int",
+                "required": true,
+                "desc": "The value to bit cast"
+            }
+        ],
+        "desc": "Does `bit_cast<float>(value)`"
+    },
+    "bitCastToInt": {
+        "name": "bitCastToInt",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "value",
+                "type": "float",
+                "required": true,
+                "desc": "The value to bit cast"
+            }
+        ],
+        "desc": "Does `bit_cast<int>(value)`"
+    },
     "xsGetRandomNumber": {
         "name": "xsGetRandomNumber",
         "return_type": "int",
@@ -1365,6 +1385,12 @@
         ],
         "desc": "Sets the value of the given field of the global XS task struct to the provided value. See also [xsTask](./#531-xstask). It is recommended to always set all values before inserting or updating a task otherwise the insert/update might fail."
     },
+    "xsResetTaskAmount": {
+        "name": "xsResetTaskAmount",
+        "return_type": "void",
+        "params": [],
+        "desc": "Resets all the values of the global XS task struct to their defaults. See also [xsTask](./#531-xstask)."
+    },
     "xsTask": {
         "name": "xsTask",
         "return_type": "void",
@@ -1441,16 +1467,263 @@
                 "name": "objectId",
                 "type": "int",
                 "required": true,
-                "desc": "The unit to get the attribute for"
+                "desc": "The object to get the attribute for"
             },
             {
                 "name": "attribute",
                 "type": "int",
                 "required": true,
                 "desc": "The attribute to get"
+            },
+            {
+                "name": "damageClass",
+                "type": "int",
+                "required": true,
+                "desc": "For use with armor/attack attributes - specifies which armor/attack class to get"
             }
         ],
         "desc": "Returns the attribute value for an object"
+    },
+    "xsGetTurn": {
+        "name": "xsGetTurn",
+        "return_type": "int",
+        "params": [],
+        "desc": "Returns the current game tick (called turn)."
+    },
+    "xsGetPlayerUnitIds": {
+        "name": "xsGetPlayerUnitIds",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "int playerId",
+                "type": "int",
+                "required": true,
+                "desc": "The player to get the unit IDs for"
+            },
+            {
+                "name": "int objectOrClassId",
+                "type": "int",
+                "required": true,
+                "desc": "The type of units to get"
+            },
+            {
+                "name": "int arrayId",
+                "type": "int",
+                "required": false,
+                "desc": "Reuse an existing array to get units"
+            }
+        ],
+        "desc": "Returns the unit IDs of all the units of a specific player of the given object ID or class on the map. The IDs here are the same as the `reference_id` used by the scenario editor"
+    },
+    "xsGetUnitAttribute": {
+        "name": "xsGetUnitAttribute",
+        "return_type": "float",
+        "params": [
+            {
+                "name": "unitId",
+                "type": "int",
+                "required": true,
+                "desc": "The unit to get the attribute for."
+            },
+            {
+                "name": "attribute",
+                "type": "int",
+                "required": true,
+                "desc": "The attribute to get"
+            },
+            {
+                "name": "damageClass",
+                "type": "int",
+                "required": true,
+                "desc": "For use with armor/attack attributes - specifies which armor/attack class to get"
+            }
+        ],
+        "desc": "Returns the attribute value for a specific object on the map."
+    },
+    "xsDoesUnitExist": {
+        "name": "xsDoesUnitExist",
+        "return_type": "bool",
+        "params": [
+            {
+                "name": "unitId",
+                "type": "int",
+                "required": true,
+                "desc": "The unit ID to check"
+            }
+        ],
+        "desc": "Returns true if a unit with the given ID exists on the map."
+    },
+    "xsGetUnitOwner": {
+        "name": "xsGetUnitOwner",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "unitId",
+                "type": "int",
+                "required": true,
+                "desc": "The unit to get the owner ID for"
+            }
+        ],
+        "desc": "Returns the lobby index of the player owning this unit."
+    },
+    "xsGetPlayerName": {
+        "name": "xsGetPlayerName",
+        "return_type": "string",
+        "params": [
+            {
+                "name": "playerId",
+                "type": "int",
+                "required": true,
+                "desc": "The lobby index of the player"
+            }
+        ],
+        "desc": "Returns the given player's name."
+    },
+    "xsGetUnitPosition": {
+        "name": "xsGetUnitPosition",
+        "return_type": "vector",
+        "params": [
+            {
+                "name": "unitId",
+                "type": "int",
+                "required": true,
+                "desc": "The unit to get the position for"
+            }
+        ],
+        "desc": "Returns the current position of a unit."
+    },
+    "xsGetUnitName": {
+        "name": "xsGetUnitName",
+        "return_type": "string",
+        "params": [
+            {
+                "name": "unitId",
+                "type": "int",
+                "required": true,
+                "desc": "The unit ID to check"
+            },
+            {
+                "name": "internalName",
+                "type": "bool",
+                "required": false,
+                "desc": "Returns the internal name of the unit if set. `!#xs false` by default."
+            }
+        ],
+        "desc": "Returns the current name of a given unit"
+    },
+    "xsGetUnitTargetUnitId": {
+        "name": "xsGetUnitTargetUnitId",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "unitId",
+                "type": "int",
+                "required": true,
+                "desc": "The unit to get the target for"
+            }
+        ],
+        "desc": "Returns the ID of the currently targeted unit for this unit"
+    },
+    "xsGetUnitMoveTarget": {
+        "name": "xsGetUnitMoveTarget",
+        "return_type": "vector",
+        "params": [
+            {
+                "name": "unitId",
+                "type": "int",
+                "required": true,
+                "desc": "The unit to get the movement target for"
+            }
+        ],
+        "desc": "Returns the location this unit is currently moving to"
+    },
+    "xsGetObjectName": {
+        "name": "xsGetObjectName",
+        "return_type": "string",
+        "params": [
+            {
+                "name": "objectId",
+                "type": "int",
+                "required": true,
+                "desc": "The object to get the name for"
+            },
+            {
+                "name": "playerId",
+                "type": "int",
+                "required": true,
+                "desc": "The player to get the object's name for"
+            },
+            {
+                "name": "internalName",
+                "type": "bool",
+                "required": false,
+                "desc": "Returns the internal name of the object if set. `!#xs false` by default."
+            }
+        ],
+        "desc": "Returns the current name of the given object for the specified player."
+    },
+    "xsIsObjectAvailable": {
+        "name": "xsIsObjectAvailable",
+        "return_type": "bool",
+        "params": [
+            {
+                "name": "objectId",
+                "type": "int",
+                "required": true,
+                "desc": "The object to check the availability for"
+            },
+            {
+                "name": "playerId",
+                "type": "int",
+                "required": true,
+                "desc": "The player to get the object's availability for"
+            }
+        ],
+        "desc": "Returns true if this object can currently be trained or built."
+    },
+    "xsGetTechName": {
+        "name": "xsGetTechName",
+        "return_type": "string",
+        "params": [
+            {
+                "name": "techId",
+                "type": "int",
+                "required": true,
+                "desc": "The tech to get the name for"
+            },
+            {
+                "name": "playerId",
+                "type": "int",
+                "required": true,
+                "desc": "The player to get the tech's name for"
+            },
+            {
+                "name": "internalName",
+                "type": "bool",
+                "required": false,
+                "desc": "Returns the internal name of the tech if set. `!#xs false` by default."
+            }
+        ],
+        "desc": "Returns the current name of the given tech for the specified player."
+    },
+    "xsGetTechState": {
+        "name": "xsGetTechState",
+        "return_type": "int",
+        "params": [
+            {
+                "name": "techId",
+                "type": "int",
+                "required": true,
+                "desc": "The tech to get the state for"
+            },
+            {
+                "name": "playerId",
+                "type": "int",
+                "required": true,
+                "desc": "The player to get the tech's state for"
+            }
+        ],
+        "desc": "Returns one of the [cTechState constants](../constants/#15-techstate \"Jump To: XS > Constant Reference > Tech State Constants\") based on the tech's status"
     },
     "xsCreateFile": {
         "name": "xsCreateFile",

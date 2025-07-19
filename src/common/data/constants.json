@@ -475,6 +475,41 @@
         "desc": "This is the civilization ID of CIV_NAME",
         "usage": null
     },
+    "cShu": {
+        "name": "cShu",
+        "value": 49,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cWu": {
+        "name": "cWu",
+        "value": 50,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cWei": {
+        "name": "cWei",
+        "value": 51,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cJurchens": {
+        "name": "cJurchens",
+        "value": 52,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
+    "cKhitans": {
+        "name": "cKhitans",
+        "value": 53,
+        "type": "int",
+        "desc": "This is the civilization ID of CIV_NAME",
+        "usage": null
+    },
     "cAoeEgyptians": {
         "name": "cAoeEgyptians",
         "value": 1,
@@ -958,6 +993,13 @@
         "desc": "This is the ID of the `Attribute Add Time` modifier for the xsEffectAmount function",
         "usage": null
     },
+    "cAttrMulTime": {
+        "name": "cAttrMulTime",
+        "value": -3,
+        "type": "int",
+        "desc": "This is the ID of the `Attribute Multiply Time` modifier for the xsEffectAmount function",
+        "usage": null
+    },
     "cAttrSetFoodCost": {
         "name": "cAttrSetFoodCost",
         "value": 0,
@@ -1012,6 +1054,48 @@
         "value": 16387,
         "type": "int",
         "desc": "This is the ID of the `Attribute Add Gold Cost` modifier for the xsEffectAmount function",
+        "usage": null
+    },
+    "cAttrMulFoodCost": {
+        "name": "cAttrMulFoodCost",
+        "value": 13,
+        "type": "int",
+        "desc": "This is the ID of the `Attribute Multiply Food Cost` modifier for the xsEffectAmount function",
+        "usage": null
+    },
+    "cAttrMulWoodCost": {
+        "name": "cAttrMulWoodCost",
+        "value": 14,
+        "type": "int",
+        "desc": "This is the ID of the `Attribute Multiply Wood Cost` modifier for the xsEffectAmount function",
+        "usage": null
+    },
+    "cAttrMulStoneCost": {
+        "name": "cAttrMulStoneCost",
+        "value": 15,
+        "type": "int",
+        "desc": "This is the ID of the `Attribute Multiply Stone Cost` modifier for the xsEffectAmount function",
+        "usage": null
+    },
+    "cAttrMulGoldCost": {
+        "name": "cAttrMulGoldCost",
+        "value": 16,
+        "type": "int",
+        "desc": "This is the ID of the `Attribute Multiply Gold Cost` modifier for the xsEffectAmount function",
+        "usage": null
+    },
+    "cAttrMulAllCosts": {
+        "name": "cAttrMulAllCosts",
+        "value": 17,
+        "type": "int",
+        "desc": "This is the ID of the `Attribute Multiply All Costs` modifier for the xsEffectAmount function",
+        "usage": null
+    },
+    "cAttrSetEffect": {
+        "name": "cAttrSetEffect",
+        "value": 18,
+        "type": "int",
+        "desc": "This is the ID of the `Attribute Set Effect` modifier for the xsEffectAmount function",
         "usage": null
     },
     "cAttrSetLocation": {
@@ -1581,11 +1665,137 @@
         "desc": "This is the attribute [Selection Effect](./../../attributes/attributes/#80-selection-effect)",
         "usage": null
     },
-    "cAttack2Graphic": {
-        "name": "cAttack2Graphic",
+    "cSpecialAbility": {
+        "name": "cSpecialAbility",
         "value": 81,
         "type": "int",
-        "desc": "This is the attribute [Attack Graphic 2](./../../attributes/attributes/#131-attack-graphic-2). Note that this constant is wrong, and should be `131`.",
+        "desc": "This is the attribute [Special Ability](./../../attributes/attributes/#81-special-ability)",
+        "usage": null
+    },
+    "cIdleAttackGraphic": {
+        "name": "cIdleAttackGraphic",
+        "value": 82,
+        "type": "int",
+        "desc": "This is the attribute [Idle Attack Graphic](./../../attributes/attributes/#82-idle-attack-graphic)",
+        "usage": null
+    },
+    "cHeroGlowGraphic": {
+        "name": "cHeroGlowGraphic",
+        "value": 83,
+        "type": "int",
+        "desc": "This is the attribute [Hero Glow Graphic](./../../attributes/attributes/#83-hero-glow-graphic)",
+        "usage": null
+    },
+    "cGarrisonGraphic": {
+        "name": "cGarrisonGraphic",
+        "value": 84,
+        "type": "int",
+        "desc": "This is the attribute [Garrison Graphic](./../../attributes/attributes/#84-garrison-graphic)",
+        "usage": null
+    },
+    "cConstructionGraphic": {
+        "name": "cConstructionGraphic",
+        "value": 85,
+        "type": "int",
+        "desc": "This is the attribute [Construction Graphic](./../../attributes/attributes/#85-construction-graphic)",
+        "usage": null
+    },
+    "cSnowGraphic": {
+        "name": "cSnowGraphic",
+        "value": 86,
+        "type": "int",
+        "desc": "This is the attribute [Snow Graphic](./../../attributes/attributes/#86-snow-graphic)",
+        "usage": null
+    },
+    "cDestructionGraphic": {
+        "name": "cDestructionGraphic",
+        "value": 87,
+        "type": "int",
+        "desc": "This is the attribute [Destruction Graphic](./../../attributes/attributes/#87-destruction-graphic)",
+        "usage": null
+    },
+    "cDestructionRubbleGraphic": {
+        "name": "cDestructionRubbleGraphic",
+        "value": 88,
+        "type": "int",
+        "desc": "This is the attribute [Destruction Rubble Graphic](./../../attributes/attributes/#88-destruction-rubble-graphic)",
+        "usage": null
+    },
+    "cResearchingGraphic": {
+        "name": "cResearchingGraphic",
+        "value": 89,
+        "type": "int",
+        "desc": "This is the attribute [Researching Graphic](./../../attributes/attributes/#89-researching-graphic)",
+        "usage": null
+    },
+    "cResearchCompletedGraphic": {
+        "name": "cResearchCompletedGraphic",
+        "value": 90,
+        "type": "int",
+        "desc": "This is the attribute [Research Completed Graphic](./../../attributes/attributes/#90-research-completed-graphic)",
+        "usage": null
+    },
+    "cDamageGraphic": {
+        "name": "cDamageGraphic",
+        "value": 91,
+        "type": "int",
+        "desc": "This is the attribute [Damage Graphic](./../../attributes/attributes/#91-damage-graphic)",
+        "usage": null
+    },
+    "cSelectionSound": {
+        "name": "cSelectionSound",
+        "value": 92,
+        "type": "int",
+        "desc": "This is the attribute [Selection Sound](./../../attributes/attributes/#92-selection-sound)",
+        "usage": null
+    },
+    "cSelectionSoundEvent": {
+        "name": "cSelectionSoundEvent",
+        "value": 93,
+        "type": "int",
+        "desc": "This is the attribute [Selection Sound Event](./../../attributes/attributes/#93-selection-sound-event)",
+        "usage": null
+    },
+    "cDyingSound": {
+        "name": "cDyingSound",
+        "value": 94,
+        "type": "int",
+        "desc": "This is the attribute [Dying Sound](./../../attributes/attributes/#94-dying-sound)",
+        "usage": null
+    },
+    "cDyingSoundEvent": {
+        "name": "cDyingSoundEvent",
+        "value": 95,
+        "type": "int",
+        "desc": "This is the attribute [Dying Sound Event](./../../attributes/attributes/#95-dying-sound-event)",
+        "usage": null
+    },
+    "cTrainSound": {
+        "name": "cTrainSound",
+        "value": 96,
+        "type": "int",
+        "desc": "This is the attribute [Train Sound](./../../attributes/attributes/#96-train-sound)",
+        "usage": null
+    },
+    "cTrainSoundEvent": {
+        "name": "cTrainSoundEvent",
+        "value": 97,
+        "type": "int",
+        "desc": "This is the attribute [Train Sound Event](./../../attributes/attributes/#97-train-sound-event)",
+        "usage": null
+    },
+    "cDamageSound": {
+        "name": "cDamageSound",
+        "value": 98,
+        "type": "int",
+        "desc": "This is the attribute [Damage Sound](./../../attributes/attributes/#98-damage-sound)",
+        "usage": null
+    },
+    "cDamageSoundEvent": {
+        "name": "cDamageSoundEvent",
+        "value": 99,
+        "type": "int",
+        "desc": "This is the attribute [Damage Sound Event](./../../attributes/attributes/#99-damage-sound-event)",
         "usage": null
     },
     "cResourceCost": {
@@ -1789,6 +1999,195 @@
         "value": 130,
         "type": "int",
         "desc": "This is the attribute [Garrison Firepower](./../../attributes/attributes/#130-garrison-firepower)",
+        "usage": null
+    },
+    "cAttack2Graphic": {
+        "name": "cAttack2Graphic",
+        "value": 131,
+        "type": "int",
+        "desc": "This is the attribute [Attack Graphic 2](./../../attributes/attributes/#131-attack-graphic-2).",
+        "usage": null
+    },
+    "cCommandSound": {
+        "name": "cCommandSound",
+        "value": 132,
+        "type": "int",
+        "desc": "This is the attribute [Command Sound](./../../attributes/attributes/#132-command-sound).",
+        "usage": null
+    },
+    "cCommandSoundEvent": {
+        "name": "cCommandSoundEvent",
+        "value": 133,
+        "type": "int",
+        "desc": "This is the attribute [Command Sound Event](./../../attributes/attributes/#133-command-sound-event).",
+        "usage": null
+    },
+    "cMoveSound": {
+        "name": "cMoveSound",
+        "value": 134,
+        "type": "int",
+        "desc": "This is the attribute [Move Sound](./../../attributes/attributes/#134-move-sound).",
+        "usage": null
+    },
+    "cMoveSoundEvent": {
+        "name": "cMoveSoundEvent",
+        "value": 135,
+        "type": "int",
+        "desc": "This is the attribute [Move Sound Event](./../../attributes/attributes/#135-move-sound-event).",
+        "usage": null
+    },
+    "cConstructionSound": {
+        "name": "cConstructionSound",
+        "value": 136,
+        "type": "int",
+        "desc": "This is the attribute [Construction Sound](./../../attributes/attributes/#136-construction-sound).",
+        "usage": null
+    },
+    "cConstructionSoundEvent": {
+        "name": "cConstructionSoundEvent",
+        "value": 137,
+        "type": "int",
+        "desc": "This is the attribute [Construction Sound Event](./../../attributes/attributes/#137-construction-sound-event).",
+        "usage": null
+    },
+    "cTransformSound": {
+        "name": "cTransformSound",
+        "value": 138,
+        "type": "int",
+        "desc": "This is the attribute [Transform Sound](./../../attributes/attributes/#138-transform-sound).",
+        "usage": null
+    },
+    "cTransformSoundEvent": {
+        "name": "cTransformSoundEvent",
+        "value": 139,
+        "type": "int",
+        "desc": "This is the attribute [Transform Sound Event](./../../attributes/attributes/#139-transform-sound-event).",
+        "usage": null
+    },
+    "cRunPattern": {
+        "name": "cRunPattern",
+        "value": 140,
+        "type": "int",
+        "desc": "This is the attribute [Run Pattern](./../../attributes/attributes/#140-run-pattern).",
+        "usage": null
+    },
+    "cInterfaceKind": {
+        "name": "cInterfaceKind",
+        "value": 141,
+        "type": "int",
+        "desc": "This is the attribute [Interface Kind](./../../attributes/attributes/#141-interface-kind).",
+        "usage": null
+    },
+    "cCombatLevel": {
+        "name": "cCombatLevel",
+        "value": 142,
+        "type": "int",
+        "desc": "This is the attribute [Combat Level](./../../attributes/attributes/#142-combat-level).",
+        "usage": null
+    },
+    "cInteractionMode": {
+        "name": "cInteractionMode",
+        "value": 143,
+        "type": "int",
+        "desc": "This is the attribute [Interaction Mode](./../../attributes/attributes/#143-interaction-mode).",
+        "usage": null
+    },
+    "cMinimapMode": {
+        "name": "cMinimapMode",
+        "value": 144,
+        "type": "int",
+        "desc": "This is the attribute [Minimap Mode](./../../attributes/attributes/#144-minimap-mode).",
+        "usage": null
+    },
+    "cTrailingUnit": {
+        "name": "cTrailingUnit",
+        "value": 145,
+        "type": "int",
+        "desc": "This is the attribute [Trailing Unit](./../../attributes/attributes/#145-trailing-unit).",
+        "usage": null
+    },
+    "cTrailMode": {
+        "name": "cTrailMode",
+        "value": 146,
+        "type": "int",
+        "desc": "This is the attribute [Trail Mode](./../../attributes/attributes/#146-trail-mode).",
+        "usage": null
+    },
+    "cTrailDensity": {
+        "name": "cTrailDensity",
+        "value": 147,
+        "type": "int",
+        "desc": "This is the attribute [Trail Density](./../../attributes/attributes/#147-trail-density).",
+        "usage": null
+    },
+    "cProjectileGraphicDisplacementX": {
+        "name": "cProjectileGraphicDisplacementX",
+        "value": 148,
+        "type": "int",
+        "desc": "This is the attribute [Projectile Graphic Displacement X](./../../attributes/attributes/#148-projectile-graphic-displacement-x).",
+        "usage": null
+    },
+    "cProjectileGraphicDisplacementY": {
+        "name": "cProjectileGraphicDisplacementY",
+        "value": 149,
+        "type": "int",
+        "desc": "This is the attribute [Projectile Graphic Displacement Y](./../../attributes/attributes/#149-projectile-graphic-displacement-y).",
+        "usage": null
+    },
+    "cProjectileGraphicDisplacementZ": {
+        "name": "cProjectileGraphicDisplacementZ",
+        "value": 150,
+        "type": "int",
+        "desc": "This is the attribute [Projectile Graphic Displacement Z](./../../attributes/attributes/#150-projectile-graphic-displacement-z).",
+        "usage": null
+    },
+    "cProjectileSpawningAreaWidth": {
+        "name": "cProjectileSpawningAreaWidth",
+        "value": 151,
+        "type": "int",
+        "desc": "This is the attribute [Projectile Spawning Area Width](./../../attributes/attributes/#151-projectile-spawning-area-width).",
+        "usage": null
+    },
+    "cProjectileSpawningAreaLength": {
+        "name": "cProjectileSpawningAreaLength",
+        "value": 152,
+        "type": "int",
+        "desc": "This is the attribute [Projectile Spawning Area Length](./../../attributes/attributes/#152-projectile-spawning-area-length).",
+        "usage": null
+    },
+    "cProjectileSpawningAreaRandomness": {
+        "name": "cProjectileSpawningAreaRandomness",
+        "value": 153,
+        "type": "int",
+        "desc": "This is the attribute [Projectile Spawning Area Randomness](./../../attributes/attributes/#153-projectile-spawning-area-randomness).",
+        "usage": null
+    },
+    "cDamageGraphicsEntryMod": {
+        "name": "cDamageGraphicsEntryMod",
+        "value": 154,
+        "type": "int",
+        "desc": "This is the attribute [Damage Graphics Entry Mod](./../../attributes/attributes/#154-damage-graphics-entry-mod).",
+        "usage": null
+    },
+    "cDamageGraphicsTotalNum": {
+        "name": "cDamageGraphicsTotalNum",
+        "value": 155,
+        "type": "int",
+        "desc": "This is the attribute [Damage Graphics Total Num](./../../attributes/attributes/#155-damage-graphics-total-num).",
+        "usage": null
+    },
+    "cDamageGraphicPercent": {
+        "name": "cDamageGraphicPercent",
+        "value": 156,
+        "type": "int",
+        "desc": "This is the attribute [Damage Graphic Percent](./../../attributes/attributes/#156-damage-graphic-percent).",
+        "usage": null
+    },
+    "cDamageGraphicApplyMode": {
+        "name": "cDamageGraphicApplyMode",
+        "value": 157,
+        "type": "int",
+        "desc": "This is the attribute [Damage Graphic Apply Mode](./../../attributes/attributes/#157-damage-graphic-apply-mode).",
         "usage": null
     },
     "cArcherClass": {
@@ -2221,6 +2620,20 @@
     "cControlledAnimalClass": {
         "name": "cControlledAnimalClass",
         "value": 961,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cGoldFishClass": {
+        "name": "cGoldFishClass",
+        "value": 963,
+        "type": "int",
+        "desc": "This is the ID used to target the CLASS_NAME",
+        "usage": null
+    },
+    "cLandMineClass": {
+        "name": "cLandMineClass",
+        "value": 964,
         "type": "int",
         "desc": "This is the ID used to target the CLASS_NAME",
         "usage": null
@@ -3576,6 +3989,55 @@
         "desc": "ID of the player resource RES_NAME. Check [here](../../resources/resources/#ID_HERE-RES_HEAD \"Jump to: Game Mecahnicsc > Resources > #ID_HERE-RES_HEAD\") for more info about what this resource does.",
         "usage": null
     },
+    "cAttributeMilitaryFoodTrickle": {
+        "name": "cAttributeMilitaryFoodTrickle",
+        "value": 287,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME. Check [here](../../resources/resources/#ID_HERE-RES_HEAD \"Jump to: Game Mecahnicsc > Resources > #ID_HERE-RES_HEAD\") for more info about what this resource does.",
+        "usage": null
+    },
+    "cAttributePastureFoodAmount": {
+        "name": "cAttributePastureFoodAmount",
+        "value": 288,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME. Check [here](../../resources/resources/#ID_HERE-RES_HEAD \"Jump to: Game Mecahnicsc > Resources > #ID_HERE-RES_HEAD\") for more info about what this resource does.",
+        "usage": null
+    },
+    "cAttributePastureAnimalCount": {
+        "name": "cAttributePastureAnimalCount",
+        "value": 289,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME. Check [here](../../resources/resources/#ID_HERE-RES_HEAD \"Jump to: Game Mecahnicsc > Resources > #ID_HERE-RES_HEAD\") for more info about what this resource does.",
+        "usage": null
+    },
+    "cAttributePastureHerderCount": {
+        "name": "cAttributePastureHerderCount",
+        "value": 290,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME. Check [here](../../resources/resources/#ID_HERE-RES_HEAD \"Jump to: Game Mecahnicsc > Resources > #ID_HERE-RES_HEAD\") for more info about what this resource does.",
+        "usage": null
+    },
+    "cAttributeDisableAnimalDecay": {
+        "name": "cAttributeDisableAnimalDecay",
+        "value": 292,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME. Check [here](../../resources/resources/#ID_HERE-RES_HEAD \"Jump to: Game Mecahnicsc > Resources > #ID_HERE-RES_HEAD\") for more info about what this resource does.",
+        "usage": null
+    },
+    "cAttributeHerdingFoodProductivity": {
+        "name": "cAttributeHerdingFoodProductivity",
+        "value": 293,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME. Check [here](../../resources/resources/#ID_HERE-RES_HEAD \"Jump to: Game Mecahnicsc > Resources > #ID_HERE-RES_HEAD\") for more info about what this resource does.",
+        "usage": null
+    },
+    "cAttributeShepherdingFoodProductivity": {
+        "name": "cAttributeShepherdingFoodProductivity",
+        "value": 294,
+        "type": "int",
+        "desc": "ID of the player resource RES_NAME. Check [here](../../resources/resources/#ID_HERE-RES_HEAD \"Jump to: Game Mecahnicsc > Resources > #ID_HERE-RES_HEAD\") for more info about what this resource does.",
+        "usage": null
+    },
     "cAttributeGaiaKills": {
         "name": "cAttributeGaiaKills",
         "value": 300,
@@ -4078,6 +4540,804 @@
         "value": 483,
         "type": "int",
         "desc": "ID of the player resource RES_NAME. Check [here](../../resources/resources/#ID_HERE-RES_HEAD \"Jump to: Game Mecahnicsc > Resources > #ID_HERE-RES_HEAD\") for more info about what this resource does.",
+        "usage": null
+    },
+    "cAttributeChoppingFoodProductivity": {
+        "name": "cAttributeChoppingFoodProductivity",
+        "value": 502,
+        "type": "int",
+        "desc": "This constant is set incorrectly, it should be 291",
+        "usage": null
+    },
+    "cDamageClassInfantry": {
+        "name": "cDamageClassInfantry",
+        "value": 1,
+        "type": "int",
+        "desc": "ID of the Damage Class CLASS_NAME",
+        "usage": null
+    },
+    "cDamageClassCapitalShips": {
+        "name": "cDamageClassCapitalShips",
+        "value": 2,
+        "type": "int",
+        "desc": "ID of the Damage Class CLASS_NAME",
+        "usage": null
+    },
+    "cDamageClassPierce": {
+        "name": "cDamageClassPierce",
+        "value": 3,
+        "type": "int",
+        "desc": "ID of the Damage Class CLASS_NAME",
+        "usage": null
+    },
+    "cDamageClassMelee": {
+        "name": "cDamageClassMelee",
+        "value": 4,
+        "type": "int",
+        "desc": "ID of the Damage Class CLASS_NAME",
+        "usage": null
+    },
+    "cDamageClassElephantUnits": {
+        "name": "cDamageClassElephantUnits",
+        "value": 5,
+        "type": "int",
+        "desc": "ID of the Damage Class CLASS_NAME",
+        "usage": null
+    },
+    "cDamageClassCavalry": {
+        "name": "cDamageClassCavalry",
+        "value": 8,
+        "type": "int",
+        "desc": "ID of the Damage Class CLASS_NAME",
+        "usage": null
+    },
+    "cDamageClassAllBuildings": {
+        "name": "cDamageClassAllBuildings",
+        "value": 11,
+        "type": "int",
+        "desc": "ID of the Damage Class CLASS_NAME",
+        "usage": null
+    },
+    "cDamageClassStoneDefense": {
+        "name": "cDamageClassStoneDefense",
+        "value": 13,
+        "type": "int",
+        "desc": "ID of the Damage Class CLASS_NAME",
+        "usage": null
+    },
+    "cDamageClassPredatorAnimals": {
+        "name": "cDamageClassPredatorAnimals",
+        "value": 14,
+        "type": "int",
+        "desc": "ID of the Damage Class CLASS_NAME",
+        "usage": null
+    },
+    "cDamageClassArchers": {
+        "name": "cDamageClassArchers",
+        "value": 15,
+        "type": "int",
+        "desc": "ID of the Damage Class CLASS_NAME",
+        "usage": null
+    },
+    "cDamageClassShips": {
+        "name": "cDamageClassShips",
+        "value": 16,
+        "type": "int",
+        "desc": "ID of the Damage Class CLASS_NAME",
+        "usage": null
+    },
+    "cDamageClassRams": {
+        "name": "cDamageClassRams",
+        "value": 17,
+        "type": "int",
+        "desc": "ID of the Damage Class CLASS_NAME",
+        "usage": null
+    },
+    "cDamageClassTrees": {
+        "name": "cDamageClassTrees",
+        "value": 18,
+        "type": "int",
+        "desc": "ID of the Damage Class CLASS_NAME",
+        "usage": null
+    },
+    "cDamageClassUniqueUnits": {
+        "name": "cDamageClassUniqueUnits",
+        "value": 19,
+        "type": "int",
+        "desc": "ID of the Damage Class CLASS_NAME",
+        "usage": null
+    },
+    "cDamageClassSiegeWeapons": {
+        "name": "cDamageClassSiegeWeapons",
+        "value": 20,
+        "type": "int",
+        "desc": "ID of the Damage Class CLASS_NAME",
+        "usage": null
+    },
+    "cDamageClassStandardBuildings": {
+        "name": "cDamageClassStandardBuildings",
+        "value": 21,
+        "type": "int",
+        "desc": "ID of the Damage Class CLASS_NAME",
+        "usage": null
+    },
+    "cDamageClassWallsAndGates": {
+        "name": "cDamageClassWallsAndGates",
+        "value": 22,
+        "type": "int",
+        "desc": "ID of the Damage Class CLASS_NAME",
+        "usage": null
+    },
+    "cDamageClassGunpowderUnits": {
+        "name": "cDamageClassGunpowderUnits",
+        "value": 23,
+        "type": "int",
+        "desc": "ID of the Damage Class CLASS_NAME",
+        "usage": null
+    },
+    "cDamageClassBoars": {
+        "name": "cDamageClassBoars",
+        "value": 24,
+        "type": "int",
+        "desc": "ID of the Damage Class CLASS_NAME",
+        "usage": null
+    },
+    "cDamageClassMonks": {
+        "name": "cDamageClassMonks",
+        "value": 25,
+        "type": "int",
+        "desc": "ID of the Damage Class CLASS_NAME",
+        "usage": null
+    },
+    "cDamageClassCastles": {
+        "name": "cDamageClassCastles",
+        "value": 26,
+        "type": "int",
+        "desc": "ID of the Damage Class CLASS_NAME",
+        "usage": null
+    },
+    "cDamageClassSpearmen": {
+        "name": "cDamageClassSpearmen",
+        "value": 27,
+        "type": "int",
+        "desc": "ID of the Damage Class CLASS_NAME",
+        "usage": null
+    },
+    "cDamageClassCavalryArchers": {
+        "name": "cDamageClassCavalryArchers",
+        "value": 28,
+        "type": "int",
+        "desc": "ID of the Damage Class CLASS_NAME",
+        "usage": null
+    },
+    "cDamageClassShockInfantry": {
+        "name": "cDamageClassShockInfantry",
+        "value": 29,
+        "type": "int",
+        "desc": "ID of the Damage Class CLASS_NAME",
+        "usage": null
+    },
+    "cDamageClassCamelUnits": {
+        "name": "cDamageClassCamelUnits",
+        "value": 30,
+        "type": "int",
+        "desc": "ID of the Damage Class CLASS_NAME",
+        "usage": null
+    },
+    "cDamageClassCondottieri": {
+        "name": "cDamageClassCondottieri",
+        "value": 32,
+        "type": "int",
+        "desc": "ID of the Damage Class CLASS_NAME",
+        "usage": null
+    },
+    "cDamageClassFishingShips": {
+        "name": "cDamageClassFishingShips",
+        "value": 34,
+        "type": "int",
+        "desc": "ID of the Damage Class CLASS_NAME",
+        "usage": null
+    },
+    "cDamageClassMamelukes": {
+        "name": "cDamageClassMamelukes",
+        "value": 35,
+        "type": "int",
+        "desc": "ID of the Damage Class CLASS_NAME",
+        "usage": null
+    },
+    "cDamageClassHeroesAndKings": {
+        "name": "cDamageClassHeroesAndKings",
+        "value": 36,
+        "type": "int",
+        "desc": "ID of the Damage Class CLASS_NAME",
+        "usage": null
+    },
+    "cDamageClassHeavySiege": {
+        "name": "cDamageClassHeavySiege",
+        "value": 37,
+        "type": "int",
+        "desc": "ID of the Damage Class CLASS_NAME",
+        "usage": null
+    },
+    "cDamageClassSkirmishers": {
+        "name": "cDamageClassSkirmishers",
+        "value": 38,
+        "type": "int",
+        "desc": "ID of the Damage Class CLASS_NAME",
+        "usage": null
+    },
+    "cDamageClassRoyalHeirs": {
+        "name": "cDamageClassRoyalHeirs",
+        "value": 39,
+        "type": "int",
+        "desc": "ID of the Damage Class CLASS_NAME",
+        "usage": null
+    },
+    "cTaskAttrWorkValue1": {
+        "name": "cTaskAttrWorkValue1",
+        "value": 0,
+        "type": "int",
+        "desc": "ID for the task amount Task Attribute ATTR_NAME",
+        "usage": null
+    },
+    "cTaskAttrWorkValue2": {
+        "name": "cTaskAttrWorkValue2",
+        "value": 1,
+        "type": "int",
+        "desc": "ID for the task amount Task Attribute ATTR_NAME",
+        "usage": null
+    },
+    "cTaskAttrWorkRange": {
+        "name": "cTaskAttrWorkRange",
+        "value": 2,
+        "type": "int",
+        "desc": "ID for the task amount Task Attribute ATTR_NAME",
+        "usage": null
+    },
+    "cTaskAttrWorkFlag2": {
+        "name": "cTaskAttrWorkFlag2",
+        "value": 3,
+        "type": "int",
+        "desc": "ID for the task amount Task Attribute ATTR_NAME",
+        "usage": null
+    },
+    "cTaskAttrSearchWaitTime": {
+        "name": "cTaskAttrSearchWaitTime",
+        "value": 4,
+        "type": "int",
+        "desc": "ID for the task amount Task Attribute ATTR_NAME",
+        "usage": null
+    },
+    "cTaskAttrCombatLevelFlag": {
+        "name": "cTaskAttrCombatLevelFlag",
+        "value": 5,
+        "type": "int",
+        "desc": "ID for the task amount Task Attribute ATTR_NAME",
+        "usage": null
+    },
+    "cTaskAttrOwnerType": {
+        "name": "cTaskAttrOwnerType",
+        "value": 6,
+        "type": "int",
+        "desc": "ID for the task amount Task Attribute ATTR_NAME",
+        "usage": null
+    },
+    "cTaskAttrTerrain": {
+        "name": "cTaskAttrTerrain",
+        "value": 7,
+        "type": "int",
+        "desc": "ID for the task amount Task Attribute ATTR_NAME",
+        "usage": null
+    },
+    "cTaskAttrResourceIn": {
+        "name": "cTaskAttrResourceIn",
+        "value": 8,
+        "type": "int",
+        "desc": "ID for the task amount Task Attribute ATTR_NAME",
+        "usage": null
+    },
+    "cTaskAttrProductivityResource": {
+        "name": "cTaskAttrProductivityResource",
+        "value": 9,
+        "type": "int",
+        "desc": "ID for the task amount Task Attribute ATTR_NAME",
+        "usage": null
+    },
+    "cTaskAttrResourceOut": {
+        "name": "cTaskAttrResourceOut",
+        "value": 10,
+        "type": "int",
+        "desc": "ID for the task amount Task Attribute ATTR_NAME",
+        "usage": null
+    },
+    "cTaskAttrUnusedResource": {
+        "name": "cTaskAttrUnusedResource",
+        "value": 11,
+        "type": "int",
+        "desc": "ID for the task amount Task Attribute ATTR_NAME",
+        "usage": null
+    },
+    "cTaskAttrMovingGraphic": {
+        "name": "cTaskAttrMovingGraphic",
+        "value": 12,
+        "type": "int",
+        "desc": "ID for the task amount Task Attribute ATTR_NAME",
+        "usage": null
+    },
+    "cTaskAttrProceedingGraphic": {
+        "name": "cTaskAttrProceedingGraphic",
+        "value": 13,
+        "type": "int",
+        "desc": "ID for the task amount Task Attribute ATTR_NAME",
+        "usage": null
+    },
+    "cTaskAttrWorkingGraphic": {
+        "name": "cTaskAttrWorkingGraphic",
+        "value": 14,
+        "type": "int",
+        "desc": "ID for the task amount Task Attribute ATTR_NAME",
+        "usage": null
+    },
+    "cTaskAttrCarryingGraphic": {
+        "name": "cTaskAttrCarryingGraphic",
+        "value": 15,
+        "type": "int",
+        "desc": "ID for the task amount Task Attribute ATTR_NAME",
+        "usage": null
+    },
+    "cTaskAttrGatheringSound": {
+        "name": "cTaskAttrGatheringSound",
+        "value": 16,
+        "type": "int",
+        "desc": "ID for the task amount Task Attribute ATTR_NAME",
+        "usage": null
+    },
+    "cTaskAttrGatheringSoundEvent": {
+        "name": "cTaskAttrGatheringSoundEvent",
+        "value": 17,
+        "type": "int",
+        "desc": "ID for the task amount Task Attribute ATTR_NAME",
+        "usage": null
+    },
+    "cTaskAttrGatheringSoundInt32": {
+        "name": "cTaskAttrGatheringSoundInt32",
+        "value": 18,
+        "type": "int",
+        "desc": "ID for the task amount Task Attribute ATTR_NAME",
+        "usage": null
+    },
+    "cTaskAttrDepositSound": {
+        "name": "cTaskAttrDepositSound",
+        "value": 19,
+        "type": "int",
+        "desc": "ID for the task amount Task Attribute ATTR_NAME",
+        "usage": null
+    },
+    "cTaskAttrDepositSoundEvent": {
+        "name": "cTaskAttrDepositSoundEvent",
+        "value": 20,
+        "type": "int",
+        "desc": "ID for the task amount Task Attribute ATTR_NAME",
+        "usage": null
+    },
+    "cTaskAttrDepositSoundInt32": {
+        "name": "cTaskAttrDepositSoundInt32",
+        "value": 21,
+        "type": "int",
+        "desc": "ID for the task amount Task Attribute ATTR_NAME",
+        "usage": null
+    },
+    "cTaskAttrAutoSearch": {
+        "name": "cTaskAttrAutoSearch",
+        "value": 22,
+        "type": "int",
+        "desc": "ID for the task amount Task Attribute ATTR_NAME",
+        "usage": null
+    },
+    "cTaskAttrCarryCheck": {
+        "name": "cTaskAttrCarryCheck",
+        "value": 23,
+        "type": "int",
+        "desc": "ID for the task amount Task Attribute ATTR_NAME",
+        "usage": null
+    },
+    "cTaskAttrBuildingPick": {
+        "name": "cTaskAttrBuildingPick",
+        "value": 24,
+        "type": "int",
+        "desc": "ID for the task amount Task Attribute ATTR_NAME",
+        "usage": null
+    },
+    "cTaskAttrGatherType": {
+        "name": "cTaskAttrGatherType",
+        "value": 25,
+        "type": "int",
+        "desc": "ID for the task amount Task Attribute ATTR_NAME",
+        "usage": null
+    },
+    "cTaskAttrEnableTargeting": {
+        "name": "cTaskAttrEnableTargeting",
+        "value": 26,
+        "type": "int",
+        "desc": "ID for the task amount Task Attribute ATTR_NAME",
+        "usage": null
+    },
+    "cTaskAttrEnabled": {
+        "name": "cTaskAttrEnabled",
+        "value": 27,
+        "type": "int",
+        "desc": "ID for the task amount Task Attribute ATTR_NAME",
+        "usage": null
+    },
+    "cTaskTypeMoveTo": {
+        "name": "cTaskTypeMoveTo",
+        "value": 1,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeFollow": {
+        "name": "cTaskTypeFollow",
+        "value": 2,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeGarrison": {
+        "name": "cTaskTypeGarrison",
+        "value": 3,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeExplore": {
+        "name": "cTaskTypeExplore",
+        "value": 4,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeGatherRebuild": {
+        "name": "cTaskTypeGatherRebuild",
+        "value": 5,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeGraze": {
+        "name": "cTaskTypeGraze",
+        "value": 6,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeCombat": {
+        "name": "cTaskTypeCombat",
+        "value": 7,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeShoot": {
+        "name": "cTaskTypeShoot",
+        "value": 8,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeAttack": {
+        "name": "cTaskTypeAttack",
+        "value": 9,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeFly": {
+        "name": "cTaskTypeFly",
+        "value": 10,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeUnloadBoatLike": {
+        "name": "cTaskTypeUnloadBoatLike",
+        "value": 12,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeGuard": {
+        "name": "cTaskTypeGuard",
+        "value": 13,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeUnloadOverWall": {
+        "name": "cTaskTypeUnloadOverWall",
+        "value": 14,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeMake": {
+        "name": "cTaskTypeMake",
+        "value": 21,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeBuild": {
+        "name": "cTaskTypeBuild",
+        "value": 101,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeMakeUnit": {
+        "name": "cTaskTypeMakeUnit",
+        "value": 102,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeMakeTech": {
+        "name": "cTaskTypeMakeTech",
+        "value": 103,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeConvert": {
+        "name": "cTaskTypeConvert",
+        "value": 104,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeHeal": {
+        "name": "cTaskTypeHeal",
+        "value": 105,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeRepair": {
+        "name": "cTaskTypeRepair",
+        "value": 106,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeGetAutoConverted": {
+        "name": "cTaskTypeGetAutoConverted",
+        "value": 107,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeDiscoveryArtifact": {
+        "name": "cTaskTypeDiscoveryArtifact",
+        "value": 108,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeHunt": {
+        "name": "cTaskTypeHunt",
+        "value": 110,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeTrade": {
+        "name": "cTaskTypeTrade",
+        "value": 111,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeGenerateWonderVictory": {
+        "name": "cTaskTypeGenerateWonderVictory",
+        "value": 120,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeDeselectWhenTasked": {
+        "name": "cTaskTypeDeselectWhenTasked",
+        "value": 121,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeLootGather": {
+        "name": "cTaskTypeLootGather",
+        "value": 122,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeHousing": {
+        "name": "cTaskTypeHousing",
+        "value": 123,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypePack": {
+        "name": "cTaskTypePack",
+        "value": 124,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeUnpackAndAttack": {
+        "name": "cTaskTypeUnpackAndAttack",
+        "value": 125,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeOffMapTrade": {
+        "name": "cTaskTypeOffMapTrade",
+        "value": 131,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypePickupUnit": {
+        "name": "cTaskTypePickupUnit",
+        "value": 132,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeChargeAttack": {
+        "name": "cTaskTypeChargeAttack",
+        "value": 133,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeTransformUnit": {
+        "name": "cTaskTypeTransformUnit",
+        "value": 134,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeKidnapUnit": {
+        "name": "cTaskTypeKidnapUnit",
+        "value": 135,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeDepositUnit": {
+        "name": "cTaskTypeDepositUnit",
+        "value": 136,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeShear": {
+        "name": "cTaskTypeShear",
+        "value": 149,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeGenerateResources": {
+        "name": "cTaskTypeGenerateResources",
+        "value": 151,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeMovementDamage": {
+        "name": "cTaskTypeMovementDamage",
+        "value": 152,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeMovableDropsite": {
+        "name": "cTaskTypeMovableDropsite",
+        "value": 153,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeLoot": {
+        "name": "cTaskTypeLoot",
+        "value": 154,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeAura": {
+        "name": "cTaskTypeAura",
+        "value": 155,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeExtraSpawn": {
+        "name": "cTaskTypeExtraSpawn",
+        "value": 156,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeStinger": {
+        "name": "cTaskTypeStinger",
+        "value": 157,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeHPTransform": {
+        "name": "cTaskTypeHPTransform",
+        "value": 158,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTaskTypeHPModifier": {
+        "name": "cTaskTypeHPModifier",
+        "value": 160,
+        "type": "int",
+        "desc": "ID for the task TASK_NAME",
+        "usage": null
+    },
+    "cTechStateNotReady": {
+        "name": "cTechStateNotReady",
+        "value": 0,
+        "type": "int",
+        "desc": "Enum value for the tech state STATE_NAME",
+        "usage": null
+    },
+    "cTechStateReady": {
+        "name": "cTechStateReady",
+        "value": 1,
+        "type": "int",
+        "desc": "Enum value for the tech state STATE_NAME",
+        "usage": null
+    },
+    "cTechStateQueued": {
+        "name": "cTechStateQueued",
+        "value": 4,
+        "type": "int",
+        "desc": "Enum value for the tech state STATE_NAME",
+        "usage": null
+    },
+    "cTechStateResearching": {
+        "name": "cTechStateResearching",
+        "value": 2,
+        "type": "int",
+        "desc": "Enum value for the tech state STATE_NAME",
+        "usage": null
+    },
+    "cTechStateDone": {
+        "name": "cTechStateDone",
+        "value": 3,
+        "type": "int",
+        "desc": "Enum value for the tech state STATE_NAME",
+        "usage": null
+    },
+    "cTechStateDisabled": {
+        "name": "cTechStateDisabled",
+        "value": -1,
+        "type": "int",
+        "desc": "Enum value for the tech state STATE_NAME",
+        "usage": null
+    },
+    "cTechStateInvalid": {
+        "name": "cTechStateInvalid",
+        "value": -2,
+        "type": "int",
+        "desc": "Enum value for the tech state STATE_NAME",
         "usage": null
     }
 }
