@@ -1495,19 +1495,19 @@
         "return_type": "int",
         "params": [
             {
-                "name": "int playerId",
+                "name": "playerId",
                 "type": "int",
                 "required": true,
                 "desc": "The player to get the unit IDs for"
             },
             {
-                "name": "int objectOrClassId",
+                "name": "objectOrClassId",
                 "type": "int",
                 "required": true,
                 "desc": "The type of units to get"
             },
             {
-                "name": "int arrayId",
+                "name": "arrayId",
                 "type": "int",
                 "required": false,
                 "desc": "Reuse an existing array to get units"

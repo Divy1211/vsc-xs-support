@@ -1,5 +1,9 @@
 # Change Log
 
+## Released v1.0.20 on 20-07-2025
+
+1. Fixed typo in function parameter names
+
 ## Released v1.0.19 on 20-07-2025
 
 1. Added new functions and constants

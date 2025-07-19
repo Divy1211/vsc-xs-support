@@ -27,6 +27,10 @@ XS Scripts are External Subroutines used by the games AoE2, AoE3 and AoM
 
 ## Release Notes
 
+## 1.0.20
+
+Fixed a typo in function parameter names
+
 ## 1.0.19
 
 Added new functions and constants
