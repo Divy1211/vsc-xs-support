@@ -1,4 +1,10 @@
 {
+    "main": {
+        "name": "main",
+        "return_type": "void",
+        "params": [],
+        "desc": "When defined, this function automatically runs at the start of the game. Never define a main function with arguments!"
+    },
     "xsDisableRule": {
         "name": "xsDisableRule",
         "return_type": "void",
@@ -456,7 +462,7 @@
         "return_type": "int",
         "params": [
             {
-                "name": "arrayID",
+                "name": "arrayId",
                 "type": "int",
                 "required": true,
                 "desc": "The ID of the array to set the value in"
@@ -481,7 +487,7 @@
         "return_type": "int",
         "params": [
             {
-                "name": "arrayID",
+                "name": "arrayId",
                 "type": "int",
                 "required": true,
                 "desc": "The ID of the array to set the value in"
@@ -506,7 +512,7 @@
         "return_type": "int",
         "params": [
             {
-                "name": "arrayID",
+                "name": "arrayId",
                 "type": "int",
                 "required": true,
                 "desc": "The ID of the array to set the value in"
@@ -531,7 +537,7 @@
         "return_type": "int",
         "params": [
             {
-                "name": "arrayID",
+                "name": "arrayId",
                 "type": "int",
                 "required": true,
                 "desc": "The ID of the array to set the value in"
@@ -556,7 +562,7 @@
         "return_type": "int",
         "params": [
             {
-                "name": "arrayID",
+                "name": "arrayId",
                 "type": "int",
                 "required": true,
                 "desc": "The ID of the array to set the value in"
@@ -581,7 +587,7 @@
         "return_type": "int",
         "params": [
             {
-                "name": "arrayID",
+                "name": "arrayId",
                 "type": "int",
                 "required": true,
                 "desc": "The ID of the array to get the value from"
@@ -600,7 +606,7 @@
         "return_type": "float",
         "params": [
             {
-                "name": "arrayID",
+                "name": "arrayId",
                 "type": "int",
                 "required": true,
                 "desc": "The ID of the array to get the value from"
@@ -619,7 +625,7 @@
         "return_type": "bool",
         "params": [
             {
-                "name": "arrayID",
+                "name": "arrayId",
                 "type": "int",
                 "required": true,
                 "desc": "The ID of the array to get the value from"
@@ -638,7 +644,7 @@
         "return_type": "string",
         "params": [
             {
-                "name": "arrayID",
+                "name": "arrayId",
                 "type": "int",
                 "required": true,
                 "desc": "The ID of the array to get the value from"
@@ -657,7 +663,7 @@
         "return_type": "vector",
         "params": [
             {
-                "name": "arrayID",
+                "name": "arrayId",
                 "type": "int",
                 "required": true,
                 "desc": "The ID of the array to get the value from"
@@ -676,7 +682,7 @@
         "return_type": "int",
         "params": [
             {
-                "name": "arrayID",
+                "name": "arrayId",
                 "type": "int",
                 "required": true,
                 "desc": "The ID of the array to resize"
@@ -695,7 +701,7 @@
         "return_type": "int",
         "params": [
             {
-                "name": "arrayID",
+                "name": "arrayId",
                 "type": "int",
                 "required": true,
                 "desc": "The ID of the array to resize"
@@ -714,7 +720,7 @@
         "return_type": "int",
         "params": [
             {
-                "name": "arrayID",
+                "name": "arrayId",
                 "type": "int",
                 "required": true,
                 "desc": "The ID of the array to resize"
@@ -733,7 +739,7 @@
         "return_type": "int",
         "params": [
             {
-                "name": "arrayID",
+                "name": "arrayId",
                 "type": "int",
                 "required": true,
                 "desc": "The ID of the array to resize"
@@ -752,7 +758,7 @@
         "return_type": "int",
         "params": [
             {
-                "name": "arrayID",
+                "name": "arrayId",
                 "type": "int",
                 "required": true,
                 "desc": "The ID of the array to resize"
@@ -771,7 +777,7 @@
         "return_type": "int",
         "params": [
             {
-                "name": "arrayID",
+                "name": "arrayId",
                 "type": "int",
                 "required": true,
                 "desc": "The ID of the array to get the length of"
@@ -1109,16 +1115,16 @@
         "return_type": "bool",
         "params": [
             {
-                "name": "playerID",
+                "name": "playerId",
                 "type": "int",
                 "required": true,
                 "desc": "The player to check unit actions for"
             },
             {
-                "name": "unitType",
+                "name": "objectOrClassId",
                 "type": "int",
                 "required": true,
-                "desc": "The type of unit to check actions for. Values 9xx refer to classes"
+                "desc": "The ID of the object or class to check actions for"
             },
             {
                 "name": "actionId",
@@ -1127,7 +1133,7 @@
                 "desc": "The type of action to check for"
             },
             {
-                "name": "targetPlayerID",
+                "name": "targetPlayerId",
                 "type": "int",
                 "required": false,
                 "desc": "Check if the action is being performed on a unit (eg. attacking) of this player. Can use -1 to ignore this filter."
@@ -1158,7 +1164,7 @@
                 "desc": "The player to get the resource of (0 for Gaia)"
             },
             {
-                "name": "resourceID",
+                "name": "resourceId",
                 "type": "int",
                 "required": true,
                 "desc": "The ID of the resource to get the amount of"
@@ -1177,7 +1183,7 @@
                 "desc": "The player to set the resource of (0 for Gaia)"
             },
             {
-                "name": "resourceID",
+                "name": "resourceId",
                 "type": "int",
                 "required": true,
                 "desc": "The ID of the resource to set the amount of"
@@ -1196,7 +1202,7 @@
         "return_type": "int",
         "params": [
             {
-                "name": "variableID",
+                "name": "variableId",
                 "type": "int",
                 "required": true,
                 "desc": "The ID of the variable to get the value of"
@@ -1209,7 +1215,7 @@
         "return_type": "void",
         "params": [
             {
-                "name": "variableID",
+                "name": "variableId",
                 "type": "int",
                 "required": true,
                 "desc": "The ID of the variable to set the value of"
@@ -1265,16 +1271,16 @@
         "return_type": "void",
         "params": [
             {
-                "name": "effectID",
+                "name": "effectId",
                 "type": "int",
                 "required": true,
                 "desc": "The ID of the effect to use"
             },
             {
-                "name": "unitOrTechnologyID",
+                "name": "objectOrTechnologyId",
                 "type": "int",
                 "required": true,
-                "desc": "The ID of the unit or technology to effect"
+                "desc": "The ID of the object or technology to effect"
             },
             {
                 "name": "attributeOrOperation",
@@ -1295,14 +1301,14 @@
                 "desc": "The player to apply the effect to. If unspecified, applies to all players except Gaia."
             }
         ],
-        "desc": "Change the specified attribute of the specified unit or technology by the value for the specified player. For more information on this, check the [UserPatch](\"Jump to: UserPatch NON EXISTENT\") section of the guide"
+        "desc": "Change the specified attribute of the specified object or technology by the value for the specified player. For more information on this, check the [UserPatch](\"Jump to: UserPatch NON EXISTENT\") section of the guide"
     },
     "xsResearchTechnology": {
         "name": "xsResearchTechnology",
         "return_type": "bool",
         "params": [
             {
-                "name": "techID",
+                "name": "techId",
                 "type": "int",
                 "required": true,
                 "desc": "The technology ID to research."
@@ -1339,10 +1345,10 @@
                 "desc": "The player to get the object count for"
             },
             {
-                "name": "id",
+                "name": "objectOrClassId",
                 "type": "int",
                 "required": true,
-                "desc": "The ID of the object to get the count for"
+                "desc": "The ID of the object or class to get the count for"
             }
         ],
         "desc": "Returns the number of currently alive objects with the given ID of the specified player"
@@ -1358,10 +1364,10 @@
                 "desc": "The player to get the object count for"
             },
             {
-                "name": "id",
+                "name": "objectOrClassId",
                 "type": "int",
                 "required": true,
-                "desc": "The ID of the object to get the count for"
+                "desc": "The ID of the object or class to get the count for"
             }
         ],
         "desc": "Returns the number of currently alive/standing + queued/foundation objects with the given ID of the specified player"
@@ -1396,41 +1402,41 @@
         "return_type": "void",
         "params": [
             {
-                "name": "unitId",
+                "name": "objectOrClassId",
                 "type": "int",
                 "required": true,
-                "desc": "The unit to add the task to"
+                "desc": "The object or class ID to add the task to"
             },
             {
                 "name": "actionType",
                 "type": "int",
                 "required": true,
-                "desc": "Task type. Eg.: 105 for heal, 155 for aura and etc. Look in the A.G.E."
+                "desc": "Task type. Refer to [cTaskType constants](../constants/#14-tasktypes \"Jump To: XS > Constant Reference > Task Type Constants\")"
             },
             {
-                "name": "targetUnitId",
+                "name": "targetObjectOrClassId",
                 "type": "int",
                 "required": false,
-                "desc": "Target unitId for the task if exists. Values 9xx refer to classes."
+                "desc": "Target object or class ID for the task to filter by."
             },
             {
                 "name": "playerId",
                 "type": "int",
                 "required": false,
-                "desc": "The player to whose units the task will be inserted. If unspecified or -1, applies to all players except Gaia."
+                "desc": "The player to whose objects the task will be inserted. If unspecified or -1, applies to all players except Gaia."
             }
         ],
-        "desc": "Adds a new (or edits an existing) task with the fields previously defined by calls to [xsTaskAmount](./#532-xstaskamount) for the specified unit at the end of the task list (see A.G.E.). If a task with the specified `actionType`, `unitId`, and `Search Wait Time` (set by `xsTaskAmount`) already exists, it is edited instead of a new one being added.\n\nNote that `xsTaskAmount` modifies a global task struct which is re-used every time `#!xs xsTask` is called (For non programmers, this is similar to filling out a form once (the calls to [xsTaskAmount](./#532-xstaskamount)) and then submitting multiple copies of it for different people)"
+        "desc": "Adds a new (or edits an existing) task with the fields previously defined by calls to [xsTaskAmount](./#532-xstaskamount) for the specified object at the end of the task list (see A.G.E.). If a task with the specified `actionType`, `objectId`, and `Search Wait Time` (set by `xsTaskAmount`) already exists, it is edited instead of a new one being added.\n\nNote that `xsTaskAmount` modifies a global task struct which is re-used every time `#!xs xsTask` is called (For non programmers, this is similar to filling out a form once (the calls to [xsTaskAmount](./#532-xstaskamount)) and then submitting multiple copies of it for different people)"
     },
     "xsRemoveTask": {
         "name": "xsRemoveTask",
         "return_type": "void",
         "params": [
             {
-                "name": "unitId",
+                "name": "objectOrClassId",
                 "type": "int",
                 "required": true,
-                "desc": "Unit to remove the task from."
+                "desc": "The object or class ID to remove the task from."
             },
             {
                 "name": "actionType",
@@ -1439,19 +1445,19 @@
                 "desc": "Task type. Eg.: 105 for heal, 155 for aura and etc. Look in the A.G.E."
             },
             {
-                "name": "targetUnitId",
+                "name": "targetObjectOrClassId",
                 "type": "int",
                 "required": false,
-                "desc": "Target unitId for the task if exists. Values 9xx refer to classes."
+                "desc": "Target object or class ID for the task to filter by."
             },
             {
                 "name": "playerId",
                 "type": "int",
                 "required": false,
-                "desc": "The player from whose units the task will be removed. If unspecified or -1, applies to all players except Gaia."
+                "desc": "The player from whose objects the task will be removed. If unspecified or -1, applies to all players except Gaia."
             }
         ],
-        "desc": "Removes a task from a unit if the specified `actionType`, `unitId`, and `Search Wait Time` (set by [xsTaskAmount](./#532-xstaskamount)) match an existing task in a unit. No other fields are used for filtering (same as when [xsTask](./#531-xstask) edits instead of adding a new task)"
+        "desc": "Removes a task from a object if the specified `actionType`, `objectId`, and `Search Wait Time` (set by [xsTaskAmount](./#532-xstaskamount)) match an existing task in a object. No other fields are used for filtering (same as when [xsTask](./#531-xstask) edits instead of adding a new task)"
     },
     "xsGetObjectAttribute": {
         "name": "xsGetObjectAttribute",
@@ -1461,7 +1467,7 @@
                 "name": "playerId",
                 "type": "int",
                 "required": true,
-                "desc": "The player whose unit to get the attribute for"
+                "desc": "The player whose object to get the attribute for"
             },
             {
                 "name": "objectId",
@@ -1504,16 +1510,16 @@
                 "name": "objectOrClassId",
                 "type": "int",
                 "required": true,
-                "desc": "The type of units to get"
+                "desc": "The ID of the object or class to get the unit reference IDs for"
             },
             {
                 "name": "arrayId",
                 "type": "int",
                 "required": false,
-                "desc": "Reuse an existing array to get units"
+                "desc": "Reuse an existing array to save memory"
             }
         ],
-        "desc": "Returns the unit IDs of all the units of a specific player of the given object ID or class on the map. The IDs here are the same as the `reference_id` used by the scenario editor"
+        "desc": "Returns an array of unit IDs on the map for the given player and the specified object ID or class. The IDs here are the same as the `reference_id` used by the scenario editor"
     },
     "xsGetUnitAttribute": {
         "name": "xsGetUnitAttribute",
@@ -1538,7 +1544,7 @@
                 "desc": "For use with armor/attack attributes - specifies which armor/attack class to get"
             }
         ],
-        "desc": "Returns the attribute value for a specific object on the map."
+        "desc": "Returns the attribute value for a specific unit on the map."
     },
     "xsDoesUnitExist": {
         "name": "xsDoesUnitExist",
