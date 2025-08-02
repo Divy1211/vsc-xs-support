@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="066e2e3a-1cd2-4860-8fa6-bf17ce226c33" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/aoe2xsscripting.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/aoe2xsscripting.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/extensions.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/tasks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscodeignore" beforeDir="false" afterPath="$PROJECT_DIR$/.vscodeignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/data/constants.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/data/functions.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/data/keywords.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/data/regex_maker.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/fileParser.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/interfaces.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/completion/codeCompletionProvider.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/definition/definitionProvider.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/extension.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hover/hoverInfoProvider.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/semantic/parsedTokenGenerator.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/semantic/semanticHighlightingProvider.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/runTest.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/suite/extension.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/suite/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syntaxes/xs.tmLanguage.json" beforeDir="false" afterPath="$PROJECT_DIR$/syntaxes/xs.tmLanguage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="30jEg0vuknwa0vekULvPIGvp3Eq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "dev-lsp",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="066e2e3a-1cd2-4860-8fa6-bf17ce226c33" name="Changes" comment="" />
+      <created>1754132691758</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1754132691758</updated>
+      <workItem from="1754132694791" duration="324000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

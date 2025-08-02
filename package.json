@@ -1,94 +1,127 @@
 {
-	"name": "vscode-xs",
-	"displayName": "AoE2 XS Scripting",
-	"description": "AoE2 XS Support for VSC",
-	"publisher": "Divy",
-	"version": "1.0.21",
-	"engines": {
-		"vscode": "^1.46.0"
-	},
-	"categories": [
-		"Programming Languages"
-	],
-	"license": "See LICENSE.md",
-	"icon": "icon.png",
-	"bugs": {
-		"url": "https://github.com/Divy1211/vsc-xs-support/issues"
-	},
-	"homepage": "https://github.com/Divy1211/vsc-xs-support",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/Divy1211/vsc-xs-support.git"
-	},
-	"keywords": [
-		"vscode",
-		"xs",
-		"external subroutines",
-		"age of empires"
-	],
-	"activationEvents": [
-		"onLanguage:xs",
-		"onCommand:xs.format",
-		"onCommand:xs.minify"
-	],
-	"main": "./out/extension.js",
-	"contributes": {
-		"languages": [
-			{
-				"id": "xs",
-				"aliases": [
-					"External Subroutine",
-					"xs"
-				],
-				"extensions": [
-					".xs"
-				],
-				"configuration": "./language-configuration.json"
-			}
-		],
-		"grammars": [
-			{
-				"language": "xs",
-				"scopeName": "source.xs",
-				"path": "./syntaxes/xs.tmLanguage.json"
-			}
-		],
-		"snippets": [
-			{
-				"language": "xs",
-				"path": "./snippets/xs.tmSnippets.json"
-			}
-		],
-		"commands": [
-			{
-				"command": "xs.format",
-				"title": "Format"
-			},
-			{
-				"command": "xs.minify",
-				"title": "Minify"
-			}
-		]
-	},
-	"scripts": {
-		"vscode:prepublish": "npm run compile",
-		"compile": "tsc -p ./",
-		"watch": "tsc -watch -p ./",
-		"pretest": "npm run compile && npm run lint",
-		"lint": "eslint src --ext ts",
-		"test": "node ./out/test/runTest.js"
-	},
-	"devDependencies": {
-		"@types/vscode": "^1.46.0",
-		"@types/glob": "^7.1.3",
-		"@types/mocha": "^8.0.4",
-		"@types/node": "^12.11.7",
-		"eslint": "^7.19.0",
-		"@typescript-eslint/eslint-plugin": "^4.14.1",
-		"@typescript-eslint/parser": "^4.14.1",
-		"glob": "^7.1.6",
-		"mocha": "^8.2.1",
-		"typescript": "^4.1.3",
-		"vscode-test": "^1.5.0"
-	}
+    "name": "vscode-xs",
+    "displayName": "AoE2 XS Scripting",
+    "description": "AoE2 XS Support for VSC",
+    "publisher": "Divy",
+    "version": "2.0.0",
+    "engines": {
+        "vscode": "^1.102.0"
+    },
+    "license": "See LICENSE.md",
+    "icon": "icon.png",
+    "categories": [
+        "Programming Languages"
+    ],
+    "bugs": {
+        "url": "https://github.com/Divy1211/vsc-xs-support/issues"
+    },
+    "homepage": "https://github.com/Divy1211/vsc-xs-support",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Divy1211/vsc-xs-support.git"
+    },
+    "keywords": [
+        "vscode",
+        "xs",
+        "external subroutines",
+        "age of empires"
+    ],
+    "activationEvents": [],
+    "main": "./dist/main.js",
+    "contributes": {
+        "configuration": {
+            "type": "object",
+            "title": "XS Check Language Settings",
+            "properties": {
+                "xsc.ignores": {
+                    "type": "array",
+                    "description": "Select warnings to enable or disable",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                            "TopStrInit",
+                            "DupCase",
+                            "DiscardedFn",
+                            "BreakPt",
+                            "UnusableClasses",
+                            "FirstOprArith",
+                            "CmpSilentCrash",
+                            "BoolCaseSilentCrash",
+                            "NumDownCast",
+                            "NoNumPromo"
+                        ]
+                    },
+                    "default": [
+                        "DiscardedFn"
+                    ]
+                },
+                "xsc.extraPreludePath": {
+                    "type": "string",
+                    "description": "Specify an additional prelude file",
+                    "default": null
+                },
+                "xsc.includeDirectories": {
+                    "type": "array",
+                    "description": "Additional directories to search for includes",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": []
+                },
+                "xsc.flavour": {
+                    "type": "string",
+                    "description": "The flavour of XS to use",
+                    "default": "AoE2:DE",
+                    "enum": [
+                        "AoE2:DE"
+                    ],
+                    "enumDescriptions": [
+                        "Configure XSC for AoE2:DE"
+                    ]
+                }
+            }
+        },
+        "languages": [
+            {
+                "id": "xs",
+                "aliases": [
+                    "External Subroutine",
+                    "xs"
+                ],
+                "extensions": [
+                    ".xs"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "xs",
+                "scopeName": "source.xs",
+                "path": "./syntaxes/xs.tmLanguage.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "xs",
+                "path": "./snippets/xs.tmSnippets.json"
+            }
+        ],
+        "commands": []
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "lint": "eslint src --ext ts"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.46.0",
+        "@types/node": "^12.11.7",
+        "eslint": "^7.19.0",
+        "@typescript-eslint/eslint-plugin": "^4.14.1",
+        "@typescript-eslint/parser": "^4.14.1",
+        "typescript": "^4.1.3",
+        "vscode-languageclient": "^9.0.0"
+    }
 }
