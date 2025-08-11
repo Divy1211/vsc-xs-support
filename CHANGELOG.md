@@ -1,5 +1,10 @@
 # Change Log
 
+## Released v2.0.0 on
+
+1. Added an LSP backend for better auto complete and error reporting
+2. Added minimal doxygen support using the `/** desc */` syntax, along with `@param` and `@returns` for functions.
+
 ## Released v1.0.21 on 20-07-2025
 
 1. Changed capitalization of `ID` to `Id` in parameter names

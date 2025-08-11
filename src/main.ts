@@ -14,9 +14,6 @@ import {
 let client: LanguageClient;
 
 export function activate(context: ExtensionContext) {
-    // vscode.window.showInformationMessage('Hello from XS extension!');
-
-    // Path to the Rust binary built via `cargo build --release`
     const command = path.join(
         context.extensionPath,
         'server',
