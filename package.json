@@ -3,7 +3,7 @@
     "displayName": "AoE2 XS Scripting",
     "description": "AoE2 XS Support for VSC",
     "publisher": "Divy",
-    "version": "2.0.0-alpha1",
+    "version": "2.0.0-alpha6",
     "engines": {
         "vscode": "^1.102.0"
     },
@@ -51,9 +51,7 @@
                             "NoNumPromo"
                         ]
                     },
-                    "default": [
-                        "DiscardedFn"
-                    ]
+                    "default": []
                 },
                 "xsc.extraPreludePath": {
                     "type": "string",
