@@ -3,7 +3,7 @@
     "displayName": "AoE2 XS Scripting",
     "description": "AoE2 XS Support for VSC",
     "publisher": "Divy",
-    "version": "2.0.0-alpha7",
+    "version": "2.0.0-alpha8",
     "engines": {
         "vscode": "^1.102.0"
     },
@@ -48,7 +48,10 @@
                             "CmpSilentCrash",
                             "BoolCaseSilentCrash",
                             "NumDownCast",
-                            "NoNumPromo"
+                            "NoNumPromo",
+                            "FloatMod",
+                            "InfLoopLim",
+                            "InfRecLim"
                         ]
                     },
                     "default": []
