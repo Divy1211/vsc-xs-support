@@ -49,6 +49,13 @@
         }
     ],
     "repository": {
+        "doxygen-deprecated": {
+            "name": "punctuation.definition.block.tag.xs",
+            "match": "\\@deprecated (.+)",
+            "captures": {
+                "1": { "name": "variable.other.xs" }
+            }
+        },
         "doxygen-param": {
             "name": "punctuation.definition.block.tag.xs",
             "match": "\\@param (\\w+) (.+)",
@@ -67,6 +74,10 @@
         "doxygen-allow-discard": {
             "name": "punctuation.definition.block.tag.xs",
             "match": "\\@allow_discard"
+        },
+        "doxygen-allow-no-num-promo": {
+            "name": "punctuation.definition.block.tag.xs",
+            "match": "\\@allow_no_num_promo"
         },
         "doxygen-extern": {
             "name": "punctuation.definition.block.tag.xs",
@@ -92,8 +103,9 @@
             "begin": "/\\*\\*",
             "end": "\\*/",
             "patterns": [
-                { "include": "#doxygen-param" },
+                { "include": "#doxygen-deprecated" },
                 { "include": "#doxygen-allow-discard" },
+                { "include": "#doxygen-allow-no-num-promo" },
                 { "include": "#doxygen-return" },
                 { "include": "#doxygen-extern" },
                 { "include": "#todo-multiline" }

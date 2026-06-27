@@ -51,7 +51,9 @@
                             "NoNumPromo",
                             "FloatMod",
                             "InfLoopLim",
-                            "InfRecLim"
+                            "InfRecLim",
+                            "Deprecated",
+                            "SwappedParams"
                         ]
                     },
                     "default": []
