@@ -53,7 +53,8 @@
                             "InfLoopLim",
                             "InfRecLim",
                             "Deprecated",
-                            "SwappedParams"
+                            "SwappedParams",
+                            "InconsistentDefaults"
                         ]
                     },
                     "default": []
